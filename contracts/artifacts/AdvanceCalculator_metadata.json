@@ -9,31 +9,28 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "num",
+						"name": "a",
 						"type": "uint256"
-					}
-				],
-				"name": "add",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
+					},
 					{
 						"internalType": "uint256",
-						"name": "num",
+						"name": "b",
 						"type": "uint256"
+					},
+					{
+						"internalType": "uint8",
+						"name": "operation",
+						"type": "uint8"
 					}
 				],
-				"name": "divide",
+				"name": "performOperations",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "get",
+				"name": "result",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -42,32 +39,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "num",
-						"type": "uint256"
-					}
-				],
-				"name": "multiply",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "num",
-						"type": "uint256"
-					}
-				],
-				"name": "subtract",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -84,7 +55,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Twitter.sol": "Calculator"
+			"contracts/5_AdvanceCalculator.sol": "AdvanceCalculator"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -98,12 +69,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Twitter.sol": {
-			"keccak256": "0x769a042ae3788b8c0d0ae8508522236ebdafbc5f67d6c9b53b4bca088eb546bd",
+		"contracts/5_AdvanceCalculator.sol": {
+			"keccak256": "0xd4e462271b29f88114a2eaee0ebdd23838a88d6a55ca739eb3b2e7f8ac255ce8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ad4b5ee237898b159e4510ffc34927ecfb5a674cd499afedc419ae2d1caeea23",
-				"dweb:/ipfs/QmWqdS5pP6psgSjaaLC1uPi9JSrZdYPPJSM7KjGrbaxLj2"
+				"bzz-raw://29eef685fe7e9fa8c5dc2b764cea5da401f22b29e7bdb99361b3f6fda6a5d5aa",
+				"dweb:/ipfs/QmNzKchKucD5kjjuUfBAWzb7qkuMpfeYyV3xgPvDxjNk53"
 			]
 		}
 	},

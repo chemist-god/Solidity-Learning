@@ -11,6 +11,99 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "author",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "TweetCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "liker",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "tweetAuthor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tweetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newLikeCount",
+						"type": "uint256"
+					}
+				],
+				"name": "TweetLiked",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "unliker",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "tweetAuthor",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "tweetId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "unLikedCount",
+						"type": "uint256"
+					}
+				],
+				"name": "TweetUnLiked",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "MAX_TWEET_LENGTH",
 				"outputs": [
@@ -31,7 +124,7 @@
 						"type": "uint16"
 					}
 				],
-				"name": "changeTweetLength",
+				"name": "changeTweet",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -44,7 +137,7 @@
 						"type": "string"
 					}
 				],
-				"name": "creaTweet",
+				"name": "createTweet",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -57,7 +150,7 @@
 						"type": "address"
 					}
 				],
-				"name": "getAllTweets",
+				"name": "getAlltweets",
 				"outputs": [
 					{
 						"components": [
@@ -263,11 +356,11 @@
 	},
 	"sources": {
 		"contracts/Twitter.sol": {
-			"keccak256": "0x91a7ced072ed86924c2eb4fc9adedc209f22f89568c60093cd191774d10ae1cc",
+			"keccak256": "0x28f32e381e2298b09006aebed76998332caa73e5d9bf08332f83732267e67fc2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://02a3f11ba605c5e01464f6c032b6bb35b03ac3a13d1a110eb62710f34fa4da63",
-				"dweb:/ipfs/QmVdyBrh4J8Mx1BjQxn8SrTxh1Jry1y3XyTBW3XRsDksSx"
+				"bzz-raw://51192c3363063c2c6063015cf09c44a016c523f9755dce751a1706c1ffb2fa0e",
+				"dweb:/ipfs/Qmd3FD7aZnZWmtjSLJE5mXcQHkAohy2ANUx3zX3WqxLdyr"
 			]
 		}
 	},
