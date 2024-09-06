@@ -1,5 +1,6 @@
 
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.26;
 
 contract Twitter {
@@ -45,6 +46,15 @@ contract Twitter {
         MAX_TWEET_LENGTH = newTweetLength;
     }
 
+    //function to getTotalLikes
+    function getTotalLikes(address _author) external view returns  (uint) {
+        uint totalLikes;
+    //a for loop to get all the total likes from the author
+        for( uint i =0; i < tweets[_author].length; i++){
+            totalLikes += tweets[_author][i].likes;
+        }
+        return  totalLikes;
+    }
 
     function createTweet(string memory  _tweet) public  {
 
