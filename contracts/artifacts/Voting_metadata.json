@@ -125,7 +125,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/votingC.sol": "Voting"
+			"contracts/update_voting.sol": "Voting"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -139,20 +139,20 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/update_voting.sol": {
+			"keccak256": "0xe529fd3bd5f041390b4f0038c973a193a22d895a0bd3829a60813d4e726de6b8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4638f6f46e3082aa8f18011fa60bd1430bf1982bef9f441f575b5f9150122665",
+				"dweb:/ipfs/QmNuZ1weeaEaqaApYTgVkiqzL2DeLAUmJt58GLB1BEXezj"
+			]
+		},
 		"contracts/voterRegistration.sol": {
 			"keccak256": "0x1885e9176a01238d4d2b100c9cece147184abb180ecf67913ce5f1f897d3af86",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://4add5f982069f4e0e01c79710022daa2c23a116b5371e1dacbd79675a1020b89",
 				"dweb:/ipfs/QmVvv2NzTHRZfRB4g3sMpbcsVTfpPsm6ZGL1BaBxfzgjCy"
-			]
-		},
-		"contracts/votingC.sol": {
-			"keccak256": "0x624f45358cbda434080e367f256fc283b5f84c35914793876d123f5753828c4e",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://482443df01146232a56ba16fae75c202349fc164f8f17160ec1073871519f788",
-				"dweb:/ipfs/Qmc2bv3Ct8usyNygHC8FYW3oo1H81LREdPvbtSsG1HvZ8H"
 			]
 		}
 	},
