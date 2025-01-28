@@ -17,6 +17,19 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "newMessage",
+						"type": "string"
+					}
+				],
+				"name": "MessageUpdated",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "message",
 				"outputs": [
@@ -71,11 +84,11 @@
 	},
 	"sources": {
 		"contracts/firstContract.sol": {
-			"keccak256": "0xba981dc0efad29e8800806027a1c34727ad63234cc01ae059c009cc941342a6d",
+			"keccak256": "0xca3a7a2aae4d3f1edb4904c23626d864dc71ffdc094f7e155f73e95c5ef268d3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://41d4f4c4370126fa3557c9fcae80c5b94eebbdf99508604d4497d02b446a086d",
-				"dweb:/ipfs/Qmf69i5d52qF7ukkvhHqHXbKt6j7gNDhstLsEP1NGbSq1u"
+				"bzz-raw://862927f906af730afc5bde1a6d4e21231ef6e447911a2b86c3663324b83e89c7",
+				"dweb:/ipfs/QmYUwUnSeUEyJMajxxAyj9V5rypYPibcDYc1WdTofDXCKw"
 			]
 		}
 	},
