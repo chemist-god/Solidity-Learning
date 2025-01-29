@@ -9,51 +9,12 @@
 				"inputs": [
 					{
 						"internalType": "string",
-						"name": "initialMessage",
+						"name": "firstMessage",
 						"type": "string"
 					}
 				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "initialMessage",
-						"type": "string"
-					}
-				],
-				"name": "ContractCreated",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "newMessage",
-						"type": "string"
-					}
-				],
-				"name": "MessageUpdated",
-				"type": "event"
-			},
-			{
-				"inputs": [],
-				"name": "getMessageHistory",
-				"outputs": [
-					{
-						"internalType": "string[]",
-						"name": "",
-						"type": "string[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -71,38 +32,6 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "messageHistory",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
 						"internalType": "string",
 						"name": "newMessage",
 						"type": "string"
@@ -112,10 +41,6 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -131,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/firstContract.sol": "Inbox"
+			"contracts/Inbox.sol": "Inbox"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -145,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/firstContract.sol": {
-			"keccak256": "0x7c775366f4ead4b68adca8a44ba080cb01bddb04bb68e51e1275d66250c8866a",
+		"contracts/Inbox.sol": {
+			"keccak256": "0x822346dcd9c212df0d97b4f042f14d67852e7428696e898a8f4057801c17d7ac",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4ae1779ae1699477dbe51de20212211ff8563524c41a896d0605c07766b309ad",
-				"dweb:/ipfs/Qmd7hxj2bAnxyzjYYDRpwH75X7FPAJcSnXHVHE5QPTABnq"
+				"bzz-raw://154a2583364cc8ad50005349068c4ceb8eb5f524c500bbc651a6760fb92dc32f",
+				"dweb:/ipfs/QmexABX2DTL9m3kjx4QXMeHoyXUZaiGoSqAtYPfAAw68pC"
 			]
 		}
 	},
