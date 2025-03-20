@@ -84,6 +84,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "reciever",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "sendCoin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -114,11 +132,11 @@
 	},
 	"sources": {
 		"contracts/coinSender.sol": {
-			"keccak256": "0x09791e3c6c4603c4b8eb31abc6a487bde107229bd404bb6471a16750ec088b29",
+			"keccak256": "0x29cee0cab3071e82abc7e95ba098ecf5fd9833deee2ad94e1c586731fe5c8e60",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e00d4d01a0aba08518b82a6c370a26f2d1e3897277588916fc9b6e278d1ba42e",
-				"dweb:/ipfs/QmSdDXjYx6fwacH55bMiAcJXUoB3M85PxRKKRAVtyuL5P7"
+				"bzz-raw://4a8784047462ddc51c77fbe8e7c31a570b0c379d28e419ca30aab3998996639b",
+				"dweb:/ipfs/QmXGQUHdhhrEQqf6rYV68HE4jGe73MJHDyT9FidqvZ3Anf"
 			]
 		}
 	},
