@@ -64,4 +64,8 @@ contract Vote {
     {
         return countNominees;
     }
+    function getNominee(uint nomineeId) public view returns 
+    (uint, string memory, string memory, uint) {
+        return (nominees[nomineeId].id, nominees[nomineeId].name, nominees[nomineeId].group, nominees[nomineeId].voteCount);
+    }
 }
