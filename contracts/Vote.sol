@@ -56,4 +56,8 @@ contract Vote {
         // Emit an event for the vote
         emit VoteCast(msg.sender, nomineeId);
     }
+    function checkVote() public view returns (bool)
+    {  
+        return voters[msg.sender];
+    }
 }

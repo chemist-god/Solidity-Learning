@@ -75,6 +75,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "checkVote",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "countNominees",
 				"outputs": [
 					{
@@ -225,11 +238,11 @@
 	},
 	"sources": {
 		"contracts/Vote.sol": {
-			"keccak256": "0x2ed2591227d25db3b6c6aa1f71b5159590537590499101c06cc190ee521e032e",
+			"keccak256": "0x5ce92e779c6b30f132d8b5809bd8b671da44394f1a3d1eb1633a0419ae1bcd02",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://72961aeacdfe12ff3d5e4a1e3634fdbc5cadf928a86244afc42450c4836ff79b",
-				"dweb:/ipfs/QmVKdudyvgXeBnQ4AyYrMH9rPN4L5P5TbJDwTqHbGWNJSF"
+				"bzz-raw://e2a67ed6c8c8ded8e97df5b65df612bad6e0d1e75f064e89e8b9698bb0d766f6",
+				"dweb:/ipfs/QmXjUPSqd61x6QpVaG6e9hdXkXxByXE3SizgqmMXyPM5ke"
 			]
 		}
 	},
