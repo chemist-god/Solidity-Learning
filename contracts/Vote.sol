@@ -60,4 +60,8 @@ contract Vote {
     {  
         return voters[msg.sender];
     }
+    function getCountNominee() public view returns(uint256)
+    {
+        return countNominees;
+    }
 }
