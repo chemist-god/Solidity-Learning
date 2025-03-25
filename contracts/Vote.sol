@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.26;
+pragma solidity ^0.8.26;
 
 contract Vote {
     struct Nominee {
@@ -18,10 +18,10 @@ contract Vote {
 
     event NomineeAdded(uint256 id, string name, string group);
     event VoteCast(address indexed voter, uint256 nomineeId);
+    event DatesSet(uint256 startDate, uint256 endDate);
 
     // Function to set the voting period
     function setVotingPeriod(uint256 _votingBegin, uint256 _votingClose) public {
-        // Consider adding access control here
         votingBegin = _votingBegin;
         votingClose = _votingClose;
     }
@@ -56,16 +56,28 @@ contract Vote {
         // Emit an event for the vote
         emit VoteCast(msg.sender, nomineeId);
     }
-    function checkVote() public view returns (bool)
-    {  
+
+    function checkVote() public view returns (bool) {  
         return voters[msg.sender];
     }
-    function getCountNominee() public view returns(uint256)
-    {
+
+    function getCountNominee() public view returns(uint256) {
         return countNominees;
     }
-    function getNominee(uint nomineeId) public view returns 
-    (uint, string memory, string memory, uint) {
+
+    function getNominee(uint256 nomineeId) public view returns 
+    (uint256, string memory, string memory, uint256) {
         return (nominees[nomineeId].id, nominees[nomineeId].name, nominees[nomineeId].group, nominees[nomineeId].voteCount);
+    }
+
+    function setDates(uint256 _startDate, uint256 _endDate) public {
+        require(votingClose == 0 && votingBegin == 0, "Voting dates already set");
+        require(_startDate > block.timestamp, "Start date must be in the future");
+        require(_endDate > _startDate, "End date must be after start date");
+
+        votingBegin = _startDate;
+        votingClose = _endDate;
+
+        emit DatesSet(_startDate, _endDate);
     }
 }

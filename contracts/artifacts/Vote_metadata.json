@@ -11,6 +11,25 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "DatesSet",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
 						"name": "id",
 						"type": "uint256"
 					},
@@ -184,6 +203,24 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endDate",
+						"type": "uint256"
+					}
+				],
+				"name": "setDates",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "_votingBegin",
 						"type": "uint256"
 					},
@@ -285,11 +322,11 @@
 	},
 	"sources": {
 		"contracts/Vote.sol": {
-			"keccak256": "0xfa42d862ef8ebb277575595c5259d537485398cf3d45f255e0a9123f439d7768",
+			"keccak256": "0x78be6b052d0289ac7d9b69f8f8139121923b3f6823178256dcf21c14828dee02",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b71009ced6363bb14b7728ab480108ba02f57c1393d489900a416e63301fc35a",
-				"dweb:/ipfs/Qmeo82Fod7LskBf3VpZzwD1XD4Fa9r1Vp818NHneYu9Kgc"
+				"bzz-raw://41ead1c12510555692c4c3dc181465fb7546da1b58b2a23b907a9da9aa007a9b",
+				"dweb:/ipfs/QmTXFF9UiAJFgsp8ANqu2ay6a8XQ95zxrmejNzniFMKbtF"
 			]
 		}
 	},
