@@ -80,4 +80,7 @@ contract Vote {
 
         emit DatesSet(_startDate, _endDate);
     }
+    function getDates() public view returns (uint256) {
+        return block.timestamp; // Get the current time
+    }
 }

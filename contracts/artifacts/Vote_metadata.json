@@ -132,6 +132,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getDates",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -322,11 +335,11 @@
 	},
 	"sources": {
 		"contracts/Vote.sol": {
-			"keccak256": "0x78be6b052d0289ac7d9b69f8f8139121923b3f6823178256dcf21c14828dee02",
+			"keccak256": "0x4747242b84ddd7ce5ff47cf8664ea63c5abbd766d55b6e9d56e6ba6e6d72ebdf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://41ead1c12510555692c4c3dc181465fb7546da1b58b2a23b907a9da9aa007a9b",
-				"dweb:/ipfs/QmTXFF9UiAJFgsp8ANqu2ay6a8XQ95zxrmejNzniFMKbtF"
+				"bzz-raw://a904a8d00f9a663d837c5c5f87d473102116398396b3c72e368aed6c0ddea3b0",
+				"dweb:/ipfs/QmW6WXZ7SQMfwvdGLobmvnvzruB9wPtmzBUEytJpzHLLBJ"
 			]
 		}
 	},
