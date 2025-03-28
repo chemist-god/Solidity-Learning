@@ -80,6 +80,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_carOwner",
+						"type": "address"
+					}
+				],
+				"name": "buyCar",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "carCount",
 				"outputs": [
@@ -201,11 +214,11 @@
 	},
 	"sources": {
 		"contracts/carSales.sol": {
-			"keccak256": "0xd90952904f67eb64002d267e53685af66c2532acbdcfd53de00d61662795cc0a",
+			"keccak256": "0x169d4abc1b86c195ea684c4e427400d4d5b5cf45fe0e141fef9b352bf0779c72",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f542eebff77ff9b0a7be61ba2eaf7d96e6f3d93a1025cc00c39830e051c49c85",
-				"dweb:/ipfs/QmaeXGLwMebpU1rS7XAq3KctTzCCnHvBo5137UPLe3KTSs"
+				"bzz-raw://7ee32a35f8514d142f93611113aab984d59e6a59771c1aff16acaf01f8e59050",
+				"dweb:/ipfs/Qmev81orgAQ3Fjs8bDDgC5if1497AtkQG9Sj9wbCD2gg2J"
 			]
 		}
 	},

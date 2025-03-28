@@ -56,5 +56,23 @@ contract CarLeasingAndSales {
         emit CarLeased(msg.sender, car.leaseEnd);
     }
 
+    function buyCar(address _carOwner) public payable {
+        Car storage car = cars[_carOwner];
+
+        require(car.owner != address(0), "Car owner not found.");
+        require(!car.isLeased, "Car is currently leased.");
+        require(msg.value == car.price, "Sent amount must be equal to car price.");
+
+        // Transfer the price to the car owner
+        payable(car.owner).transfer(car.price);
+
+        // Transfer ownership
+        car.owner = msg.sender;
+        car.isLeased = false; // Reset lease status
+        car.deposit = 0; // Reset deposit if necessary
+
+        emit CarBought(msg.sender, car.price);
+    }
+
     
 }
