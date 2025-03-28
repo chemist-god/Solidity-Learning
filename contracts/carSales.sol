@@ -27,5 +27,18 @@ contract CarLeasingAndSales {
         _;
     }
 
+    function registerCar(uint256 _price, uint256 _deposit, uint256 _leaseTerm) public {
+        require(_price > 0, "Price must be greater than zero.");
+        require(_deposit > 0, "Deposit must be greater than zero.");
+        require(_leaseTerm > 0, "Lease term must be greater than zero.");
+
+        Car memory car = Car(msg.sender, _price, _deposit, _leaseTerm, 0, false);
+
+        cars[msg.sender] = car;
+        carCount++;
+
+        emit CarRegistered(msg.sender, _price, _deposit, _leaseTerm);
+    }
+
     
 }

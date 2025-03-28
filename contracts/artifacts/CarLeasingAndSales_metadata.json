@@ -135,6 +135,29 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_deposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_leaseTerm",
+						"type": "uint256"
+					}
+				],
+				"name": "registerCar",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -165,11 +188,11 @@
 	},
 	"sources": {
 		"contracts/carSales.sol": {
-			"keccak256": "0x24a39ff1cdf7daed9763a83a2557e559283cd0b34e0b8751b7012443b859cea4",
+			"keccak256": "0xdd2512e5d38efbd5ba0fcfa9ba530f4d80b46c29c49894f81ad0dbed6087da9a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f184d25e74e90863bef6f2700c3b5d11842db79acc357df152e89e75c1a24eca",
-				"dweb:/ipfs/QmcsXFJp3qkAmGQTc7XUurb1s7TWHGExtvN1W9GSp6zVAk"
+				"bzz-raw://be52ef5e98d492465a0fccdbe5203e682155f0b768d4f6fa39626ad7476ed836",
+				"dweb:/ipfs/QmXVUD6dQNYU44aGpPBnpK6pfGriwp2Hf3FWtWbgwg73CA"
 			]
 		}
 	},
