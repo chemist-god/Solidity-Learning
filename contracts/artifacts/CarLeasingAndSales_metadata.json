@@ -139,6 +139,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_carOwner",
+						"type": "address"
+					}
+				],
+				"name": "leaseCar",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "_price",
 						"type": "uint256"
@@ -188,11 +201,11 @@
 	},
 	"sources": {
 		"contracts/carSales.sol": {
-			"keccak256": "0xdd2512e5d38efbd5ba0fcfa9ba530f4d80b46c29c49894f81ad0dbed6087da9a",
+			"keccak256": "0xd90952904f67eb64002d267e53685af66c2532acbdcfd53de00d61662795cc0a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://be52ef5e98d492465a0fccdbe5203e682155f0b768d4f6fa39626ad7476ed836",
-				"dweb:/ipfs/QmXVUD6dQNYU44aGpPBnpK6pfGriwp2Hf3FWtWbgwg73CA"
+				"bzz-raw://f542eebff77ff9b0a7be61ba2eaf7d96e6f3d93a1025cc00c39830e051c49c85",
+				"dweb:/ipfs/QmaeXGLwMebpU1rS7XAq3KctTzCCnHvBo5137UPLe3KTSs"
 			]
 		}
 	},
