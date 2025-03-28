@@ -74,5 +74,8 @@ contract CarLeasingAndSales {
         emit CarBought(msg.sender, car.price);
     }
 
-    
+    function getCar(address _carOwner) public view returns (uint256 price, uint256 deposit, uint256 leaseTerm, bool isLeased) {
+        Car memory car = cars[_carOwner];
+        return (car.price, car.deposit, car.leaseTerm, car.isLeased);
+    }
 }

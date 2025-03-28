@@ -157,6 +157,40 @@
 						"type": "address"
 					}
 				],
+				"name": "getCar",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "leaseTerm",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isLeased",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_carOwner",
+						"type": "address"
+					}
+				],
 				"name": "leaseCar",
 				"outputs": [],
 				"stateMutability": "payable",
@@ -214,11 +248,11 @@
 	},
 	"sources": {
 		"contracts/carSales.sol": {
-			"keccak256": "0x169d4abc1b86c195ea684c4e427400d4d5b5cf45fe0e141fef9b352bf0779c72",
+			"keccak256": "0x66fe7677c7e5ecaad77f8a2f0ce7782d438b265b6620c58d1093075649b0803d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7ee32a35f8514d142f93611113aab984d59e6a59771c1aff16acaf01f8e59050",
-				"dweb:/ipfs/Qmev81orgAQ3Fjs8bDDgC5if1497AtkQG9Sj9wbCD2gg2J"
+				"bzz-raw://092d7901f5b906c4f26247def0d3d376e290ff03e131ca8dbe32662858cb30c8",
+				"dweb:/ipfs/QmRkU3MQhomLynAWLnzEm7sw2KaxF5Jo1KAhPvx9tFHb4y"
 			]
 		}
 	},
