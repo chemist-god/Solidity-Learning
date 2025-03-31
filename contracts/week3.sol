@@ -16,4 +16,10 @@ function setStudent(string memory _name, uint _age, bool _enrolled) public {
 student = Student(_name, _age, _enrolled);
 }
 
+//struct inside an array
+Student[] public students;
+function addStudent(string memory _name, uint _age, bool _enrolled) public {
+students.push(Student(_name, _age, _enrolled));
+}
+
 }
