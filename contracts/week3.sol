@@ -29,4 +29,9 @@ function deposit(uint _amount) public {
 balances[msg.sender] += _amount;
 }
 
+//function to check balance
+function checkBalance() public view returns (uint) {
+return balances[msg.sender];
+}
+
 }
