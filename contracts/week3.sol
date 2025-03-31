@@ -22,4 +22,11 @@ function addStudent(string memory _name, uint _age, bool _enrolled) public {
 students.push(Student(_name, _age, _enrolled));
 }
 
+//mapping -> is a key value store
+    // storing account balance
+    mapping(address => uint) public balances;
+function deposit(uint _amount) public {
+balances[msg.sender] += _amount;
+}
+
 }
