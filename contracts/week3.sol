@@ -34,4 +34,15 @@ function checkBalance() public view returns (uint) {
 return balances[msg.sender];
 }
 
+//mappings in mapping -> called  a Nested mapping
+mapping(address => mapping(string => uint)) public tokenBalances;
+
+function setTokenBalance(string memory _token, uint _amount) public {
+    tokenBalances[msg.sender][_token] = _amount;
+}
+
+function getTokenBalance(string memory _token) public view returns (uint) {
+    return tokenBalances[msg.sender][_token];
+}
+
 }
