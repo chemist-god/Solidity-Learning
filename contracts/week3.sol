@@ -10,4 +10,10 @@ struct Student {
     uint age;
     bool enrolled;
 }
+
+Student public student;
+function setStudent(string memory _name, uint _age, bool _enrolled) public {
+student = Student(_name, _age, _enrolled);
+}
+
 }
