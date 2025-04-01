@@ -42,7 +42,16 @@ module my_nft::SuiGhana_nft{
             url: url::new_unsafe_from_bytes(url),
         };
 
+        let sender = tx_context::sender(ctx);
 
+                event::emit(Mintnft_event {
+            object_id: object::uid_to_inner(&nft.id),
+            creator: sender,
+            name: nft.name,
+        });
+
+// Emits a Mintnft_event to notify that a new NFT has been minted
+            transfer::public_transfer(nft, sender);
 
 
 
