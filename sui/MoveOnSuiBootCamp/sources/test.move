@@ -11,7 +11,14 @@ module my_nft::SuiGhana_nft{
     use sui::event;
     
 
-    
+    //definig nft structure
+        public struct SuiGhana_nft has key, store {
+        id: UID,
+        name: string::String, 
+        description: string::String,
+        url: Url,
+    }
+
 
 
 
