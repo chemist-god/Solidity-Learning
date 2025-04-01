@@ -26,8 +26,21 @@ module my_nft::SuiGhana_nft{
         name: string::String,
     }
 
-
-
+    //the mint function 
+        public entry fun mint(
+        name: vector<u8>,
+        description: vector<u8>,
+        url: vector<u8>,
+        ctx: &mut TxContext,
+    ) {
+        
+        //inside the mint function
+                let nft = SuiGhana_nft {
+            id: object::new(ctx),
+            name: string::utf8(name),
+            description: string::utf8(description),
+            url: url::new_unsafe_from_bytes(url),
+        };
 
 
 
