@@ -19,7 +19,12 @@ module my_nft::SuiGhana_nft{
         url: Url,
     }
 
-
+    //minting an event structure 
+        public struct Mintnft_event has copy, drop {
+        object_id: ID,
+        creator: address,
+        name: string::String,
+    }
 
 
 
