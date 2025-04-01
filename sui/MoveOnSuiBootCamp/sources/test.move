@@ -54,6 +54,13 @@ module my_nft::SuiGhana_nft{
             transfer::public_transfer(nft, sender);
 
 
+    //update decription function
+        public entry fun update_description(
+        nft: &mut SuiGhana_nft,
+        new_description: vector<u8>,
+    ) {
+        nft.description = string::utf8(new_description);
+    }
 
 
 
