@@ -50,4 +50,14 @@ contract FoodDelivery {
     // Increment the order count to get a new order ID
         orderCount++;
 
+    // Create a new order and store it in the mapping
+        orders[orderCount] = Order({
+            id: orderCount,
+            customer: msg.sender,    // Set the customer to the address that called the function
+            foodItem: foodItem,      // Set the food item
+            price: msg.value,        // Set the price to the amount of Ether sent
+            status: OrderStatus.Pending, // Set the initial status to Pending
+            timestamp: block.timestamp // Record the time of order placement
+        });
+
 }
