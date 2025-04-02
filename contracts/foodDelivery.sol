@@ -47,4 +47,7 @@ contract FoodDelivery {
         // Ensure that the order has a price (must send Ether)
         require(msg.value > 0, "Order must have a price");
     
+    // Increment the order count to get a new order ID
+        orderCount++;
+
 }
