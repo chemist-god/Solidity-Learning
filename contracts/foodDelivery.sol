@@ -30,4 +30,10 @@ contract FoodDelivery {
     event OrderDelivered(uint256 indexed orderId);
     event OrderCanceled(uint256 indexed orderId);
 
+    // Modifier to ensure that only the customer can call certain functions
+    modifier onlyCustomer(uint256 orderId) {
+        require(msg.sender == orders[orderId].customer, "Not the customer");
+        _; // Continue execution of the function
+    }
+
 }
