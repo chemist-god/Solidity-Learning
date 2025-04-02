@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/foodDelivery.sol": "FoodDelivery"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/foodDelivery.sol": {
+			"keccak256": "0x06c1c51201a637a65ef0918efc3e3a6665faf2c3c2c649285e4a3bdca3894aea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d2b0477f67ccb1a642076674ef4f2922a476bf4c7c7f08574e1e72a14a2f7e93",
+				"dweb:/ipfs/QmdiCCmoP5YFLCwBXtNvKtdFdVb9AwvrCCeF57s7EFXCTm"
+			]
+		}
+	},
+	"version": 1
+}

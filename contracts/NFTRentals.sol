@@ -15,7 +15,7 @@ contract NFTRental is Ownable {
 
     mapping(uint256 => Rental) public rentals; // tokenId => Rental
 
-    // Constructor that calls the Ownable constructor
+    // Constructor that initializes the Ownable contract
     constructor() Ownable() {}
 
     function rentNFT(
