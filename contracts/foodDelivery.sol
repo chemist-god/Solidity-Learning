@@ -41,4 +41,10 @@ contract FoodDelivery {
         require(orders[orderId].status == OrderStatus.Pending, "Order not pending");
         _; // Continue execution of the function
     }
+
+    // Function to place a new order
+    function placeOrder(string memory foodItem) external payable {
+        // Ensure that the order has a price (must send Ether)
+        require(msg.value > 0, "Order must have a price");
+    
 }
