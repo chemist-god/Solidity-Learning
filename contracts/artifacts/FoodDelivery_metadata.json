@@ -6,6 +6,76 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderAccepted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderCanceled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderDelivered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderPlaced",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "orderCount",
 				"outputs": [
@@ -91,11 +161,11 @@
 	},
 	"sources": {
 		"contracts/foodDelivery.sol": {
-			"keccak256": "0x534b490a5a14e8a8e2a0655b26c6abe89816bcc43f0b4f99988bc6181285e630",
+			"keccak256": "0x252404320b07beb54fa573a1602875e317988b87da41fee76286a5ac95c1c845",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c69b071760ce42696cff190a08165d23824b619fc70002221a547b697dad9d23",
-				"dweb:/ipfs/QmYrqQGHCTXaY3dp3FZPETHzrZkKYt27UKX8FrwG1Rkbog"
+				"bzz-raw://2b0e9b501043071ec13e5f0329f42253dea6b459e766bb630e5f4acb8ada0597",
+				"dweb:/ipfs/QmW8ZN9EVSbyFgjtpbhXdSJ47LVddsWPMHJysA6kZB6GkK"
 			]
 		}
 	},

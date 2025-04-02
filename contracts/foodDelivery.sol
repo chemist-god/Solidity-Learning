@@ -24,4 +24,10 @@ contract FoodDelivery {
     // Mapping to store orders by their unique ID
     mapping(uint256 => Order) public orders;
 
+    // Events to log important actions
+    event OrderPlaced(uint256 indexed orderId, address indexed customer, string foodItem, uint256 price);
+    event OrderAccepted(uint256 indexed orderId);
+    event OrderDelivered(uint256 indexed orderId);
+    event OrderCanceled(uint256 indexed orderId);
+
 }
