@@ -36,4 +36,9 @@ contract FoodDelivery {
         _; // Continue execution of the function
     }
 
+    // Modifier to ensure that the order is still pending
+    modifier onlyPending(uint256 orderId) {
+        require(orders[orderId].status == OrderStatus.Pending, "Order not pending");
+        _; // Continue execution of the function
+    }
 }
