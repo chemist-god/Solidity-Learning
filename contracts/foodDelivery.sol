@@ -18,4 +18,10 @@ contract FoodDelivery {
         uint256 timestamp;        // Time when the order was placed
     }
 
+    // State variable to keep track of the total number of orders
+    uint256 public orderCount;
+
+    // Mapping to store orders by their unique ID
+    mapping(uint256 => Order) public orders;
+
 }

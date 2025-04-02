@@ -4,7 +4,65 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "orderCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "orders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum FoodDelivery.OrderStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +91,11 @@
 	},
 	"sources": {
 		"contracts/foodDelivery.sol": {
-			"keccak256": "0x63a92be4484d02ce611f0e332b46cb98fa17caf75a47592220c71ae3a3996d41",
+			"keccak256": "0x534b490a5a14e8a8e2a0655b26c6abe89816bcc43f0b4f99988bc6181285e630",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://51b9dcc866ad998e31d1249e3dfca81881959b98a84cdd95c5ebcb9a352d793f",
-				"dweb:/ipfs/QmXcjeKFZ7RHSQLc63bDRswxJFB1JN5ZRRRYLNJkbYWtBi"
+				"bzz-raw://c69b071760ce42696cff190a08165d23824b619fc70002221a547b697dad9d23",
+				"dweb:/ipfs/QmYrqQGHCTXaY3dp3FZPETHzrZkKYt27UKX8FrwG1Rkbog"
 			]
 		}
 	},
