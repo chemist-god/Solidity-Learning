@@ -131,6 +131,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
+					}
+				],
+				"name": "placeOrder",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -161,11 +174,11 @@
 	},
 	"sources": {
 		"contracts/foodDelivery.sol": {
-			"keccak256": "0x252404320b07beb54fa573a1602875e317988b87da41fee76286a5ac95c1c845",
+			"keccak256": "0x123fdb7214a4be039452b80c8ff9609d2c44ffdf0587a86ffe8750de4ea80839",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2b0e9b501043071ec13e5f0329f42253dea6b459e766bb630e5f4acb8ada0597",
-				"dweb:/ipfs/QmW8ZN9EVSbyFgjtpbhXdSJ47LVddsWPMHJysA6kZB6GkK"
+				"bzz-raw://ce69290f66e28696cd518297cfc084243818e58fb2daf4a00559efd92cfc6101",
+				"dweb:/ipfs/QmeKVGbH4Hpti7B9QdRSfUK9sducmfoZs8dnryvHd96FQN"
 			]
 		}
 	},

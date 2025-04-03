@@ -60,4 +60,8 @@ contract FoodDelivery {
             timestamp: block.timestamp // Record the time of order placement
         });
 
+     //Emit an event to log the order placement
+        emit OrderPlaced(orderCount, msg.sender, foodItem, msg.value);
+    }
 }
+
