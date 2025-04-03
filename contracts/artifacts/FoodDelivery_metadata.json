@@ -76,6 +76,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "acceptOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "orderCount",
 				"outputs": [
@@ -174,11 +187,11 @@
 	},
 	"sources": {
 		"contracts/foodDelivery.sol": {
-			"keccak256": "0x123fdb7214a4be039452b80c8ff9609d2c44ffdf0587a86ffe8750de4ea80839",
+			"keccak256": "0x076ef0a705a65482ac3ec0130989df21c71e1ca3d58ea7691c192cae4d05e129",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ce69290f66e28696cd518297cfc084243818e58fb2daf4a00559efd92cfc6101",
-				"dweb:/ipfs/QmeKVGbH4Hpti7B9QdRSfUK9sducmfoZs8dnryvHd96FQN"
+				"bzz-raw://5828a3923801378068d8d962ac4a6bda4808142a78235f61026482cf2710dc30",
+				"dweb:/ipfs/QmYvevCsPRerXV4oVo41WTVzaVDY2EaUv737ouzmPnDfTi"
 			]
 		}
 	},

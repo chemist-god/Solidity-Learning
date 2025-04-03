@@ -63,5 +63,12 @@ contract FoodDelivery {
      //Emit an event to log the order placement
         emit OrderPlaced(orderCount, msg.sender, foodItem, msg.value);
     }
+    // Function to accept a pending order
+    function acceptOrder(uint256 orderId) external onlyPending(orderId) {
+        // Change the order status to Accepted
+        orders[orderId].status = OrderStatus.Accepted;
+        // Emit an event to log the order acceptance
+        emit OrderAccepted(orderId);
+    }
 }
 
