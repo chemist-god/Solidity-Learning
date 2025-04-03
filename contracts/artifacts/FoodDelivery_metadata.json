@@ -96,6 +96,19 @@
 						"type": "uint256"
 					}
 				],
+				"name": "cancelOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
 				"name": "deliverOrder",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -200,11 +213,11 @@
 	},
 	"sources": {
 		"contracts/foodDelivery.sol": {
-			"keccak256": "0x56f6b9ea41ec1ca916fd7853fb0f6cf3722ee434a47f884746287c0f7032cc7b",
+			"keccak256": "0x9fc394a6f813563323d13e9f3774cf3f6e28ea3303a781476fb65fad6da6b0ec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9e507ad87f35bd165675596b232775b3447badd6b40e83a4fd26f4125b2f9a13",
-				"dweb:/ipfs/QmV5z6L9MCBGSDq1STfJSB2aUBQaUQTGW6riNXAKua1Tyr"
+				"bzz-raw://fea100e602df84dfa059dd629c08b2db745b4bbd5deb7db11a2fe5f652a36d33",
+				"dweb:/ipfs/QmdAQgNhDfLy2Pjf9tUhypshm5qTsWMzzqngBnp3vft6ea"
 			]
 		}
 	},

@@ -78,5 +78,16 @@ contract FoodDelivery {
         // Emit an event to log the order delivery
         emit OrderDelivered(orderId);
     }
+
+    // Function to cancel an order
+    function cancelOrder(uint256 orderId) external onlyCustomer(orderId) onlyPending(orderId) {
+        // Change the order status to Canceled
+        orders[orderId].status = OrderStatus.Canceled;
+        // Refund the customer by sending back the Ether they paid
+        payable(msg.sender).transfer(orders[orderId].price);
+        // Emit an event to log the order cancellation
+        emit OrderCanceled(orderId);
+    }
+
 }
 
