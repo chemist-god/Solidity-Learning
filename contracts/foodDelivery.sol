@@ -89,5 +89,11 @@ contract FoodDelivery {
         emit OrderCanceled(orderId);
     }
 
+    // Function to retrieve the details of a specific order
+    function getOrder(uint256 orderId) external view returns (Order memory) {
+        // Return the order details from the mapping
+        return orders[orderId];
+    }
+
 }
 
