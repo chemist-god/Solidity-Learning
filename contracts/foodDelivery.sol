@@ -70,5 +70,13 @@ contract FoodDelivery {
         // Emit an event to log the order acceptance
         emit OrderAccepted(orderId);
     }
+
+    // Function to mark an order as delivered
+    function deliverOrder(uint256 orderId) external onlyPending(orderId) {
+        // Change the order status to Delivered
+        orders[orderId].status = OrderStatus.Delivered;
+        // Emit an event to log the order delivery
+        emit OrderDelivered(orderId);
+    }
 }
 
