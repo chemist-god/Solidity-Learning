@@ -4,238 +4,7 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "OrderAccepted",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "OrderCanceled",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "OrderDelivered",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "customer",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "foodItem",
-						"type": "string"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					}
-				],
-				"name": "OrderPlaced",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "acceptOrder",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "cancelOrder",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "deliverOrder",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "orderId",
-						"type": "uint256"
-					}
-				],
-				"name": "getOrder",
-				"outputs": [
-					{
-						"components": [
-							{
-								"internalType": "uint256",
-								"name": "id",
-								"type": "uint256"
-							},
-							{
-								"internalType": "address",
-								"name": "customer",
-								"type": "address"
-							},
-							{
-								"internalType": "string",
-								"name": "foodItem",
-								"type": "string"
-							},
-							{
-								"internalType": "uint256",
-								"name": "price",
-								"type": "uint256"
-							},
-							{
-								"internalType": "enum FoodDelivery.OrderStatus",
-								"name": "status",
-								"type": "uint8"
-							},
-							{
-								"internalType": "uint256",
-								"name": "timestamp",
-								"type": "uint256"
-							}
-						],
-						"internalType": "struct FoodDelivery.Order",
-						"name": "",
-						"type": "tuple"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "orderCount",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "orders",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "id",
-						"type": "uint256"
-					},
-					{
-						"internalType": "address",
-						"name": "customer",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "foodItem",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					},
-					{
-						"internalType": "enum FoodDelivery.OrderStatus",
-						"name": "status",
-						"type": "uint8"
-					},
-					{
-						"internalType": "uint256",
-						"name": "timestamp",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "foodItem",
-						"type": "string"
-					}
-				],
-				"name": "placeOrder",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
-			}
-		],
+		"abi": [],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -249,7 +18,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/foodDelivery.sol": "FoodDelivery"
+			"contracts/FoodDelivery_2.sol": "FoodDelivery"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -263,12 +32,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/foodDelivery.sol": {
-			"keccak256": "0x2d5a0fcb7dbc396556f19c32320bc1976eff710821125b952889ead76fa59674",
+		"contracts/FoodDelivery_2.sol": {
+			"keccak256": "0x97e39c88d077de03fbfe4d189605a2109eaf004cbba6bc2cd09f1d5bb7b14caa",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c0b49438b851a6eebbfe3efda7a1543e027e1e5e1c5b1e056b80a85afe440318",
-				"dweb:/ipfs/QmQVcSuKnKupLt8gFScec64iCSEbhdcFhT6WXpAtk2KEd1"
+				"bzz-raw://cb087e938e6f21a1ed449691e8c3696cbc68afd0a97675db3db830a0d3395208",
+				"dweb:/ipfs/QmX8wCEiQyit8j3vjC8Kz1PjD8GsszNMKRCGDXoVjvRX4T"
 			]
 		}
 	},
