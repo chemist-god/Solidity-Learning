@@ -9,4 +9,9 @@ contract FoodDelivery {
         uint256 registrationTime;
         bool isRegistered;
     }
+    struct MenuItem{
+        string name;
+        uint256 price;
+        bool isAvailable;
+    }
 }
