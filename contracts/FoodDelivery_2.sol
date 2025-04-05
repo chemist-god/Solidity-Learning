@@ -57,4 +57,16 @@ contract FoodDelivery {
         require(!restaurants[msg.sender].isRegistered, "Restaurants cannot place orders.");
         _;
     }
+
+    // Restaurant Registration
+    function registerRestaurant(string memory _name, string memory _location) external {
+        require(!restaurants[msg.sender].isRegistered, "Restaurant is already registered.");
+        restaurants[msg.sender] = Restaurant({
+            name: _name,
+            location: _location,
+            registrationTime: block.timestamp,
+            isRegistered: true
+        });
+        emit RestaurantRegistered(msg.sender, _name);
+    }
 }

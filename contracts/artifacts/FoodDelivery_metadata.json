@@ -223,6 +223,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					}
+				],
+				"name": "registerRestaurant",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -283,11 +301,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0x3475ccd9c39935d242a468dac6c0f6c15b72d8575bd13413ac258b03f08f5040",
+			"keccak256": "0x800f2d6b068e79ccc9b78920e4712f3c174b984e9cd23454e07f72eed8937bff",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8434154d2c517d3dcafe5cf9f33983942a645c44efcbda5563b85136c7b223d9",
-				"dweb:/ipfs/QmWrBjmDuv3p9VJrZMc7mvG1n15JnMJNCYR8JxtHoqkArE"
+				"bzz-raw://037187682a63e8e8048dd2e381673746685faaf5f9906e8818b761a179190d10",
+				"dweb:/ipfs/QmTMCx9toHMfCrBmmiGdGQii6yacnPoZZPEkvdLsy7J6wJ"
 			]
 		}
 	},
