@@ -41,5 +41,9 @@ contract FoodDelivery {
     mapping(uint256 => Order) public orders;
     mapping(address => uint256[]) public customerOrders;
     
-
+    //Events
+    event RestaurantRegistered(address indexed restaurant, string name);
+    event MenuItemAdded(address indexed restaurant, uint256 itemId, string itemName, uint256 price);
+    event OrderPlaced(uint256 indexed orderId, address indexed customer, address indexed restaurant, uint256 totalAmount);
+    event OrderStatusUpdated(uint256 indexed orderId, OrderStatus newStatus);
 }
