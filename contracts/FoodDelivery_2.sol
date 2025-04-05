@@ -33,4 +33,13 @@ contract FoodDelivery {
         OutForDelivery,
         Delivered
     }
+
+    // state variables  to keep track of order
+    uint256 public  nextOrder = 1;
+    mapping(address => Restaurant) public restaurants;
+    mapping(address => mapping(uint256 => MenuItem)) public menus;
+    mapping(uint256 => Order) public orders;
+    mapping(address => uint256[]) public customerOrders;
+    
+
 }
