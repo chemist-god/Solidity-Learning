@@ -69,4 +69,15 @@ contract FoodDelivery {
         });
         emit RestaurantRegistered(msg.sender, _name);
     }
+
+    // Menu Management
+    function addMenuItem(uint256 _itemId, string memory _itemName, uint256 _price) external onlyRegisteredRestaurant {
+        require(_price > 0, "Price must be greater than zero.");
+        menus[msg.sender][_itemId] = MenuItem({
+            name: _itemName,
+            price: _price,
+            isAvailable: true
+        });
+        emit MenuItemAdded(msg.sender, _itemId, _itemName, _price);
+    }
 }
