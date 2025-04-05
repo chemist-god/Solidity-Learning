@@ -23,8 +23,14 @@ contract FoodDelivery {
         address customer;
         uint256 totalAmount;
         uint256[] itemsIds;
-        bool status;
+        OrderStatus status;
         address restaurant;
         uint256 timestamp; 
+    }
+    enum OrderStatus {
+        Placed,
+        Preparing,
+        OutForDelivery,
+        Delivered
     }
 }
