@@ -46,4 +46,15 @@ contract FoodDelivery {
     event MenuItemAdded(address indexed restaurant, uint256 itemId, string itemName, uint256 price);
     event OrderPlaced(uint256 indexed orderId, address indexed customer, address indexed restaurant, uint256 totalAmount);
     event OrderStatusUpdated(uint256 indexed orderId, OrderStatus newStatus);
+
+    // Modifiers
+    modifier onlyRegisteredRestaurant() {
+        require(restaurants[msg.sender].isRegistered, "Only registered restaurants can perform this action.");
+        _;
+    }
+
+    modifier onlyCustomer() {
+        require(!restaurants[msg.sender].isRegistered, "Restaurants cannot place orders.");
+        _;
+    }
 }
