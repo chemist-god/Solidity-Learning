@@ -294,6 +294,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_itemId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isAvailable",
+						"type": "bool"
+					}
+				],
+				"name": "updateMenuItemAvailability",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -324,11 +342,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0x008b1e64e3cbb94b44fe4622154db24490c93cc48969748094f9646b0739e17c",
+			"keccak256": "0x8cf3a24e2624cbace668235811e522cb89a4037608c7a815ef87c16707b54494",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9d27524d7864f4f79dcccc8b9950d5ec32a8a289ce877af76e14e232a2bac239",
-				"dweb:/ipfs/QmbFxR3WkeRmiesXcFgjrYCBGm3iEzAzjTLSYLcLch2B7K"
+				"bzz-raw://100a7b9691629144cfac9aa83b88c859e6e8b4041bcbde508f8dae8bafe7cd46",
+				"dweb:/ipfs/QmVkEwF9WXw129pu8QxDvVeXoTRB3ZMWtUHoA3ta5pbwop"
 			]
 		}
 	},

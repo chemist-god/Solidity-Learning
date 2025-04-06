@@ -80,4 +80,8 @@ contract FoodDelivery {
         });
         emit MenuItemAdded(msg.sender, _itemId, _itemName, _price);
     }
+    function updateMenuItemAvailability(uint256 _itemId, bool _isAvailable) external onlyRegisteredRestaurant {
+        require(menus[msg.sender][_itemId].price > 0, "Item does not exist.");
+        menus[msg.sender][_itemId].isAvailable = _isAvailable;
+    }
 }
