@@ -188,7 +188,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "nextOrder",
+				"name": "nextOrderId",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -241,6 +241,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_restaurant",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_itemIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "placeOrder",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -342,11 +360,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0x8cf3a24e2624cbace668235811e522cb89a4037608c7a815ef87c16707b54494",
+			"keccak256": "0x482ce6c7178ff3e218ebd85e0abe7eb29bab657965d1130834000a07408fa32e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://100a7b9691629144cfac9aa83b88c859e6e8b4041bcbde508f8dae8bafe7cd46",
-				"dweb:/ipfs/QmVkEwF9WXw129pu8QxDvVeXoTRB3ZMWtUHoA3ta5pbwop"
+				"bzz-raw://11a345fc1880325d4ccefa7cd2f81243a189ba48a57fa16c5502c19e78a23d09",
+				"dweb:/ipfs/QmUnBe1HmQHRKBoUDswBgGVj32daPkMjZ3QMrSEV9D3hLP"
 			]
 		}
 	},

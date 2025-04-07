@@ -35,7 +35,7 @@ contract FoodDelivery {
     }
 
     // state variables  to keep track of order
-    uint256 public  nextOrder = 1;
+    uint256 public  nextOrderId = 1;
     mapping(address => Restaurant) public restaurants;
     mapping(address => mapping(uint256 => MenuItem)) public menus;
     mapping(uint256 => Order) public orders;
@@ -95,4 +95,23 @@ contract FoodDelivery {
             require(item.isAvailable, "One or more items are unavailable.");
             totalAmount += item.price;
         }
+
+        require(msg.value == totalAmount, "Incorrect payment amount.");
+
+        uint256 orderId = nextOrderId++;
+        //used a positional argument
+        orders[orderId] = Order(
+            orderId,
+            msg.sender,
+             totalAmount,
+             _itemIds,
+             OrderStatus.Placed,
+             _restaurant,
+            block.timestamp
+        );
+
+        customerOrders[msg.sender].push(orderId);
+        emit OrderPlaced(orderId, msg.sender, _restaurant, totalAmount);
+
+}
 }
