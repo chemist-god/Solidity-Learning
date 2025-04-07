@@ -156,6 +156,40 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_restaurant",
+						"type": "address"
+					}
+				],
+				"name": "getRestaurantDetails",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -348,6 +382,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -378,11 +419,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0xe492e2f212769525f48108890a6bdf3dfe5bdb5b8bca27c96ea80f49b087ff0a",
+			"keccak256": "0xa0c449fd7efa357e7b53aa461ddb300992637fcc06e9ceef3c3fe78d2fb1d15b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bb718ec09c5611680a088342d5f28b16b28fe1f9490912e33b6bcffd8f7c92b9",
-				"dweb:/ipfs/QmaVw3D1zoytytfXP8fQq7BmP3DGAwoH2feuNKtaD7uLPV"
+				"bzz-raw://ad52597a06cd3f6dff331f63a9bc5cf878abaa4b538b499348779c4bd0f57e5f",
+				"dweb:/ipfs/QmYaNXix5WPPzhm7hBKR93jit8w9bazK7yhb9kaDYwpFLz"
 			]
 		}
 	},

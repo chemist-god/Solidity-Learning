@@ -120,4 +120,18 @@ contract FoodDelivery {
         order.status = _newStatus;
         emit OrderStatusUpdated(_orderId, _newStatus);
     }
+
+    //withdraw Funds
+    function withdrawFunds() external onlyRegisteredRestaurant {
+        uint256 balance = address(this).balance;
+        require(balance > 0, "No funds to withdraw");
+        payable(msg.sender).transfer(balance);
+    }
+
+    //read data without changing data on blockchain
+    function getRestaurantDetails(address _restaurant) external view returns (string memory, string memory, uint256, bool) {
+        Restaurant memory restaurant = restaurants[_restaurant];
+        return ( restaurant.name, restaurant.location, restaurant.registrationTime, restaurant.isRegistered);
+    }
+    
 }
