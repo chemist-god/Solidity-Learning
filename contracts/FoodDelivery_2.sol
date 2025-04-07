@@ -133,5 +133,12 @@ contract FoodDelivery {
         Restaurant memory restaurant = restaurants[_restaurant];
         return ( restaurant.name, restaurant.location, restaurant.registrationTime, restaurant.isRegistered);
     }
-    
+
+    function getOrderDetails(uint256 _orderId) external view returns ( Order memory ) {
+        return orders[_orderId];
+    }
+
+    function getCustomerOrder(address _customer) external view returns (uint256[] memory) {
+        return customerOrders[_customer];
+    }
 }

@@ -156,6 +156,81 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_customer",
+						"type": "address"
+					}
+				],
+				"name": "getCustomerOrder",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "getOrderDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "OrderId",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "customer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "itemsIds",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "enum FoodDelivery.OrderStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "address",
+								"name": "restaurant",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "timestamp",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FoodDelivery.Order",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "_restaurant",
 						"type": "address"
 					}
@@ -419,11 +494,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0xa0c449fd7efa357e7b53aa461ddb300992637fcc06e9ceef3c3fe78d2fb1d15b",
+			"keccak256": "0x0a9d6a33d130bdfac80ca2fcd021249c0ac256c407a486ef20ff1b2037528250",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ad52597a06cd3f6dff331f63a9bc5cf878abaa4b538b499348779c4bd0f57e5f",
-				"dweb:/ipfs/QmYaNXix5WPPzhm7hBKR93jit8w9bazK7yhb9kaDYwpFLz"
+				"bzz-raw://0460f14916c6604835082b8d6f76ba6c38fe90dfe8dbbf243df2308365172eec",
+				"dweb:/ipfs/QmbwBUtix4v7fW3Q15hpMH9FxoHHGTpov95mHup4gY1X79"
 			]
 		}
 	},
