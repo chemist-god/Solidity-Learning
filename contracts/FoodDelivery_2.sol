@@ -84,4 +84,15 @@ contract FoodDelivery {
         require(menus[msg.sender][_itemId].price > 0, "Item does not exist.");
         menus[msg.sender][_itemId].isAvailable = _isAvailable;
     }
+
+    // Order Placement
+    function placeOrder(address _restaurant, uint256[] memory _itemIds) external payable onlyCustomer {
+        require(restaurants[_restaurant].isRegistered, "Invalid restaurant.");
+        uint256 totalAmount = 0;
+
+        for (uint256 i = 0; i < _itemIds.length; i++) {
+            MenuItem memory item = menus[_restaurant][_itemIds[i]];
+            require(item.isAvailable, "One or more items are unavailable.");
+            totalAmount += item.price;
+        }
 }
