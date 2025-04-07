@@ -330,6 +330,24 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum FoodDelivery.OrderStatus",
+						"name": "_newStatus",
+						"type": "uint8"
+					}
+				],
+				"name": "updateOrderStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -360,11 +378,11 @@
 	},
 	"sources": {
 		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0x482ce6c7178ff3e218ebd85e0abe7eb29bab657965d1130834000a07408fa32e",
+			"keccak256": "0xe492e2f212769525f48108890a6bdf3dfe5bdb5b8bca27c96ea80f49b087ff0a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://11a345fc1880325d4ccefa7cd2f81243a189ba48a57fa16c5502c19e78a23d09",
-				"dweb:/ipfs/QmUnBe1HmQHRKBoUDswBgGVj32daPkMjZ3QMrSEV9D3hLP"
+				"bzz-raw://bb718ec09c5611680a088342d5f28b16b28fe1f9490912e33b6bcffd8f7c92b9",
+				"dweb:/ipfs/QmaVw3D1zoytytfXP8fQq7BmP3DGAwoH2feuNKtaD7uLPV"
 			]
 		}
 	},

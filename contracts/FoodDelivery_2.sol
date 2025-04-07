@@ -112,6 +112,12 @@ contract FoodDelivery {
 
         customerOrders[msg.sender].push(orderId);
         emit OrderPlaced(orderId, msg.sender, _restaurant, totalAmount);
-
-}
+    }
+    //order status 
+    function updateOrderStatus(uint256 _orderId, OrderStatus _newStatus) external onlyRegisteredRestaurant {
+        Order storage order = orders[_orderId];
+        require(order.restaurant == msg.sender, "Only restaurant can update order status");
+        order.status = _newStatus;
+        emit OrderStatusUpdated(_orderId, _newStatus);
+    }
 }
