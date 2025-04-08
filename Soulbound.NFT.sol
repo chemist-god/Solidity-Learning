@@ -17,4 +17,9 @@ contract SoulboundNFT is ERC721URIStorage, Ownable {
         _safeMint(to, tokenId);
     }
 
+
+    function unequip(uint256 tokenId) external {
+        require(OwnerOf(tokenId) == msg.sender, "You are not thr ownerr of this NFT");
+        _burn(tokenId);
+    }
 }
