@@ -9,4 +9,12 @@ contract SoulboundNFT is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
 
+    constructor() ERC721("SoulboundNFT", "SLB-NFT") {}
+
+    function safeMint(address to, string memory uri) public onlyOwner {
+        uint256 tokenId = _tokenIdCOunter.current();
+        _tokenIdCOunter.increment();
+        _safeMint(to, tokenId);
+    }
+
 }
