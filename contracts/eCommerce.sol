@@ -69,4 +69,9 @@ contract Ecommerce {
         emit ProductRefunded(_productId, msg.sender);
     }
 
+     // Function to get product details
+    function getProduct(uint256 _productId) public view returns (Product memory) {
+        return products[_productId];
+    }
+
 }
