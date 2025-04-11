@@ -50,7 +50,11 @@ contract Ecommerce {
         require(product.isAvailable, "Product not available");
         require(msg.value == product.price, "Incorrect price sent");
 
-        
+        // Transfer funds to the seller
+        product.seller.transfer(msg.value);
+        product.isAvailable = false; // Mark product as sold
+
+        emit ProductPurchased(_productId, msg.sender);
     }
 
 
