@@ -57,5 +57,16 @@ contract Ecommerce {
         emit ProductPurchased(_productId, msg.sender);
     }
 
+    // Function to refund a product (only the seller can refund)
+    function refundProduct(uint256 _productId) public onlySeller(_productId) {
+        Product storage product = products[_productId];
+        require(!product.isAvailable, "Product is still available");
+
+        // Refund logic 
+        //(for simplicity, i assume the buyer is the seller)
+        product.isAvailable = true; //  this marks product as available again
+
+        emit ProductRefunded(_productId, msg.sender);
+    }
 
 }
