@@ -34,4 +34,15 @@ contract Ecommerce {
         _;
     }
 
+    // Function to add a new product
+    function addProduct(string memory _name, string memory _description, uint256 _price) public {
+        require(_price > 0, "Price must be greater than zero");
+
+        productCount++;
+        products[productCount] = Product(productCount, _name, _description, _price, payable(msg.sender), true);
+
+        emit ProductAdded(productCount, _name, _price, msg.sender);
+    }
+
+
 }
