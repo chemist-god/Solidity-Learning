@@ -22,10 +22,16 @@ contract Ecommerce {
             //Event to emit when a product is purchased
              /// Event to emit when a product is refunded
 
-
     event ProductAdded(uint256 id, string name, uint256 price, address seller);
 
     event ProductPurchased(uint256 id, address buyer);
 
     event ProductRefunded(uint256 id, address buyer);
+
+    // Modifier to check if the caller is the seller of the product
+    modifier onlySeller(uint256 _productId) {
+        require(msg.sender == products[_productId].seller, "Not the seller");
+        _;
+    }
+
 }
