@@ -44,5 +44,14 @@ contract Ecommerce {
         emit ProductAdded(productCount, _name, _price, msg.sender);
     }
 
+    // Function to purchase a product
+    function purchaseProduct(uint256 _productId) public payable {
+        Product storage product = products[_productId];
+        require(product.isAvailable, "Product not available");
+        require(msg.value == product.price, "Incorrect price sent");
+
+        
+    }
+
 
 }
