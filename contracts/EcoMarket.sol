@@ -26,4 +26,9 @@ contract EcoMarket {
     }
     mapping(uint256 => mapping(address => Purchase)) public purchases;
     mapping(uint256 => mapping(address => bool)) public refunded;
+
+    //now we defining our events
+    event ProductAdded(uint256 id, string name, uint256 price);
+    event ProductPurchased(uint256 id, address buyer);
+    event RefundProcessed(uint256 id, address buyer);
 }
