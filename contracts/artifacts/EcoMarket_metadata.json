@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "roles",
+				"outputs": [
+					{
+						"internalType": "enum EcoMarket.Role",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/EcoMarket.sol": "EcoMarket"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/EcoMarket.sol": {
+			"keccak256": "0x32f1bb898101a458769a9144316af0c22169a8eb5f302ed9faeffb208b47ff63",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d734ce0f6f84b9effe90e0eaf52cdf724eb21c9d8e7ad7b8c5080fd3d0f10f3",
+				"dweb:/ipfs/QmSFf1pSKqZERh9DdYVVEfRn3Cg9PE73MHRbonPwrTcmVg"
+			]
+		}
+	},
+	"version": 1
+}

@@ -2,14 +2,8 @@
 pragma solidity 0.8.26;
 
 contract EcoMarket {
-    // Struct for product details
-    struct Product {
-        uint256 id;
-        string name;
-        uint256 price;
-        Status status;
-    }
-
-    // Enum for product status
-    enum Status { Available, Sold }
+   // we are setting role based management
+    // Role management
+    enum Role { User, Admin }
+    mapping(address => Role) public roles;
 }
