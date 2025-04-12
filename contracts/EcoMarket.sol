@@ -17,4 +17,13 @@ contract EcoMarket {
     enum Status { Available, Sold }
     mapping(uint256 => Product) public products;
     uint256 public productId;
+
+    //here we are defining a struct  for purchase tracking
+    struct Purchase {
+        address buyer;
+        uint256 pricePaid;
+        uint256 timestamp;
+    }
+    mapping(uint256 => mapping(address => Purchase)) public purchases;
+    mapping(uint256 => mapping(address => bool)) public refunded;
 }
