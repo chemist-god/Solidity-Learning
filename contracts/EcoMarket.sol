@@ -40,4 +40,14 @@ contract EcoMarket {
         require(roles[msg.sender] == Role.Admin, "Admin only");
         _;
     }
+
+    modifier productExists(uint256 _id) {
+        require(products[_id].id == _id, "Product doesn't exist");
+        _;
+    }
+
+    modifier productAvailable(uint256 _id) {
+        require(products[_id].status == Status.Available, "Not available");
+        _;
+    }
 }
