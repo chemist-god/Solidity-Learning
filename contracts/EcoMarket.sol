@@ -50,4 +50,13 @@ contract EcoMarket {
         require(products[_id].status == Status.Available, "Not available");
         _;
     }
+
+       // the Admin management
+    function grantAdmin(address _user) external onlyAdmin {
+        roles[_user] = Role.Admin;
+    }
+
+    function revokeAdmin(address _user) external onlyAdmin {
+        roles[_user] = Role.User;
+    }
 }
