@@ -31,4 +31,13 @@ contract EcoMarket {
     event ProductAdded(uint256 id, string name, uint256 price);
     event ProductPurchased(uint256 id, address buyer);
     event RefundProcessed(uint256 id, address buyer);
+
+    constructor() {
+        roles[msg.sender] = Role.Admin;
+    }
+
+    modifier onlyAdmin() {
+        require(roles[msg.sender] == Role.Admin, "Admin only");
+        _;
+    }
 }
