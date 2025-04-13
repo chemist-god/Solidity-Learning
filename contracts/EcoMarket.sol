@@ -59,4 +59,11 @@ contract EcoMarket {
     function revokeAdmin(address _user) external onlyAdmin {
         roles[_user] = Role.User;
     }
+
+                // Product functions
+    function addProduct(string memory _name, uint256 _price) external onlyAdmin {
+        productId++;
+        products[productId] = Product(productId, _name, _price, Status.Available);
+        emit ProductAdded(productId, _name, _price);
+    }
 }
