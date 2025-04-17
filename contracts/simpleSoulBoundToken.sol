@@ -33,5 +33,11 @@ contract SimpleSoulBoundToken {
         emit Burned(from, tokenId);
     }
 
+    // Transfer admin rights
+    function changeAdmin(address newAdmin) external {
+        require(msg.sender == admin, "Only admin");
+        require(newAdmin != address(0), "Zero address");
+        admin = newAdmin;
+    }
 
 }

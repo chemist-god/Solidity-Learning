@@ -78,6 +78,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "newAdmin",
+						"type": "address"
+					}
+				],
+				"name": "changeAdmin",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "to",
 						"type": "address"
 					},
@@ -140,11 +153,11 @@
 	},
 	"sources": {
 		"contracts/simpleSoulBoundToken.sol": {
-			"keccak256": "0x328c15253d38f641f041a335344927324f8d9a9df96679a35b664a11ff454584",
+			"keccak256": "0xbc776245c3911f5ba2f2bbe6a34f10f5a261e85cfbe9d73c31a2049b3312f8d3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://df3be61fc730bb7102c1df1e0e508fc8810a2855e5323b5ddd9c09935a634018",
-				"dweb:/ipfs/QmY2vkcmc5aGs7Y4wTtFjuFLxDueLhfSwJ9pN6pYRaHhYe"
+				"bzz-raw://ca62cc9fcee8ef13e7628b8154a60e78fd5a1047e80b71bbf416e810198429b8",
+				"dweb:/ipfs/QmVKPj4TsfAtEGM9SBmTva2HYAsbD2DQE1as9nGH5awzHA"
 			]
 		}
 	},
