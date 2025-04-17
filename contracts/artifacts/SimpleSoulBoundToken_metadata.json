@@ -65,6 +65,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "to",
 						"type": "address"
 					},
@@ -127,11 +140,11 @@
 	},
 	"sources": {
 		"contracts/simpleSoulBoundToken.sol": {
-			"keccak256": "0x76338438d03d6968c85e8be2cfb49f646c4e25a1c90703a83b7dd79bbd83221a",
+			"keccak256": "0x328c15253d38f641f041a335344927324f8d9a9df96679a35b664a11ff454584",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3f9c2168095299d2460764f89867862887f9141a8bba609549ccd8e3b4cbf0c6",
-				"dweb:/ipfs/Qme3yprp4dthv2rKX7SiHRzPJ9fZ6z8rXR7pBnMYDiqVN5"
+				"bzz-raw://df3be61fc730bb7102c1df1e0e508fc8810a2855e5323b5ddd9c09935a634018",
+				"dweb:/ipfs/QmY2vkcmc5aGs7Y4wTtFjuFLxDueLhfSwJ9pN6pYRaHhYe"
 			]
 		}
 	},

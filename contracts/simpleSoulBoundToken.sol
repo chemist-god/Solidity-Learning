@@ -23,5 +23,15 @@ contract SimpleSoulBoundToken {
         emit Minted(to, tokenId);
     }
 
+    // Burn SBT from an address (admin only)
+    function burn(address from) external {
+        require(msg.sender == admin, "Only admin");
+        uint256 tokenId = sbt[from];
+        require(tokenId != 0, "No SBT to burn");
+        
+        delete sbt[from];
+        emit Burned(from, tokenId);
+    }
+
 
 }
