@@ -11,5 +11,12 @@ contract SimpleLottery {
         players.push(msg.sender);
     }
 
-    
+    // Pick a winner (only owner)
+    function pickWinner() public {
+        require(msg.sender == owner, "Only owner can pick winner");
+        uint256 index = uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty))) % players.length;
+        winner = players[index];
+        payable(winner).transfer(address(this).balance);
+        players = new address[](0); // Reset lottery
+    }
 }
