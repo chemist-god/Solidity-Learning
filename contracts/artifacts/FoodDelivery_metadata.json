@@ -10,30 +10,38 @@
 				"inputs": [
 					{
 						"indexed": true,
-						"internalType": "address",
-						"name": "restaurant",
-						"type": "address"
-					},
-					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "itemId",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "itemName",
-						"type": "string"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "price",
+						"name": "orderId",
 						"type": "uint256"
 					}
 				],
-				"name": "MenuItemAdded",
+				"name": "OrderAccepted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderCanceled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "OrderDelivered",
 				"type": "event"
 			},
 			{
@@ -52,15 +60,15 @@
 						"type": "address"
 					},
 					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "restaurant",
-						"type": "address"
+						"indexed": false,
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "totalAmount",
+						"name": "price",
 						"type": "uint256"
 					}
 				],
@@ -68,62 +76,14 @@
 				"type": "event"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": true,
 						"internalType": "uint256",
 						"name": "orderId",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "enum FoodDelivery.OrderStatus",
-						"name": "newStatus",
-						"type": "uint8"
 					}
 				],
-				"name": "OrderStatusUpdated",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "restaurant",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					}
-				],
-				"name": "RestaurantRegistered",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_itemId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "string",
-						"name": "_itemName",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_price",
-						"type": "uint256"
-					}
-				],
-				"name": "addMenuItem",
+				"name": "acceptOrder",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -131,61 +91,44 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "orderId",
 						"type": "uint256"
 					}
 				],
-				"name": "customerOrders",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_customer",
-						"type": "address"
-					}
-				],
-				"name": "getCustomerOrder",
-				"outputs": [
-					{
-						"internalType": "uint256[]",
-						"name": "",
-						"type": "uint256[]"
-					}
-				],
-				"stateMutability": "view",
+				"name": "cancelOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_orderId",
+						"name": "orderId",
 						"type": "uint256"
 					}
 				],
-				"name": "getOrderDetails",
+				"name": "deliverOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "getOrder",
 				"outputs": [
 					{
 						"components": [
 							{
 								"internalType": "uint256",
-								"name": "OrderId",
+								"name": "id",
 								"type": "uint256"
 							},
 							{
@@ -194,24 +137,19 @@
 								"type": "address"
 							},
 							{
-								"internalType": "uint256",
-								"name": "totalAmount",
-								"type": "uint256"
+								"internalType": "string",
+								"name": "foodItem",
+								"type": "string"
 							},
 							{
-								"internalType": "uint256[]",
-								"name": "itemsIds",
-								"type": "uint256[]"
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
 							},
 							{
 								"internalType": "enum FoodDelivery.OrderStatus",
 								"name": "status",
 								"type": "uint8"
-							},
-							{
-								"internalType": "address",
-								"name": "restaurant",
-								"type": "address"
 							},
 							{
 								"internalType": "uint256",
@@ -228,76 +166,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_restaurant",
-						"type": "address"
-					}
-				],
-				"name": "getRestaurantDetails",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "menus",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "isAvailable",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "nextOrderId",
+				"name": "orderCount",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -320,7 +190,7 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "OrderId",
+						"name": "id",
 						"type": "uint256"
 					},
 					{
@@ -329,19 +199,19 @@
 						"type": "address"
 					},
 					{
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
-						"name": "totalAmount",
+						"name": "price",
 						"type": "uint256"
 					},
 					{
 						"internalType": "enum FoodDelivery.OrderStatus",
 						"name": "status",
 						"type": "uint8"
-					},
-					{
-						"internalType": "address",
-						"name": "restaurant",
-						"type": "address"
 					},
 					{
 						"internalType": "uint256",
@@ -355,114 +225,14 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_restaurant",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256[]",
-						"name": "_itemIds",
-						"type": "uint256[]"
+						"internalType": "string",
+						"name": "foodItem",
+						"type": "string"
 					}
 				],
 				"name": "placeOrder",
 				"outputs": [],
 				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_location",
-						"type": "string"
-					}
-				],
-				"name": "registerRestaurant",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "restaurants",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "location",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "registrationTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "isRegistered",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_itemId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "bool",
-						"name": "_isAvailable",
-						"type": "bool"
-					}
-				],
-				"name": "updateMenuItemAvailability",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_orderId",
-						"type": "uint256"
-					},
-					{
-						"internalType": "enum FoodDelivery.OrderStatus",
-						"name": "_newStatus",
-						"type": "uint8"
-					}
-				],
-				"name": "updateOrderStatus",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdrawFunds",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -479,7 +249,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FoodDelivery_2.sol": "FoodDelivery"
+			"contracts/foodDelivery.sol": "FoodDelivery"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -493,12 +263,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/FoodDelivery_2.sol": {
-			"keccak256": "0x0a9d6a33d130bdfac80ca2fcd021249c0ac256c407a486ef20ff1b2037528250",
+		"contracts/foodDelivery.sol": {
+			"keccak256": "0x2d5a0fcb7dbc396556f19c32320bc1976eff710821125b952889ead76fa59674",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0460f14916c6604835082b8d6f76ba6c38fe90dfe8dbbf243df2308365172eec",
-				"dweb:/ipfs/QmbwBUtix4v7fW3Q15hpMH9FxoHHGTpov95mHup4gY1X79"
+				"bzz-raw://c0b49438b851a6eebbfe3efda7a1543e027e1e5e1c5b1e056b80a85afe440318",
+				"dweb:/ipfs/QmQVcSuKnKupLt8gFScec64iCSEbhdcFhT6WXpAtk2KEd1"
 			]
 		}
 	},
