@@ -5,5 +5,16 @@ contract RockPaperScissors {
     enum Choice { None, Rock, Paper, Scissors }
     enum GameStatus { Waiting, Committed, Revealed, Completed }
     
+    struct Game {
+        address player1;
+        address player2;
+        bytes32 player1Commit;
+        Choice player1Choice;
+        Choice player2Choice;
+        uint256 betAmount;
+        GameStatus status;
+        address winner;
+    }
+    
     
 }
