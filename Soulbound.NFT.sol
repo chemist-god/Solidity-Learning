@@ -12,7 +12,7 @@ contract SoulboundNFT is ERC721URIStorage, Ownable {
     event Minted(address indexed to, uint256 tokenId, string uri);
     event Burned(uint256 tokenId);
 
-    constructor() ERC721("SoulboundNFT", "SLB-NFT") Ownable() {}
+    constructor() ERC721("SoulboundNFT", "SLB-NFT") Ownable(msg.sender) {}
 
     function safeMint(address to, string memory uri) public onlyOwner {
         require(to != address(0), "Invalid address: cannot mint to the zero address");
@@ -23,6 +23,14 @@ contract SoulboundNFT is ERC721URIStorage, Ownable {
         _setTokenURI(tokenId, uri);
 
         emit Minted(to, tokenId, uri);
+    }
+
+    function batchSafeMint(address[] calldata recipients, string[] calldata uris) external onlyOwner {
+        require(recipients.length == uris.length, "Arrays length mismatch");
+        
+        for (uint256 i = 0; i < recipients.length; i++) {
+            safeMint(recipients[i], uris[i]);
+        }
     }
 
     function unequip(uint256 tokenId) external {
@@ -39,9 +47,10 @@ contract SoulboundNFT is ERC721URIStorage, Ownable {
     function _beforeTokenTransfer(
         address from,
         address to,
-        uint256 firstTokenId,
+        uint256 tokenId,
         uint256 batchSize
-    ) internal virtual override {
-        require(from == address(0) || to == address(0), "You are not allowed to transfer this NFT.");
+    ) internal virtual override(ERC721, ERC721URIStorage) {
+        require(from == address(0) || to == address(0), "This NFT is soulbound and cannot be transferred");
+        super._beforeTokenTransfer(from, to, tokenId, batchSize);
     }
 }

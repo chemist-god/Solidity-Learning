@@ -27,5 +27,12 @@ contract RockPaperScissors {
     address public owner;
     bool public gameEnded;
     address public winner;
+
+    event GameStarted(address player1, address player2);
+    event GameEnded(address winner);
+
+    constructor() {
+        owner = msg.sender;
+    }
     
 }
