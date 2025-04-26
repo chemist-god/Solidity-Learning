@@ -30,6 +30,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "inc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -60,11 +67,11 @@
 	},
 	"sources": {
 		"contracts/Counter.sol": {
-			"keccak256": "0x6f07c25903ae40ee52a47b1c4b428961fffb044604764c7ea6484477d96713c4",
+			"keccak256": "0x6884dbd001b71067b42195cfdabc089d8b550199a6c2cf9058dce120df65ddd1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a120b7295df415fb4a9f7863c87164358a56eb278bcfc32f7810ce17b544fb22",
-				"dweb:/ipfs/Qma3iMaCxppkuVzUDeVyFNSREbiV69dnCswSVgvF2PhUry"
+				"bzz-raw://aa3044bb8a03e11f91c4cd12877a7a79747bbbefcb5c00bb84d4451ea2185d7b",
+				"dweb:/ipfs/QmcsWUW7Hyr1dWeXSvHL7LCLJHoixzs373ZRXe2BET62nG"
 			]
 		}
 	},
