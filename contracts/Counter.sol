@@ -14,5 +14,12 @@ contract Counter {
         count += 1;
     }
 
+    // Function to decrement count by 1
+    function dec() public {
+        // Prevent underflow
+        require(count > 0, "Counter: cannot decrement below zero");
+        count -= 1;
+    }
+
     
 }
