@@ -44,6 +44,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reset",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -74,11 +81,11 @@
 	},
 	"sources": {
 		"contracts/Counter.sol": {
-			"keccak256": "0x2adacccf571d24b8bb0dc31d8548ee763d07cbf5fb5524809022e9ce6e45507b",
+			"keccak256": "0x6120cbc21c7763bd06f397217109c3dffd4db142edde439eea293ba0e3f8a680",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://325e7aca6cc57630db4b894fb8aa66a80549cde40d898f6658b9d61aecc241d2",
-				"dweb:/ipfs/QmZ2YYpBxxGkUsFmB2oUZNSzA3zi481s3spFgRedpowMUJ"
+				"bzz-raw://1b46fe5321132f2c0fee3d97231a8d235d530e609681f4f71def1c08b255955c",
+				"dweb:/ipfs/QmNnXo3x15Cm3mMTH6ZvuiU18paCGuLXpgQj7gckxQgaTV"
 			]
 		}
 	},

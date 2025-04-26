@@ -21,5 +21,8 @@ contract Counter {
         count -= 1;
     }
 
-    
+    // Function to reset count to zero
+    function reset() public {
+        count = 0;
+    }
 }
