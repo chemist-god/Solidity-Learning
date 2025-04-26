@@ -20,16 +20,15 @@
 			},
 			{
 				"inputs": [],
-				"name": "increment",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "reset",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -46,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/counter.sol": "Counter"
+			"contracts/Counter.sol": "Counter"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -60,12 +59,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/counter.sol": {
-			"keccak256": "0x6a867977b1203c07ea9c34c0717791d3434523d8894dd6cc4f18fc11a2b34fff",
+		"contracts/Counter.sol": {
+			"keccak256": "0x6f07c25903ae40ee52a47b1c4b428961fffb044604764c7ea6484477d96713c4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4fdb115ce0aa7024588477587da985e629475efbb7ad9b7a75ed25134be5770c",
-				"dweb:/ipfs/QmedUbPeqKz7uXx2nW71rmQ2eb7Da9jQT4R6WgfpsggXUV"
+				"bzz-raw://a120b7295df415fb4a9f7863c87164358a56eb278bcfc32f7810ce17b544fb22",
+				"dweb:/ipfs/Qma3iMaCxppkuVzUDeVyFNSREbiV69dnCswSVgvF2PhUry"
 			]
 		}
 	},
