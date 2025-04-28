@@ -49,6 +49,45 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "calculateBonus",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -72,6 +111,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -103,11 +155,11 @@
 	},
 	"sources": {
 		"contracts/artifacts/SimpleBank.sol": {
-			"keccak256": "0x838773368f0991f476d55f46d922b160b8c04727013b290201a48e7b3d029a41",
+			"keccak256": "0x84daa1c22ea5a084b2979277dd92cf10b108ed43d3bc2bd64a2500c9418a4db1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://faf383994553f62cc581dea6e7ee715d1f81a43bd99824801fd2d87500f515bb",
-				"dweb:/ipfs/Qmc4tvT6khdGfNsQXsUU8uJLuqVrMkwrva8pLx6mGW7i7a"
+				"bzz-raw://caffa3946f93419dffa56748ee256a4e240065c7e5ac44e5748f29a99cdde0eb",
+				"dweb:/ipfs/QmVvjR4gAfa53r5pRND71ubizNmTHjo9c8i7xCSRTLwBVY"
 			]
 		}
 	},
