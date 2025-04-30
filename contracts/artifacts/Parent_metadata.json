@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "sayHello",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SchoolSystem.sol": "Parent"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SchoolSystem.sol": {
+			"keccak256": "0x1a6dd5c4a1d72ad0575859ee27915ae0810eaa165f623058c6f96b31677917ce",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f2606376f12eb5d37efdc1550aad68e203413f251427b22fb64de6815c6777fe",
+				"dweb:/ipfs/QmQDTUYfWHKFBki7aUz7PVN4oi3BdM8McuTSxrG3XSnqct"
+			]
+		}
+	},
+	"version": 1
+}
