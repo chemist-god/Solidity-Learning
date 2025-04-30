@@ -12,4 +12,10 @@ contract Parent {
     }
 }
 
+contract Parent_f {
+    function externalFunction() public pure returns (string memory) {
+        return "Hello from Parent";
+    }
+}
+
 }
