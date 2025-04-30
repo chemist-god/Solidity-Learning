@@ -18,7 +18,7 @@ contract FootballAge {
 
     function getPlayerAge(address _playerAddress) public view returns (uint) {
         require(players[_playerAddress].birthYear != 0, "Player not found");
-        return (block.timestamp / 1 years) - players[_playerAddress].birthYear;
+        return ((block.timestamp / 10**9)/31536000)-players[_playerAddress].birthYear; 
     }
 }
 
