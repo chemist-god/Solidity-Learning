@@ -17,5 +17,15 @@ contract Parent_f {
         return "Hello from Parent";
     }
 }
+ contract Child_f {
+    Parent_f externalContract;
 
+    function setContract (address _newExternalContractAddress) public {
+        externalContract = Parent_f(_newExternalContractAddress);    
+    }
+
+    function callExternalFunction() public view returns (string memory) {
+        return externalContract.externalFunction();
+    }
+}
 }
