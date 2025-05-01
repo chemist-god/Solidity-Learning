@@ -4,7 +4,88 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "TodoAdded",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "nextId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "todoIds",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "todos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "enum TodoList.Status",
+						"name": "status",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +114,11 @@
 	},
 	"sources": {
 		"contracts/TodoList.sol": {
-			"keccak256": "0x0a7171d2e01b089ca2558d0763a4c7c8c35a23ca15c1bdafe7d969500d79dc6f",
+			"keccak256": "0x6cf687bdbc343eaa72a046ce19260c73d2506e6ac28383b554d3ef9e54aea969",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9c0ee78dff873e569586e6002293788efcbbccac7dfedfe9960c412eb91d22ec",
-				"dweb:/ipfs/QmVxcKUHtW2GXRu8pYN53feNSAvpCnWTwbCrtUzju5fzAH"
+				"bzz-raw://c8497e35cb6fd47aecf89f880fc273f74d8dd49b65ac6289a4a743673ce2e884",
+				"dweb:/ipfs/QmRupyFokc8aphCf5F5QhbEifZwYPDaYqxFznJaw3gmXdx"
 			]
 		}
 	},

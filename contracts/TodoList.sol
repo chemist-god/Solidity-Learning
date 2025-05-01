@@ -11,4 +11,12 @@ contract TodoList {
         string content;
         Status status;
     }
+
+    // Step 3: Use a Mapping and Array
+    mapping(uint => Todo) public todos;
+    uint[] public todoIds;
+    uint public nextId = 1;
+
+    // Step 5: Define the event
+    event TodoAdded(uint id, string content);
 }
