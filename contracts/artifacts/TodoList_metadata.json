@@ -25,6 +25,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					}
+				],
+				"name": "addTodo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "nextId",
 				"outputs": [
@@ -114,11 +127,11 @@
 	},
 	"sources": {
 		"contracts/TodoList.sol": {
-			"keccak256": "0x6cf687bdbc343eaa72a046ce19260c73d2506e6ac28383b554d3ef9e54aea969",
+			"keccak256": "0xdaa77d5b6055eee75940b8396ab95acbf84ef9d3046f29ea10e5bb43e6787252",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c8497e35cb6fd47aecf89f880fc273f74d8dd49b65ac6289a4a743673ce2e884",
-				"dweb:/ipfs/QmRupyFokc8aphCf5F5QhbEifZwYPDaYqxFznJaw3gmXdx"
+				"bzz-raw://33de4f4f685c3b5fd285b04a0448e3bd76387ca091d573aaea5ffa00427eac40",
+				"dweb:/ipfs/Qma7hazsU9Xikc6snyFMu1kKkC5dAMZ9tLov8bQfW42dSC"
 			]
 		}
 	},

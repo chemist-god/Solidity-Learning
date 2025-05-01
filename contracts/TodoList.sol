@@ -19,4 +19,14 @@ contract TodoList {
 
     // Step 5: Define the event
     event TodoAdded(uint id, string content);
+
+    // Step 4: Implement Basic Functions
+
+    // Function to add a new todo
+    function addTodo(string memory _content) public {
+        todos[nextId] = Todo(nextId, _content, Status.Pending);
+        todoIds.push(nextId);
+        emit TodoAdded(nextId, _content);
+        nextId++;
+    }
 }
