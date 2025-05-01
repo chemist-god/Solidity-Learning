@@ -29,4 +29,17 @@ contract TodoList {
         emit TodoAdded(nextId, _content);
         nextId++;
     }
+
+    // Function to update the status of a todo
+    function updateStatus(uint _id, Status _status) public {
+        require(bytes(todos[_id].content).length > 0, "Todo does not exist.");
+        todos[_id].status = _status;
+    }
+
+    // Function to get a specific todo
+    function getTodo(uint _id) public view returns (uint, string memory, Status) {
+        require(bytes(todos[_id].content).length > 0, "Todo does not exist.");
+        Todo memory todo = todos[_id];
+        return (todo.id, todo.content, todo.status);
+    }
 }

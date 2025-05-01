@@ -38,6 +38,35 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getTodo",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "enum TodoList.Status",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "nextId",
 				"outputs": [
@@ -97,6 +126,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum TodoList.Status",
+						"name": "_status",
+						"type": "uint8"
+					}
+				],
+				"name": "updateStatus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -127,11 +174,11 @@
 	},
 	"sources": {
 		"contracts/TodoList.sol": {
-			"keccak256": "0xdaa77d5b6055eee75940b8396ab95acbf84ef9d3046f29ea10e5bb43e6787252",
+			"keccak256": "0xaed4c01c57f8affcf32f11a691ccb236e45eafb286ceb6c5250eb175ee3b5414",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://33de4f4f685c3b5fd285b04a0448e3bd76387ca091d573aaea5ffa00427eac40",
-				"dweb:/ipfs/Qma7hazsU9Xikc6snyFMu1kKkC5dAMZ9tLov8bQfW42dSC"
+				"bzz-raw://d6347d8c31c936be885f3a5935d73874295f920586d22369c77dab10c390325a",
+				"dweb:/ipfs/QmV88wV5DzVzFuUuk3bxFwfMPdtvFFLUaSVLxJAjX6aW2c"
 			]
 		}
 	},
