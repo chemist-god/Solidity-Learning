@@ -30,4 +30,19 @@ contract TodoCRUD {
         return (task.id, task.content, task.completed);
     }
 
+    // Update a task by id
+    function updateTask(uint _id, string memory _content, bool _completed) public {
+        require(tasks[_id].id != 0, "Task not found");
+        Task storage task = tasks[_id];
+        task.content = _content;
+        task.completed = _completed;
+        emit TaskUpdated(_id, _content, _completed);
+    }
+
+    // Delete a task by id
+    function deleteTask(uint _id) public {
+        require(tasks[_id].id != 0, "Task not found");
+        delete tasks[_id];
+        emit TaskDeleted(_id);
+    }
 }

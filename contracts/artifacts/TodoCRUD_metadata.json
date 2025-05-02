@@ -83,6 +83,19 @@
 						"type": "uint256"
 					}
 				],
+				"name": "deleteTask",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
 				"name": "getTask",
 				"outputs": [
 					{
@@ -145,6 +158,29 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_content",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_completed",
+						"type": "bool"
+					}
+				],
+				"name": "updateTask",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -175,11 +211,11 @@
 	},
 	"sources": {
 		"contracts/TodoCRUD.sol": {
-			"keccak256": "0x4becfa9c3b0dd15ace1a5aa10111e7adee80ddb7b41b96e8f059e5d9b3b28a29",
+			"keccak256": "0x263d90a174d5642cc2f7e9c2628168b131875debeb615ccfb122a603a1dcf3e2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://01e3d8a02198b2790080417a8412c147d08d8665bddd0dce2faece5562f0c0d9",
-				"dweb:/ipfs/QmQHhyDVEC1LHvGuftnHfjAtfrv8wr95AGNXA7UW5VNVhL"
+				"bzz-raw://a212719bf4d3f10fabba28cfba290c83fefb700aa08db12fd75719f27d3c8773",
+				"dweb:/ipfs/QmavWTi4uJ4C2hsKH8MqascBrZC3rE6KWGUxj6vfbtEwGD"
 			]
 		}
 	},
