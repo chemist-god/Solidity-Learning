@@ -13,12 +13,12 @@
 						"type": "string"
 					},
 					{
-						"internalType": "string",
-						"name": "_number",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
 					}
 				],
-				"name": "addNumber",
+				"name": "addProduct",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -26,36 +26,37 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
-				"name": "getNumber",
+				"name": "products",
 				"outputs": [
 					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
 					{
 						"internalType": "string",
-						"name": "",
+						"name": "name",
 						"type": "string"
-					}
-				],
-				"name": "phoneBook",
-				"outputs": [
+					},
 					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "seller",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "inStock",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -90,11 +91,11 @@
 	},
 	"sources": {
 		"contracts/Practice.sol": {
-			"keccak256": "0xed421b7b733e17a2abdc572bc68d9ba415a26610b61093871e26dfa2949d1d0c",
+			"keccak256": "0xdf217aa592e5db06bd05eac4b797ddba5fcb8015051a10e95676558ec4d11449",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0e4e3a374c49aae3dcb15ef2a1adedc1b249385a411ba6dabbad6208aed29bcf",
-				"dweb:/ipfs/QmaaJNd1dMGayfAQ6qq1QMXrdKW5X2qnt7NADkzqd4L1H7"
+				"bzz-raw://64c43a6686e6ef13de19389c8e8017a07944fc933f414bc5544796e61ffa59d7",
+				"dweb:/ipfs/QmYqP3Dy7dcjJ67HK1UJbxnmX8PLfwgicXX7PVFeLZhxd7"
 			]
 		}
 	},

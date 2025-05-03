@@ -38,19 +38,42 @@ contract MyPractice {
     // }
 
 
-    //moving on with mapping
-     //using phonebook as example
+    // //moving on with mapping
+    //  //using phonebook as example
 
-     //mapping of name to phone book
-     mapping(string => string) public phoneBook;
+    //  //mapping of name to phone book
+    //  mapping(string => string) public phoneBook;
 
-     //add a new entry
-     function addNumber(string memory _name, string memory _number) public {
-        phoneBook[_name] = _number;
-     }
+    //  //add a new entry
+    //  function addNumber(string memory _name, string memory _number) public {
+    //     phoneBook[_name] = _number;
+    //  }
 
-     //get a friends niumber
-     function getNumber(string memory_name) public view returns (string memory) {
-        return phoneBook[_name];
-     }
+    //  //get a friends niumber
+    //  function getNumber(string memory _name) public view returns (string memory) {
+    //     return phoneBook[_name];
+    //  }
+
+
+    //moving on with structs
+
+    struct Product {
+    uint id;
+    string name;
+    uint price;
+    address seller;
+    bool inStock;
+}
+
+Product[] public products;
+
+function addProduct(string memory _name, uint _price) public {
+    products.push(Product({
+        id: products.length,
+        name: _name,
+        price: _price,
+        seller: msg.sender,
+        inStock: true
+    }));
+}
 }
