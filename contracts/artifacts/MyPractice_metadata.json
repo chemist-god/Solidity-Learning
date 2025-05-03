@@ -6,51 +6,20 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "addEmployee",
+				"inputs": [],
+				"name": "changeLight",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "employees",
+				"inputs": [],
+				"name": "currentLight",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "enum MyPractice.TrafficLight",
 						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_index",
-						"type": "uint256"
-					}
-				],
-				"name": "getEmployee",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
+						"type": "uint8"
 					}
 				],
 				"stateMutability": "view",
@@ -85,11 +54,11 @@
 	},
 	"sources": {
 		"contracts/Practice.sol": {
-			"keccak256": "0x728bda8ea421614a6dd528c88d27b4744ebd516a7cac99a75bfd86ab327f8be5",
+			"keccak256": "0x1f96b94e0c3e4bf299a2d9d2f7b8b70a4f26e45ef472ca813e07f60ecf13b8c0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1f5fcd06d89670c35460baa07f37ab913e05cdf81469a85118122e9b50f9a33d",
-				"dweb:/ipfs/QmbWkVwqBZEpcEwDAwS4u5PRCQNkKamfRaSgUsTxTAKQZy"
+				"bzz-raw://6535f0fc0d336d3e86a35ac99a18be454b1d4b7464feeb360bde24c7f372809c",
+				"dweb:/ipfs/QmWbCCjcZ5bj8Ek1xr88Zk5M9W8hcktjsktAfPswtW9zkm"
 			]
 		}
 	},
