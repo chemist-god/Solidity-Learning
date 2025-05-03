@@ -11,16 +11,49 @@
 						"internalType": "string",
 						"name": "_name",
 						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_price",
-						"type": "uint256"
 					}
 				],
-				"name": "addProduct",
+				"name": "addEmployee",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_number",
+						"type": "string"
+					}
+				],
+				"name": "addNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "changeLight",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentLight",
+				"outputs": [
+					{
+						"internalType": "enum MyPractice.TrafficLight",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -31,32 +64,69 @@
 						"type": "uint256"
 					}
 				],
-				"name": "products",
+				"name": "employees",
 				"outputs": [
 					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
-						"name": "id",
+						"name": "_index",
 						"type": "uint256"
-					},
+					}
+				],
+				"name": "getEmployee",
+				"outputs": [
 					{
 						"internalType": "string",
-						"name": "name",
+						"name": "",
 						"type": "string"
-					},
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "uint256",
-						"name": "price",
-						"type": "uint256"
-					},
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getNumber",
+				"outputs": [
 					{
-						"internalType": "address",
-						"name": "seller",
-						"type": "address"
-					},
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
 					{
-						"internalType": "bool",
-						"name": "inStock",
-						"type": "bool"
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "phoneBook",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -91,11 +161,11 @@
 	},
 	"sources": {
 		"contracts/Practice.sol": {
-			"keccak256": "0xdf217aa592e5db06bd05eac4b797ddba5fcb8015051a10e95676558ec4d11449",
+			"keccak256": "0xe2023338ba9f2abfa59af6321485f6bc90cac562512786faa08867059efcf96e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://64c43a6686e6ef13de19389c8e8017a07944fc933f414bc5544796e61ffa59d7",
-				"dweb:/ipfs/QmYqP3Dy7dcjJ67HK1UJbxnmX8PLfwgicXX7PVFeLZhxd7"
+				"bzz-raw://d2ee810e789c8f61aa8f8d269a0c40f459a1ff8eefe9789adc71ca000c097b56",
+				"dweb:/ipfs/QmUNWDoAHjK2xCVLCEkQvxHB89qAbULp5onhY21pimjEyU"
 			]
 		}
 	},
