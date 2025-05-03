@@ -19,21 +19,38 @@ contract MyPractice {
     // }
 
 
-    //moving on with enum
-       // using traffic light as ec=xample 
-    enum TrafficLight {Red, Yello, Green}
+    // //moving on with enum
+    //    // using traffic light as ec=xample 
+    // enum TrafficLight {Red, Yello, Green}
 
-    //define current state of light
-        TrafficLight public currentLight = TrafficLight.Red;
+    // //define current state of light
+    //     TrafficLight public currentLight = TrafficLight.Red;
 
-    //change the light
-    function changeLight() public {
-        if (currentLight == TrafficLight.Red) {
-            currentLight = TrafficLight.Green;
-        } else if (currentLight == TrafficLight.Green){
-            currentLight = TrafficLight.Yello;
-        }else{
-            currentLight = TrafficLight.Red;
-        }
-    }
+    // //change the light
+    // function changeLight() public {
+    //     if (currentLight == TrafficLight.Red) {
+    //         currentLight = TrafficLight.Green;
+    //     } else if (currentLight == TrafficLight.Green){
+    //         currentLight = TrafficLight.Yello;
+    //     }else{
+    //         currentLight = TrafficLight.Red;
+    //     }
+    // }
+
+
+    //moving on with mapping
+     //using phonebook as example
+
+     //mapping of name to phone book
+     mapping(string => string) public phoneBook;
+
+     //add a new entry
+     function addNumber(string memory _name, string memory _number) public {
+        phoneBook[_name] = _number;
+     }
+
+     //get a friends niumber
+     function getNumber(string memory_name) public view returns (string memory) {
+        return phoneBook[_name];
+     }
 }

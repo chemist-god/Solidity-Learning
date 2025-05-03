@@ -6,20 +6,56 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "changeLight",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_number",
+						"type": "string"
+					}
+				],
+				"name": "addNumber",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "currentLight",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "getNumber",
 				"outputs": [
 					{
-						"internalType": "enum MyPractice.TrafficLight",
+						"internalType": "string",
 						"name": "",
-						"type": "uint8"
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "phoneBook",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -54,11 +90,11 @@
 	},
 	"sources": {
 		"contracts/Practice.sol": {
-			"keccak256": "0x1f96b94e0c3e4bf299a2d9d2f7b8b70a4f26e45ef472ca813e07f60ecf13b8c0",
+			"keccak256": "0xed421b7b733e17a2abdc572bc68d9ba415a26610b61093871e26dfa2949d1d0c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6535f0fc0d336d3e86a35ac99a18be454b1d4b7464feeb360bde24c7f372809c",
-				"dweb:/ipfs/QmWbCCjcZ5bj8Ek1xr88Zk5M9W8hcktjsktAfPswtW9zkm"
+				"bzz-raw://0e4e3a374c49aae3dcb15ef2a1adedc1b249385a411ba6dabbad6208aed29bcf",
+				"dweb:/ipfs/QmaaJNd1dMGayfAQ6qq1QMXrdKW5X2qnt7NADkzqd4L1H7"
 			]
 		}
 	},
