@@ -57,23 +57,11 @@ contract MyPractice {
 
     //moving on with structs
 
-    struct Product {
-    uint id;
-    string name;
-    uint price;
-    address seller;
-    bool inStock;
-}
 
-Product[] public products;
-
-function addProduct(string memory _name, uint _price) public {
-    products.push(Product({
-        id: products.length,
-        name: _name,
-        price: _price,
-        seller: msg.sender,
-        inStock: true
-    }));
+        //loops
+        function airdropTokens(address[] memory recipients, uint amount) public {
+    for(uint i = 0; i < recipients.length; i++) {
+        balances[recipients[i]] += amount;
+    }
 }
 }
