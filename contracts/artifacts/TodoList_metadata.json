@@ -159,7 +159,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TodoList.sol": "TodoList"
+			"contracts/Todo.sol": "TodoList"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -173,12 +173,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/TodoList.sol": {
-			"keccak256": "0xaed4c01c57f8affcf32f11a691ccb236e45eafb286ceb6c5250eb175ee3b5414",
+		"contracts/Todo.sol": {
+			"keccak256": "0xa5ef22b3e9bd0579966766ed308f638012a0adbca2337a3e71b5517278b1c37b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6347d8c31c936be885f3a5935d73874295f920586d22369c77dab10c390325a",
-				"dweb:/ipfs/QmV88wV5DzVzFuUuk3bxFwfMPdtvFFLUaSVLxJAjX6aW2c"
+				"bzz-raw://4c22282614266f567adcd5c6394c10f44603b548ffbb610869ab416a24487616",
+				"dweb:/ipfs/Qma25GHkvuiSSh5cUMVd34SALF5p5amocC29KPq8zxM6fd"
 			]
 		}
 	},
