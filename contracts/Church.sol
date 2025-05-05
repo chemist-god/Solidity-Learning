@@ -48,4 +48,24 @@ contract Church {
         emit DonationReceived(msg.sender, msg.value);
     }
    
+   
+
+    // Admin can withdraw collected funds
+    function withdraw(uint256 _amount) external onlyAdmin {
+        require(_amount <= address(this).balance, "Insufficient funds in contract");
+
+        payable(admin).transfer(_amount);
+
+        emit Withdrawn(admin, _amount);
+    }
+
+    // Get donation amount of a member
+    function getMemberDonations(address _member) external view returns (uint256) {
+        return members[_member].totalDonations;
+    }
+
+    // Contract balance
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
 }

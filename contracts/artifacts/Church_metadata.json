@@ -82,6 +82,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_member",
+						"type": "address"
+					}
+				],
+				"name": "getMemberDonations",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -130,6 +162,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -160,11 +205,11 @@
 	},
 	"sources": {
 		"contracts/Church.sol": {
-			"keccak256": "0xeba286035827e0425e7122efb128e3222b7d27dcd37cd772ea45528b205b0648",
+			"keccak256": "0xa86880b07dbb7b593177b32c63935fb3309db759908c767d5201428a765bd5d6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://06f2894fdb5be5846297cd83cc253612221c505130e3e07da863af92575c9b4c",
-				"dweb:/ipfs/Qmbqpn4ceLf7j79zYGqcPhgYRMBoSVCKDuQYJx5AgHEiSr"
+				"bzz-raw://285baecc5765e43959f212263b677c0be9529c7258ff17bc094557ef2e271edc",
+				"dweb:/ipfs/QmRs2tYjdcW6pmNMipZZyAt7eMpmguTRs1tDSghCRKqCjJ"
 			]
 		}
 	},
