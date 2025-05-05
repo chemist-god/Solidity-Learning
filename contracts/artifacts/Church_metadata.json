@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -70,6 +75,13 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "donate",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -91,6 +103,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_member",
+						"type": "address"
+					}
+				],
+				"name": "registerMember",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -135,11 +160,11 @@
 	},
 	"sources": {
 		"contracts/Church.sol": {
-			"keccak256": "0xb60f607ce62f049a4f037220ca3dd49cfc46e9d38c9c2692430c6aa6a99bf46b",
+			"keccak256": "0xeba286035827e0425e7122efb128e3222b7d27dcd37cd772ea45528b205b0648",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://150dddaa5ff4db687f2bd8d627e9b5508b376e04dd52de1fb7f1f237c817c25d",
-				"dweb:/ipfs/QmecfSVaVGBYgqT8JQrKShJPcrDZXaux46qXeEshLoHM4K"
+				"bzz-raw://06f2894fdb5be5846297cd83cc253612221c505130e3e07da863af92575c9b4c",
+				"dweb:/ipfs/Qmbqpn4ceLf7j79zYGqcPhgYRMBoSVCKDuQYJx5AgHEiSr"
 			]
 		}
 	},

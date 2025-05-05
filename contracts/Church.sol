@@ -25,6 +25,27 @@ contract Church {
         require(members[msg.sender].isRegistered, "Only registered members can call this function");
         _;
     }
+ constructor() {
+        admin = msg.sender;
+    }
 
+    // Register a new member
+    function registerMember(address _member) external onlyAdmin {
+        require(!members[_member].isRegistered, "Member already registered");
+        members[_member].isRegistered = true;
+        members[_member].totalDonations = 0;
+
+        emit MemberRegistered(_member);
+    }
+
+    // Members can donate ether
+    function donate() external payable onlyMember {
+        require(msg.value > 0, "Donation must be greater than zero");
+
+        members[msg.sender].totalDonations += msg.value;
+        totalDonations += msg.value;
+
+        emit DonationReceived(msg.sender, msg.value);
+    }
    
 }
