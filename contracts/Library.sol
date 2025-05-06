@@ -20,3 +20,9 @@ library Math {
 }
 
 
+contract TestMath {
+    function testSquareRoot(uint256 x) public pure returns (uint256) {
+        return Math.sqrt(x);
+    }
+}
+
