@@ -9,4 +9,8 @@ contract HashContract {
     function hash(string memory _message) public  {
         messageHash = keccak256(bytes(_message));
     }
+
+    function getMessage() public view returns (bytes32){
+        return messageHash;
+    }
 }

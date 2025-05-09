@@ -6,6 +6,19 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"name": "getMessage",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -47,11 +60,11 @@
 	},
 	"sources": {
 		"contracts/HashContract.sol": {
-			"keccak256": "0x7ededb0aa5777c61adb05aeeee0e0cd3c23b564a442e250e15385150ffd7d864",
+			"keccak256": "0x5e6c35e11e9b1c56449b32102f7adff484b2520ffb14d7f7d23c3e04ed887464",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e3488a0e1ccd9459a318a0d8b830b346f5ba9f8c66e793334cf1ba09a3eb34f0",
-				"dweb:/ipfs/QmP27mV9qTbctUtZLXztZuVTyxhptUQQeBrrRrpN9nxCuB"
+				"bzz-raw://5c780f2fa93ffe9367707d9d94a14dd0113118b11bf9ac25bd529d51b6d0e0fa",
+				"dweb:/ipfs/QmUKokysTPVnt4DvLQX1cW6pgbSWVfJWfkW1uPXvny4N2D"
 			]
 		}
 	},
