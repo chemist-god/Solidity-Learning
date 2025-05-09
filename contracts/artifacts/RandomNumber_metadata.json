@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "seed",
+						"type": "uint256"
+					}
+				],
+				"name": "getRandomNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/RandomNumber.sol": "RandomNumber"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/RandomNumber.sol": {
+			"keccak256": "0x13235bf1047d7269bfae3a4283c84966ebcab530e5a51249702b2af5b51905a7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9dbddf20bd3c92e189709f1a80cd7e68717b19862bc1072b939a4037fc33975a",
+				"dweb:/ipfs/QmZP3NkCCsAXJ2e7vADxd76jAD49dTLq4W7T43dzPpKugt"
+			]
+		}
+	},
+	"version": 1
+}
