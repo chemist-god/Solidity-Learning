@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					}
+				],
+				"name": "hash",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HashContract.sol": "HashContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HashContract.sol": {
+			"keccak256": "0x7ededb0aa5777c61adb05aeeee0e0cd3c23b564a442e250e15385150ffd7d864",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e3488a0e1ccd9459a318a0d8b830b346f5ba9f8c66e793334cf1ba09a3eb34f0",
+				"dweb:/ipfs/QmP27mV9qTbctUtZLXztZuVTyxhptUQQeBrrRrpN9nxCuB"
+			]
+		}
+	},
+	"version": 1
+}
