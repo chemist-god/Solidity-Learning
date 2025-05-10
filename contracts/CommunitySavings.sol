@@ -23,4 +23,9 @@ contract CommunitySavings {
         balances[msg.sender] -= amount;
         payable(msg.sender).transfer(amount);
     }
+
+    //function to check balance
+    function getTotalBalance() public view returns (uint) {
+        return address(this).balance;
+    }
 }

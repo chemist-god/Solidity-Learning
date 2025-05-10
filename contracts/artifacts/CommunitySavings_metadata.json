@@ -38,6 +38,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getTotalBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -91,11 +104,11 @@
 	},
 	"sources": {
 		"contracts/CommunitySavings.sol": {
-			"keccak256": "0xafa63927a043043539bd36b52a9760f46842166dde5eb51d75b54e894daad066",
+			"keccak256": "0xfebe92850e99edf6286aad2e60f36a19fd44025310ee25c8a542dc1b3858e645",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://344b77d43714d20c72318cad83278fe1242e27286964b29d18fa4fd5e811a763",
-				"dweb:/ipfs/QmNixK2PdwkNVuzNEKtK81ow3MhGz2fqjSz8RXEoJvfyAs"
+				"bzz-raw://566735c9c8be11f08b3538c9ed8c1a4a01b63691e114afdf34fb62793eba2363",
+				"dweb:/ipfs/QmTgNw6UJyVERySd4NnyBxbPz25cDyWbeKNR41qMwgtfTJ"
 			]
 		}
 	},
