@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "expectedHash",
+						"type": "bytes32"
+					}
+				],
+				"name": "verifySignature",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SignatureVerifier.sol": "SignatureVerifier"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SignatureVerifier.sol": {
+			"keccak256": "0x312881b6e43d76047e252e625c174dbff1a5c82b4f274af870855ddefb63a54e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://807211cbda4380068cc89ba7c7deec55492b37e120f938c2fbdb869958db6f60",
+				"dweb:/ipfs/QmPMSKnLiYCBbcTJSn2H2QxGQ7hRpsSRfQdf8Azz9tXLzd"
+			]
+		}
+	},
+	"version": 1
+}
