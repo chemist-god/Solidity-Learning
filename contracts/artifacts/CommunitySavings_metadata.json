@@ -48,6 +48,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -78,11 +91,11 @@
 	},
 	"sources": {
 		"contracts/CommunitySavings.sol": {
-			"keccak256": "0xe497577c9bca4f3b0bb75f61ed8dd03dc0764077ce4a9f84b87e9e8e0d4e61ef",
+			"keccak256": "0xafa63927a043043539bd36b52a9760f46842166dde5eb51d75b54e894daad066",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b36c99d7f23739b5c0e69db32cbb9e15485cbb0fab91930105a4a8e85b6acbd",
-				"dweb:/ipfs/QmU3NtRT5BE8deHPxFxnyy6WVPRcVjV2R7gCFiDiQTi7NP"
+				"bzz-raw://344b77d43714d20c72318cad83278fe1242e27286964b29d18fa4fd5e811a763",
+				"dweb:/ipfs/QmNixK2PdwkNVuzNEKtK81ow3MhGz2fqjSz8RXEoJvfyAs"
 			]
 		}
 	},

@@ -16,4 +16,11 @@ contract CommunitySavings {
         require(msg.value > 0, "Deposit must be greater than Zero");
         balances[msg.sender] += msg.value;
     }
+
+    //function to withdraw
+    function withdraw(uint amount) public  {
+        require(balances[msg.sender] >= amount, "Insufficient balance");
+        balances[msg.sender] -= amount;
+        payable(msg.sender).transfer(amount);
+    }
 }
