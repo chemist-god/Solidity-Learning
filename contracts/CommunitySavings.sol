@@ -10,4 +10,10 @@ contract CommunitySavings {
     constructor() {
         owner =msg.sender;
     }
+
+    //function to deposit
+    function deposit() public payable  {
+        require(msg.value > 0, "Deposit must be greater than Zero");
+        balances[msg.sender] += msg.value;
+    }
 }

@@ -31,6 +31,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -71,11 +78,11 @@
 	},
 	"sources": {
 		"contracts/CommunitySavings.sol": {
-			"keccak256": "0x6ebef53bec3b4f174883945f7bd1bfefddab2ef510a658d7e755faf5c140d6cc",
+			"keccak256": "0xe497577c9bca4f3b0bb75f61ed8dd03dc0764077ce4a9f84b87e9e8e0d4e61ef",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://664cc9c0b1d77bcfceed6c0001daa05e8ccf1d9089cbbb7953ec0df8c51a5f60",
-				"dweb:/ipfs/QmZZoYSYJrrLwRBsdibc9SKf6LEnNQkQrU3MJQ5REsF3AN"
+				"bzz-raw://1b36c99d7f23739b5c0e69db32cbb9e15485cbb0fab91930105a4a8e85b6acbd",
+				"dweb:/ipfs/QmU3NtRT5BE8deHPxFxnyy6WVPRcVjV2R7gCFiDiQTi7NP"
 			]
 		}
 	},
