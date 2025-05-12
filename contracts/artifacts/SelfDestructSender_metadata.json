@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "vault",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SelfDestruct.sol": "SelfDestructSender"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SelfDestruct.sol": {
+			"keccak256": "0x2f3a3a117d6bbc60788f8762a51db989aa864d88c4d4dae7066feb4465a88335",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49af943998c85fe76c2e528b83e3d2eb35d6754ce51c98b6f8b74e079540d6e9",
+				"dweb:/ipfs/QmSrRkxTBCWT9vdjb9Dh7DvyW7Zy318yno2mQiSGYhiGL7"
+			]
+		}
+	},
+	"version": 1
+}
