@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.20+commit.a1b79de6"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "vault",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ForceSendEther.sol": "ForceSendEther"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/ForceSendEther.sol": {
+			"keccak256": "0xdfb2e1c48d6e28338dd9cddf51cd327c6ac0b782d5e6020eb6a7d3e9d99464ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://45d96e37a3af58cb69887c365ad12c29d3940441135a4684a63e4a11ed22c9f1",
+				"dweb:/ipfs/QmaVDjyjB2dZxFBATvtEhEePRjrZLeYxkx9VuP66fefVwL"
+			]
+		}
+	},
+	"version": 1
+}
