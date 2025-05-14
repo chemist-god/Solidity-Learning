@@ -69,7 +69,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/smartSImpleAccount.sol": "SimpleSmartAccount"
+			"contracts/smartSImpleAccount.sol": "SmartAccount"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -84,11 +84,11 @@
 	},
 	"sources": {
 		"contracts/smartSImpleAccount.sol": {
-			"keccak256": "0xcf3d6d54b0d7546b75f261ae215604851414a0c98a09b43fc29af6fc6851ac25",
+			"keccak256": "0xfb448d3be62f7f17e2da0767317d6a4419635d9b6b0e6bea6b02d4306e85aa76",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9a203b671d02fe30c897a50a72973f9a3fa8fdbd522bd7d3de7d0661e805a9b7",
-				"dweb:/ipfs/QmcGBseBXf2T8F4fMohT1aBurHJgGY1BTZB6kYJEpUvdA8"
+				"bzz-raw://b53cda6ccb861b7f4b5d952b118586773e93809fec07bc2163cb68736749a821",
+				"dweb:/ipfs/QmXGDbn4NUoKu7DaUQN2FqCo4Xh4Eqo578T5oiz231riSr"
 			]
 		}
 	},
