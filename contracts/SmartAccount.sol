@@ -18,6 +18,20 @@ contract SimpleSmartAccount {
         _;
     }
 
-    
+    // Constructor sets the deployer as the owner
+    constructor() {
+        owner = msg.sender;
+    }
+
+    // Function to receive Ether deposits
+    receive() external payable {
+        emit Deposited(msg.sender, msg.value);
+    }
+
+    // Function to check contract balance
+    function getBalance() public view returns (uint) {
+        return address(this).balance;
+    }
+
 }
 

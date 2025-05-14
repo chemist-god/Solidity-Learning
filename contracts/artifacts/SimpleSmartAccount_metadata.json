@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -45,6 +50,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -55,6 +73,10 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -85,11 +107,11 @@
 	},
 	"sources": {
 		"contracts/SmartAccount.sol": {
-			"keccak256": "0x3444c361deb45b345155acd0838716704fb518f5a9fa7e13868391b58e89abc1",
+			"keccak256": "0x3318e22b08072bf464f2b02026877f260beacac8dc8edb699722c82586e5dc8b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://203b8014c82c74594d539369fbcf2dac64089ed0546efb6daae07a91ecb8e85f",
-				"dweb:/ipfs/QmZzSVjDYZTNMJwsWuS8AzFU5P3B6LwJBgmhYzz3HBS5Gh"
+				"bzz-raw://324aa7ab84f966ebdfb9778210b732fd03327fde2f191355667d0fbd4c0234fd",
+				"dweb:/ipfs/QmaUXKuJ9ADPG64MwLfhjSi65j8XfqLtwMLjGS3rcrnaNL"
 			]
 		}
 	},
