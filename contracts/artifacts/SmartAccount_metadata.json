@@ -17,6 +17,35 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "target",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gasLimit",
+						"type": "uint256"
+					}
+				],
+				"name": "execute",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getNonce",
 				"outputs": [
@@ -84,11 +113,11 @@
 	},
 	"sources": {
 		"contracts/smartSImpleAccount.sol": {
-			"keccak256": "0xfb448d3be62f7f17e2da0767317d6a4419635d9b6b0e6bea6b02d4306e85aa76",
+			"keccak256": "0xabc6fc0ae103dc6bea5bc78cf449da3c9ad52ff99b79661d6d18d419b6d2c8c9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b53cda6ccb861b7f4b5d952b118586773e93809fec07bc2163cb68736749a821",
-				"dweb:/ipfs/QmXGDbn4NUoKu7DaUQN2FqCo4Xh4Eqo578T5oiz231riSr"
+				"bzz-raw://00fb6901cdee15bf76ab12f29736c252b1ef9e921fd2aea7c0d229d4240346ff",
+				"dweb:/ipfs/QmVarnsFnSYSj3SW34hDNTy15Lou7WFBGsVEbCCyXHTupV"
 			]
 		}
 	},
