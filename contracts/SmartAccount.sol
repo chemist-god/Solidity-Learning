@@ -33,5 +33,17 @@ contract SimpleSmartAccount {
         return address(this).balance;
     }
 
+    // Owner can withdraw specified amount
+    function withdraw(uint amount) public onlyOwner {
+        require(amount <= address(this).balance, "Insufficient balance");
+        payable(owner).transfer(amount);
+        emit Withdrawn(owner, amount);
+    }
+
+    // Owner can change ownership (example of programmable rule)
+    function changeOwner(address newOwner) public onlyOwner {
+        require(newOwner != address(0), "Invalid address");
+        owner = newOwner;
+    }
 }
 

@@ -49,6 +49,19 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getBalance",
 				"outputs": [
@@ -72,6 +85,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -107,11 +133,11 @@
 	},
 	"sources": {
 		"contracts/SmartAccount.sol": {
-			"keccak256": "0x3318e22b08072bf464f2b02026877f260beacac8dc8edb699722c82586e5dc8b",
+			"keccak256": "0x4d23ab14008019bc16e9ab22e015bab8d6b441f59df7a94e8c2806c0b24f82f0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://324aa7ab84f966ebdfb9778210b732fd03327fde2f191355667d0fbd4c0234fd",
-				"dweb:/ipfs/QmaUXKuJ9ADPG64MwLfhjSi65j8XfqLtwMLjGS3rcrnaNL"
+				"bzz-raw://b80f61d2ca04abf49c1f353d5a6a70b787b8bec7e62de9667397d00f000511eb",
+				"dweb:/ipfs/QmW64S7coLTZrL2V3LSy8JTaCRGbHNBwCE5z9LibRTJUs7"
 			]
 		}
 	},
