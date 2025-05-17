@@ -6,6 +6,32 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					}
+				],
+				"name": "generateTransactionHash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "enum MultiRolePaymentSplitter.UserRole",
@@ -76,11 +102,11 @@
 	},
 	"sources": {
 		"contracts/PayrollSplitter.sol": {
-			"keccak256": "0x6d591d3904b0f427c76bddb5aa43e1909be311e99c73b3523cecc7440bdee52c",
+			"keccak256": "0x83b56981cc891da31d9ac64db0f2932085ade38fa14a2919a33bd1e63ff2c36c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c9d555d40fa3dbe24fd980b562932d4e92caa0a4267fba00d4bb28030e5752bf",
-				"dweb:/ipfs/QmUE1kMhPmG53HMCAYPL9rkPJAgcJ9p2uGMtjzg7xJBYfy"
+				"bzz-raw://9a9934b04a48f8028620d607024b915c5651547d817857d7e86a5a549d92d08d",
+				"dweb:/ipfs/QmV6XZvTtx96mVabSV8WtT3FXvHdzzrW2AL6iarYr5kUeX"
 			]
 		}
 	},

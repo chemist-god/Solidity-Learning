@@ -38,4 +38,14 @@ contract MultiRolePaymentSplitter {
         });
     }
 
+    // Function to make a hashed transaction reference using keccak256
+    function generateTransactionHash(string memory _message) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked(_message));
+    }
+
+    // Function for payments (simulating account abstraction)
+    function deposit() external payable onlyRegistered {
+        users[msg.sender].balance += msg.value;
+    }
+
     }
