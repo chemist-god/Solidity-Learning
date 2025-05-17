@@ -8,6 +8,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "enum MultiRolePaymentSplitter.UserRole",
+						"name": "_role",
+						"type": "uint8"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -63,11 +76,11 @@
 	},
 	"sources": {
 		"contracts/PayrollSplitter.sol": {
-			"keccak256": "0xc475e5ec340601f6a693fda890df60a5303d017f039a9e55f5a386d1d2eba55e",
+			"keccak256": "0x6d591d3904b0f427c76bddb5aa43e1909be311e99c73b3523cecc7440bdee52c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ba4c4d7ee58b64f7962eb38e2807b6b9b8914bab3092963f81e1167a561962e1",
-				"dweb:/ipfs/QmevaoL2aF3znDbqc4Ps92MVfDqUHrGZ7KHiFy3PQCdRqb"
+				"bzz-raw://c9d555d40fa3dbe24fd980b562932d4e92caa0a4267fba00d4bb28030e5752bf",
+				"dweb:/ipfs/QmUE1kMhPmG53HMCAYPL9rkPJAgcJ9p2uGMtjzg7xJBYfy"
 			]
 		}
 	},

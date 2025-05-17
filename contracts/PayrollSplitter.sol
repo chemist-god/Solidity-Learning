@@ -27,5 +27,15 @@ contract MultiRolePaymentSplitter {
         _;
     }
 
-    
-}
+    // Function to register a user
+    function registerUser(UserRole _role) external {
+        require(users[msg.sender].userAddress == address(0), "Already registered");
+
+        users[msg.sender] = User({
+            userAddress: msg.sender,
+            role: _role,
+            balance: 0
+        });
+    }
+
+    }
