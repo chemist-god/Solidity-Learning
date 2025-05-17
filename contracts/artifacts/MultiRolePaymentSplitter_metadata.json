@@ -4,7 +4,37 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "enum MultiRolePaymentSplitter.UserRole",
+						"name": "role",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +63,11 @@
 	},
 	"sources": {
 		"contracts/PayrollSplitter.sol": {
-			"keccak256": "0x0989c473c8907c2dbfc84714d5f3c16ccfc266e7444f5bdcd29b5db38b7be482",
+			"keccak256": "0xc475e5ec340601f6a693fda890df60a5303d017f039a9e55f5a386d1d2eba55e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7fbff418d4165cc07a56f2f993181bd0e05c868c26b135879b5480311b795545",
-				"dweb:/ipfs/QmbCyJz5KbJEMRz9vF8j2HXd3aG1e4qjJEmVqgb2syiMXM"
+				"bzz-raw://ba4c4d7ee58b64f7962eb38e2807b6b9b8914bab3092963f81e1167a561962e1",
+				"dweb:/ipfs/QmevaoL2aF3znDbqc4Ps92MVfDqUHrGZ7KHiFy3PQCdRqb"
 			]
 		}
 	},
