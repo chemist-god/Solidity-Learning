@@ -6,6 +6,25 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "checkBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "deposit",
 				"outputs": [],
@@ -72,6 +91,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -102,11 +134,11 @@
 	},
 	"sources": {
 		"contracts/PayrollSplitter.sol": {
-			"keccak256": "0x83b56981cc891da31d9ac64db0f2932085ade38fa14a2919a33bd1e63ff2c36c",
+			"keccak256": "0x4f4cb9b4767e47040b54f8538bdceda1bfc79446ef82ecc5cc7e5b7133240603",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9a9934b04a48f8028620d607024b915c5651547d817857d7e86a5a549d92d08d",
-				"dweb:/ipfs/QmV6XZvTtx96mVabSV8WtT3FXvHdzzrW2AL6iarYr5kUeX"
+				"bzz-raw://466a273b62dfc695507b510bbe4b67034231f06769d3664584a689ae961d3ced",
+				"dweb:/ipfs/QmZJpvfPWxLPTjWvR9nWUTD2kaErZbbbx2tHZzrQgzjWgc"
 			]
 		}
 	},

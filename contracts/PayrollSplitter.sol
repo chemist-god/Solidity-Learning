@@ -48,4 +48,16 @@ contract MultiRolePaymentSplitter {
         users[msg.sender].balance += msg.value;
     }
 
+    // Function to withdraw funds
+    function withdraw(uint256 _amount) external onlyRegistered {
+        require(users[msg.sender].balance >= _amount, "Insufficient funds");
+
+        users[msg.sender].balance -= _amount;
+        payable(msg.sender).transfer(_amount);
     }
+
+    // Function for Admins to check balances
+    function checkBalance(address _user) external view onlyAdmin returns (uint256) {
+        return users[_user].balance;
+    }
+}
