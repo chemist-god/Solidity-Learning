@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/PayrollSplitter.sol": "MultiRolePaymentSplitter"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/PayrollSplitter.sol": {
+			"keccak256": "0x0989c473c8907c2dbfc84714d5f3c16ccfc266e7444f5bdcd29b5db38b7be482",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7fbff418d4165cc07a56f2f993181bd0e05c868c26b135879b5480311b795545",
+				"dweb:/ipfs/QmbCyJz5KbJEMRz9vF8j2HXd3aG1e4qjJEmVqgb2syiMXM"
+			]
+		}
+	},
+	"version": 1
+}
