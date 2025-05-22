@@ -11,5 +11,13 @@ contract TithePayment {
         church = _church;
     }
 
-   
+    modifier onlyFirstSunday() {
+        require(
+            block.timestamp % 2592000 < 86400, // Approximate check for first Sunday (2592000 seconds in a month)
+            "Payments only allowed on the first Sunday"
+        );
+        _;
+    }
+
+    
 }
