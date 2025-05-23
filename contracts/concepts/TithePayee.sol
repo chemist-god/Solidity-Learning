@@ -19,5 +19,16 @@ contract TithePayment {
         _;
     }
 
-    
+    function payTithe() external payable onlyFirstSunday {
+        require(msg.value > 0, "Tithe amount must be greater than zero");
+        
+        tithes[msg.sender] += msg.value;
+        payable(church).transfer(msg.value);
+        
+        emit TithePaid(msg.sender, msg.value);
+    }
+
+    function getTitheAmount(address payer) external view returns (uint256) {
+        return tithes[payer];
+    }
 }

@@ -52,6 +52,32 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "payer",
+						"type": "address"
+					}
+				],
+				"name": "getTitheAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "payTithe",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -96,11 +122,11 @@
 	},
 	"sources": {
 		"contracts/concepts/TithePayee.sol": {
-			"keccak256": "0x1669e5341ccef31c61361589ff2f2a5e6c0a5011b9ea6ebda34e87fbe5fbc1f6",
+			"keccak256": "0xa930a5fa389f64aafab492948d97e64c740abd2cdcb8853cc4d9c188c2c7dd27",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e131b69c44f8ba467e64a9a5b7d5ad5f65e2bff93e07a8fbfdd8f15803c2d256",
-				"dweb:/ipfs/QmZLVpFy241MocXGxXWYxMbaWftCTad9B2yKQP4ABdFwew"
+				"bzz-raw://fe6164a14d9e7d0dc37fa3530b168d9dd738d8ed54c77d82164c3b09151d8ea4",
+				"dweb:/ipfs/QmYun7GdMzfUg7QVUunoAqKSH2hv1pMgdYq6rLhihyzeSC"
 			]
 		}
 	},
