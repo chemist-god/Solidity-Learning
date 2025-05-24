@@ -19,5 +19,10 @@ contract CryptoBillPayments {
         _;
     }
 
+    function verifyServiceProvider(address provider) public onlyOwner {
+        verifiedServiceProviders[provider] = true;
+        emit ProviderVerified(provider);
+    }
+
     
 }

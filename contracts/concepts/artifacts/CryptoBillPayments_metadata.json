@@ -128,6 +128,19 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "verifyServiceProvider",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -158,11 +171,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CryptoBills.sol": {
-			"keccak256": "0x919320522f0ef1113fdc53462a3049c2e10e9faba78fcc34ddc4823b558f32ee",
+			"keccak256": "0x858e57ff714513d6a33bc7ea4b241719953f96d791597607e1dae25f6d78dc0b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://083d05bcf290539b33931289a73f466d6da8c005d15e83212654d0a62561350d",
-				"dweb:/ipfs/QmUtPcsPxxDWjfsyjbpcy1FnEsRBQVWKwBH95sUDGV9gex"
+				"bzz-raw://b010e8880785572ba5d9f5deea4ef3f048be555df89e9b301b6cd279c86beec0",
+				"dweb:/ipfs/QmUGfjLMi4qdT54ikz4gpLyA2SbjzW7f1E7B26kb9ehydN"
 			]
 		}
 	},
