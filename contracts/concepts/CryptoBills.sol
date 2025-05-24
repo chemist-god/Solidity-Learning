@@ -40,5 +40,11 @@ contract CryptoBillPayments {
         emit PaymentMade(msg.sender, provider, amount, service);
     }
 
-    
+    function withdrawFunds() public {
+        uint256 amount = balances[msg.sender];
+        require(amount > 0, "No funds to withdraw");
+
+        balances[msg.sender] = 0;
+        payable(msg.sender).transfer(amount);
+    }
 }

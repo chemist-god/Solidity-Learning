@@ -171,6 +171,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -201,11 +208,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CryptoBills.sol": {
-			"keccak256": "0x3f84ef51eacd1a23c219c7b5545f8cb58f048a9b919ece5519dcd7ef48152435",
+			"keccak256": "0x9e45c244627905f7deb6c4014ced8f1a02bccb1caa6c99cef82639c3071e8f8d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://61e61fa9d30a1a9e860ae623f10290c8aa7ef8cf8125c8290c183642087fb68a",
-				"dweb:/ipfs/QmXHX81TPrimSMmYsVmfSJMU9B43JQfG2VEQACmVqn1G7p"
+				"bzz-raw://79cfc9690ca532dfb3fc4f163f4fbb5600399f4f5fe9d93742ae2c2364f21b26",
+				"dweb:/ipfs/QmStmB2XSDYdEYDjKYy9ezpt9ErAsdtRQoZwqKXns7Qqmf"
 			]
 		}
 	},
