@@ -7,5 +7,17 @@ contract CryptoBillPayments {
     mapping(address => bool) public verifiedServiceProviders;
     mapping(address => mapping(string => uint256)) public userBills;
 
-   
+    event PaymentMade(address indexed user, address indexed provider, uint256 amount, string service);
+    event ProviderVerified(address indexed provider);
+    
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not authorized");
+        _;
+    }
+
+    
 }

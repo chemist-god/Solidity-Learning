@@ -6,6 +6,55 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "service",
+						"type": "string"
+					}
+				],
+				"name": "PaymentMade",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					}
+				],
+				"name": "ProviderVerified",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -109,11 +158,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CryptoBills.sol": {
-			"keccak256": "0xd7051e92e4fdf370a026331a410a2f58398daa1834096bab59f8efbde1a3d741",
+			"keccak256": "0x919320522f0ef1113fdc53462a3049c2e10e9faba78fcc34ddc4823b558f32ee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e82f08886cb2c11c86d159f1a80566b6887cac391363e4deb9c8aed4b5ebc599",
-				"dweb:/ipfs/QmXTzBp9w5hF8jmHLT5crJTvdJLSFFteZDyfqF57QwaByW"
+				"bzz-raw://083d05bcf290539b33931289a73f466d6da8c005d15e83212654d0a62561350d",
+				"dweb:/ipfs/QmUtPcsPxxDWjfsyjbpcy1FnEsRBQVWKwBH95sUDGV9gex"
 			]
 		}
 	},
