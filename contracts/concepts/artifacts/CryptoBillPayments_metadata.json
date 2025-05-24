@@ -97,6 +97,29 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "service",
+						"type": "string"
+					}
+				],
+				"name": "payBill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					},
@@ -178,11 +201,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CryptoBills.sol": {
-			"keccak256": "0x23fb1fa2ff9a716b946b434ea0114ed60b650de850532630c909aee59dd75ff9",
+			"keccak256": "0x3f84ef51eacd1a23c219c7b5545f8cb58f048a9b919ece5519dcd7ef48152435",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://282735ce6f0d683c016d84793d4d1eb61e63992dd501c37791814e5322e9cfce",
-				"dweb:/ipfs/Qma1wG1Lrb4CAWnwrFuV44wmPtoa9Z2p1VetAycht9KiGZ"
+				"bzz-raw://61e61fa9d30a1a9e860ae623f10290c8aa7ef8cf8125c8290c183642087fb68a",
+				"dweb:/ipfs/QmXHX81TPrimSMmYsVmfSJMU9B43JQfG2VEQACmVqn1G7p"
 			]
 		}
 	},

@@ -29,5 +29,16 @@ contract CryptoBillPayments {
         balances[msg.sender] += msg.value;
     }
 
+    function payBill(address provider, uint256 amount, string memory service) public {
+        require(verifiedServiceProviders[provider], "Provider not verified");
+        require(balances[msg.sender] >= amount, "Insufficient funds");
+
+        balances[msg.sender] -= amount;
+        balances[provider] += amount;
+
+        userBills[msg.sender][service] += amount;
+        emit PaymentMade(msg.sender, provider, amount, service);
+    }
+
     
 }
