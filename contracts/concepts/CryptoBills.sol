@@ -24,5 +24,10 @@ contract CryptoBillPayments {
         emit ProviderVerified(provider);
     }
 
+    function depositFunds() public payable {
+        require(msg.value > 0, "Must deposit positive amount");
+        balances[msg.sender] += msg.value;
+    }
+
     
 }

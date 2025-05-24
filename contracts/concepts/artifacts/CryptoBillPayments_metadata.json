@@ -75,6 +75,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "depositFunds",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "owner",
 				"outputs": [
 					{
@@ -171,11 +178,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CryptoBills.sol": {
-			"keccak256": "0x858e57ff714513d6a33bc7ea4b241719953f96d791597607e1dae25f6d78dc0b",
+			"keccak256": "0x23fb1fa2ff9a716b946b434ea0114ed60b650de850532630c909aee59dd75ff9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b010e8880785572ba5d9f5deea4ef3f048be555df89e9b301b6cd279c86beec0",
-				"dweb:/ipfs/QmUGfjLMi4qdT54ikz4gpLyA2SbjzW7f1E7B26kb9ehydN"
+				"bzz-raw://282735ce6f0d683c016d84793d4d1eb61e63992dd501c37791814e5322e9cfce",
+				"dweb:/ipfs/Qma1wG1Lrb4CAWnwrFuV44wmPtoa9Z2p1VetAycht9KiGZ"
 			]
 		}
 	},
