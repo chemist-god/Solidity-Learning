@@ -23,5 +23,16 @@ contract SongNFT is ERC721, Ownable {
 
     constructor() ERC721("SongNFT", "SNFT") {}
 
+    function mintSong(string memory _title, string memory _artist, uint256 _royalty) public {
+        require(_royalty <= 100, "Royalty percentage cannot exceed 100");
+        uint256 tokenId = nextTokenId;
+        songs[tokenId] = Song(_title, _artist, _royalty);
+        songOwners[tokenId] = msg.sender;
+        _safeMint(msg.sender, tokenId);
+        nextTokenId++;
+
+        emit SongMinted(tokenId, _title, _artist, _royalty, msg.sender);
+    }
+
     
 }
