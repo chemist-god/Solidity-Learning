@@ -34,5 +34,25 @@ contract SongNFT is ERC721, Ownable {
         emit SongMinted(tokenId, _title, _artist, _royalty, msg.sender);
     }
 
-    
+    function distributeRoyalties(uint256 tokenId) public payable {
+        require(_exists(tokenId), "Token does not exist");
+        require(msg.value > 0, "Payment amount must be greater than zero");
+        
+        address owner = ownerOf(tokenId);
+        uint256 royaltyAmount = msg.value.mul(songs[tokenId].royaltyPercentage).div(100);
+        payable(owner).transfer(royaltyAmount);
+
+        emit RoyaltiesDistributed(tokenId, royaltyAmount, owner);
+    }
+
+    function transferSong(address _to, uint256 tokenId) public {
+        require(ownerOf(tokenId) == msg.sender, "Not the owner");
+        _transfer(msg.sender, _to, tokenId);
+    }
+
+    function getSongDetails(uint256 tokenId) public view returns (string memory, string memory, uint256) {
+        require(_exists(tokenId), "Token does not exist");
+        Song memory song = songs[tokenId];
+        return (song.title, song.artist, song.royaltyPercentage);
+    }
 }
