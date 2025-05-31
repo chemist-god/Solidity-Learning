@@ -276,6 +276,19 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -306,11 +319,11 @@
 	},
 	"sources": {
 		"contracts/concepts/AgriToken.sol": {
-			"keccak256": "0x6adf94c7b5853aa51763bbb50f239f6243b5b0c1c47617a762e33bc872cdb296",
+			"keccak256": "0xbc17f3d527e76bf076e7e472af4fff30f39b533dec08952d60c5d084c777debc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d16c67265021c73661ae33ba39b141215f0e3cd1112b5ba2c54d2753a1e14096",
-				"dweb:/ipfs/Qma4bn2axNqxedZt5iNB98UtsRG7CFNXAZMg9RHkKcxt2e"
+				"bzz-raw://999e0390ca83d2b68be8b9c043d3a88b1661c2fcabe501aba83a5d64f5f33bb6",
+				"dweb:/ipfs/QmUxRQM7xAKUHcuCoGFyWmsAg2J3CU8A973937iivqVkV8"
 			]
 		}
 	},
