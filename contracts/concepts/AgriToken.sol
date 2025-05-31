@@ -15,5 +15,16 @@ contract TokenizedAgriFund {
     event Approval(address indexed owner, address indexed spender, uint256 value);
     event FundReceived(address indexed investor, uint256 amount);
 
+    constructor(uint256 _initialSupply) {
+        owner = msg.sender;
+        totalSupply = _initialSupply * (10 ** uint256(decimals));
+        balanceOf[owner] = totalSupply;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not contract owner");
+        _;
+    }
+
     
 }

@@ -6,6 +6,17 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_initialSupply",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -211,11 +222,11 @@
 	},
 	"sources": {
 		"contracts/concepts/AgriToken.sol": {
-			"keccak256": "0xe54c2c9dd7969b72cfefc0155dea7741cadfb0c217a822166c99dc64edf08be5",
+			"keccak256": "0xc3f2e335fa32c0edc57ecbc6acc30ceaa976b6e2707c494b8bf487f39d43264f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dfd54608ff2e1f789e9fea256e5a8a4566ed2a3397249fe0a505507f87076f92",
-				"dweb:/ipfs/QmeEsuCLwAK8YW39x6bJksQRdzLNnyHcPyCAkuejmC2v4r"
+				"bzz-raw://0e869da01a30c73f2830af4187bf4c2522fff94e09c20754a5a2f868a8478589",
+				"dweb:/ipfs/QmdujzewkEaBJ2ha54KkwDqsoVeajbQUN1AykgPjBqYxPq"
 			]
 		}
 	},
