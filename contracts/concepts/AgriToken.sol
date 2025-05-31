@@ -52,5 +52,12 @@ contract TokenizedAgriFund {
         return true;
     }
 
+    function invest() public payable {
+        require(msg.value > 0, "Must send ETH to invest");
+        balanceOf[msg.sender] += msg.value;
+        totalSupply += msg.value;
+        emit FundReceived(msg.sender, msg.value);
+    }
+
     
 }

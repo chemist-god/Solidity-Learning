@@ -167,6 +167,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "invest",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -299,11 +306,11 @@
 	},
 	"sources": {
 		"contracts/concepts/AgriToken.sol": {
-			"keccak256": "0xb9da902843cdefec7862827281936328fd143c83fa1776da3bd0088e2fe00f1f",
+			"keccak256": "0x6adf94c7b5853aa51763bbb50f239f6243b5b0c1c47617a762e33bc872cdb296",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6c5306ef9b7966ba167132a14f7925a241ac4c6a9bec8760c68644280be6c140",
-				"dweb:/ipfs/QmSk2cLDVZhSrEZus7jrZxor9Eh7hBnVCF9osqCvH4SgbE"
+				"bzz-raw://d16c67265021c73661ae33ba39b141215f0e3cd1112b5ba2c54d2753a1e14096",
+				"dweb:/ipfs/Qma4bn2axNqxedZt5iNB98UtsRG7CFNXAZMg9RHkKcxt2e"
 			]
 		}
 	},
