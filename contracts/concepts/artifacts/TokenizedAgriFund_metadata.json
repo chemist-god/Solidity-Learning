@@ -240,6 +240,35 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -270,11 +299,11 @@
 	},
 	"sources": {
 		"contracts/concepts/AgriToken.sol": {
-			"keccak256": "0x6f99df8983f56b4351cc6120a4a7f03f5a4d6a066f833bf038f3893499ab5f5e",
+			"keccak256": "0xb9da902843cdefec7862827281936328fd143c83fa1776da3bd0088e2fe00f1f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://63256c6e75ee022ddc33cc7e023caf59fb1877b15c671a02e73a48e41dd0da91",
-				"dweb:/ipfs/QmcoAFXFoTBKYRGr6SndDwwz7B16YvmRcXkddwrmL9maXN"
+				"bzz-raw://6c5306ef9b7966ba167132a14f7925a241ac4c6a9bec8760c68644280be6c140",
+				"dweb:/ipfs/QmSk2cLDVZhSrEZus7jrZxor9Eh7hBnVCF9osqCvH4SgbE"
 			]
 		}
 	},
