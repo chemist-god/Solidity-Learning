@@ -67,6 +67,30 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -154,6 +178,35 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_from",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -184,11 +237,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CrossBorder.sol": {
-			"keccak256": "0xdfc4037c2445dafb03b0443e42c2fb261fa51f908aed0709bdf4e6e789260210",
+			"keccak256": "0x31f4b8bb81b0d28210f3047fbd4ea92742ef2417036f65974dded4628c0dbf1c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e3c7decad4f0bc7cbcf96d7c7ea427b5782995e9c6b301ee6c03dcc4733d52ea",
-				"dweb:/ipfs/QmeZF7XzaGvC3hk3QX7B8wXfHaXtgWhwoygRGpnhJmBR92"
+				"bzz-raw://b1afdad0d16adc54f614ed8ff58c02e7a98894c4d08e64232e5eafe562d9b7b8",
+				"dweb:/ipfs/QmVNS6FcpZL3EeXXpjpfjzB1J5S58NZNzFmfRRarTk91d1"
 			]
 		}
 	},

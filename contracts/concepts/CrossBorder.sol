@@ -33,5 +33,19 @@ contract CrossBorderStablecoin {
         return true;
     }
 
-    
+    function approve(address _spender, uint256 _value) public returns (bool) {
+        allowances[msg.sender][_spender] = _value;
+        emit Approval(msg.sender, _spender, _value);
+        return true;
+    }
+
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool) {
+        require(balances[_from] >= _value, "Insufficient balance");
+        require(allowances[_from][msg.sender] >= _value, "Allowance exceeded");
+        balances[_from] -= _value;
+        balances[_to] += _value;
+        allowances[_from][msg.sender] -= _value;
+        emit Transfer(_from, _to, _value);
+        return true;
+    }
 }
