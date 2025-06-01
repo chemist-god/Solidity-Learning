@@ -6,6 +6,17 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_initialSupply",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -119,6 +130,30 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_value",
+						"type": "uint256"
+					}
+				],
+				"name": "transfer",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -149,11 +184,11 @@
 	},
 	"sources": {
 		"contracts/concepts/CrossBorder.sol": {
-			"keccak256": "0xcc4ff884cf2067c1d9472d352f7773195dff7c416429b1364d5473bed9a1b93b",
+			"keccak256": "0xdfc4037c2445dafb03b0443e42c2fb261fa51f908aed0709bdf4e6e789260210",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://13f01774ce1fbd2bc106065d2ea1853493d56327ed208a4552c1c5642daa150c",
-				"dweb:/ipfs/QmTxvNab5xG35jBVHtdDdytYHKLEdd34G3WvXQQh1ZsAJJ"
+				"bzz-raw://e3c7decad4f0bc7cbcf96d7c7ea427b5782995e9c6b301ee6c03dcc4733d52ea",
+				"dweb:/ipfs/QmeZF7XzaGvC3hk3QX7B8wXfHaXtgWhwoygRGpnhJmBR92"
 			]
 		}
 	},
