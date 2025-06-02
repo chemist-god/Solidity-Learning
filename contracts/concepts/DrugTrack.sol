@@ -16,5 +16,21 @@ contract DrugBatchNFT is ERC721URIStorage, Ownable {
 
     constructor() ERC721("DrugBatchNFT", "DBNFT") {}
 
-   
+    function mintDrugBatch(
+        string memory expiryDate,
+        string memory manufacturer,
+        string memory manufacturerSecret,
+        string memory tokenURI
+    ) external onlyOwner {
+        uint256 tokenId = nextTokenId;
+        drugBatches[tokenId] = DrugBatch(expiryDate, manufacturer, keccak256(abi.encodePacked(manufacturerSecret)));
+        _safeMint(msg.sender, tokenId);
+        _setTokenURI(tokenId, tokenURI);
+        nextTokenId++;
+    }
+
+    function verifyDrug(uint256 tokenId, string memory manufacturerSecret) external view returns (bool) {
+        require(_exists(tokenId), "Drug batch does not exist");
+        return drugBatches[tokenId].manufacturerSecretHash == keccak256(abi.encodePacked(manufacturerSecret));
+    }
 }
