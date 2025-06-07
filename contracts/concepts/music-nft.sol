@@ -24,5 +24,16 @@ contract SongNFT is ERC721URIStorage, Ownable {
         uint256 currentTokenId;
     } 
 
-   
+    uint256 public constant ROYALTY_PERCENTAGE = 30;
+
+    event NFTMinted(uint256 indexed tokenId, address indexed buyer, uint256 price);
+    event RoyaltyCollected(uint256 indexed tokenId, uint256 amount);
+    event RoyaltyPaid(address indexed artist, uint256 amount);
+
+    modifier onlyMintedUser(address user) {
+        require(balanceOf(user) > 0, "Don't own the NFT");
+        _;
+    }
+
+    
 }
