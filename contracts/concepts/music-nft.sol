@@ -44,5 +44,23 @@ contract SongNFT is ERC721URIStorage, Ownable {
         _currentTokenId = 0;
     }
 
-   
+    function mintNFT(address _to) external payable returns (uint256) {
+        require(msg.value >= nftPrice, "Insufficient payment");
+        
+        _currentTokenId = _currentTokenId.add(1);
+        uint256 newTokenId = _currentTokenId;
+
+        uint256 royaltyAmount = msg.value.mul(ROYALTY_PERCENTAGE).div(100);
+        royaltyBalance = royaltyBalance.add(royaltyAmount);
+
+        _safeMint(_to, newTokenId);
+        _setTokenURI(newTokenId, audioURI);
+
+        emit RoyaltyCollected(newTokenId, royaltyAmount);
+        emit NFTMinted(newTokenId, _to, msg.value);
+
+        return newTokenId;
+    }
+
+    
 }
