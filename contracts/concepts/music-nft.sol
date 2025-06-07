@@ -72,5 +72,14 @@ contract SongNFT is ERC721URIStorage, Ownable {
         emit RoyaltyPaid(artist, amount);
     }
 
-    
+    function getInfo(address user) external view onlyMintedUser(user) returns (NFTInfo memory)  {
+        return NFTInfo({                                                                                                                                                                                                                                                  
+            nftPrice: nftPrice, 
+            artist: artist,
+            audioURI: audioURI,
+            coverURI: coverURI, 
+            royaltyBalance: royaltyBalance,
+            currentTokenId: _currentTokenId 
+        });
+    }
 }
