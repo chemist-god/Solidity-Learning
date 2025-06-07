@@ -35,5 +35,14 @@ contract SongNFT is ERC721URIStorage, Ownable {
         _;
     }
 
-    
+    constructor(string memory _name, string memory _symbol, uint256 _nftPrice, 
+        string memory _audioURI, address _artist, string memory _coverURI) ERC721(_name, _symbol) {
+        nftPrice = _nftPrice; 
+        audioURI = _audioURI; 
+        coverURI = _coverURI; 
+        artist = _artist;
+        _currentTokenId = 0;
+    }
+
+   
 }
