@@ -62,5 +62,15 @@ contract SongNFT is ERC721URIStorage, Ownable {
         return newTokenId;
     }
 
+    function payRoyalties() external {
+        uint256 amount = royaltyBalance;
+        royaltyBalance = 0;
+        
+        (bool success, ) = payable(artist).call{value: amount}("");
+        require(success, "Royalty payout failed");
+
+        
+    }
+
     
 }
