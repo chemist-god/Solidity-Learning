@@ -22,5 +22,9 @@ contract CarRental {
     mapping(uint => Car) public cars;
     mapping(address => Rental) public rentals;
 
+    event CarRegistered(uint carId, string model, uint rentalPrice, address owner);
+    event CarRented(uint carId, address renter, uint startTime, uint endTime);
+    event CarReturned(uint carId, address renter);
+
     
 }
