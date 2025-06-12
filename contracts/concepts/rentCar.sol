@@ -44,5 +44,14 @@ contract CarRental {
         emit CarRented(_carId, msg.sender, block.timestamp, block.timestamp + _duration);
     }
 
-    
+    function returnCar(uint _carId) public {
+        Rental storage rental = rentals[msg.sender];
+        require(rental.carId == _carId, "Not rented by user");
+        require(rental.isActive, "Rental already ended");
+
+        cars[_carId].isAvailable = true;
+        rental.isActive = false;
+
+        emit CarReturned(_carId, msg.sender);
+    }
 }
