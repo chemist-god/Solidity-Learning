@@ -26,5 +26,23 @@ contract CarRental {
     event CarRented(uint carId, address renter, uint startTime, uint endTime);
     event CarReturned(uint carId, address renter);
 
+    function registerCar(string memory _model, uint _rentalPrice) public {
+        carCount++;
+        cars[carCount] = Car(carCount, _model, _rentalPrice, true, payable(msg.sender));
+        emit CarRegistered(carCount, _model, _rentalPrice, msg.sender);
+    }
+
+    function rentCar(uint _carId, uint _duration) public payable {
+        Car storage car = cars[_carId];
+        require(car.isAvailable, "Car not available");
+        require(msg.value >= car.rentalPrice * _duration, "Insufficient payment");
+
+        car.isAvailable = false;
+        rentals[msg.sender] = Rental(_carId, msg.sender, block.timestamp, block.timestamp + _duration, true);
+        car.owner.transfer(msg.value);
+        
+        emit CarRented(_carId, msg.sender, block.timestamp, block.timestamp + _duration);
+    }
+
     
 }
