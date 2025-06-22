@@ -26,5 +26,37 @@ contract CommunityMarket {
         string purpose;     // Why did the buyer buy it (e.g. personal use, resale)
     }
 
+    // --- State Variables ---
+    uint private nextProductId; // Next product's ID number
+    uint private nextSaleId;    // Next sale's ID number
+
+    // Store all products and sales by their IDs
+    mapping(uint => Product) public products;
+    mapping(uint => Sale) public sales;
+
+    // Track which products each seller listed
+    mapping(address => uint[]) public sellerProducts;
+    // Track which sales each buyer made
+    mapping(address => uint[]) public buyerSales;
+
+    // --- Events ---
+    // Let outside apps know when something happens
+    event ProductAdded(uint id, address seller, string name, uint price);
+    event ProductPurchased(uint saleId, uint productId, address buyer, uint pricePaid, string purpose);
+
+    // --- Modifiers ---
+    // Only let the seller of a product do certain things
+    modifier onlySeller(uint _productId) {
+        require(products[_productId].seller == msg.sender, "You are not the seller.");
+        _;
+    }
+
+    // Set up the contract: whoever deploys it is the owner, and start IDs at 1
+    constructor() {
+        owner = msg.sender;
+        nextProductId = 1;
+        nextSaleId = 1;
+    }
+
     
 }
