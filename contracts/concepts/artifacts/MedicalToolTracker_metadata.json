@@ -1,0 +1,267 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "approvePersonnel",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "approvedPersonnel",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_toolId",
+						"type": "uint256"
+					}
+				],
+				"name": "getToolDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "toolType",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "batchId",
+								"type": "string"
+							},
+							{
+								"internalType": "address",
+								"name": "hospital",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "registeredAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum MedicalToolTracker.ToolStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "address",
+								"name": "lastHandledBy",
+								"type": "address"
+							}
+						],
+						"internalType": "struct MedicalToolTracker.Tool",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_toolId",
+						"type": "uint256"
+					}
+				],
+				"name": "markDisposed",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_toolId",
+						"type": "uint256"
+					}
+				],
+				"name": "markInUse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_toolId",
+						"type": "uint256"
+					}
+				],
+				"name": "markSterilized",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_toolType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_batchId",
+						"type": "string"
+					}
+				],
+				"name": "registerTool",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "toolCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tools",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "toolType",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "batchId",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "hospital",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "registeredAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum MedicalToolTracker.ToolStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "lastHandledBy",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/concepts/toolTracker.sol": "MedicalToolTracker"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/concepts/toolTracker.sol": {
+			"keccak256": "0x2eafd018009d723ae5de829227c4901bf0359ad1fb94ba2f0fa4d81b92c09087",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4dea1e4d29536f441b3188e90bcf01414feffc98346cca0733b91fd2a7c53672",
+				"dweb:/ipfs/QmVPDKuGU62RuEant1hey2L6ZERLUKf5nMT2cAcYewq68c"
+			]
+		}
+	},
+	"version": 1
+}
