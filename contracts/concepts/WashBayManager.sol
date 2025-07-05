@@ -37,5 +37,21 @@ contract WashBayManager {
         owner = msg.sender;
     }
 
+    function requestService(ServiceType _serviceType) external payable returns (uint256) {
+        require(msg.value > 0, "Fee must be greater than 0");
+
+        services[serviceCount] = Service({
+            customer: msg.sender,
+            worker: address(0),
+            serviceType: _serviceType,
+            fee: msg.value,
+            status: Status.Requested,
+            timestamp: block.timestamp
+        });
+
+        emit ServiceRequested(serviceCount, msg.sender, _serviceType, msg.value);
+        return serviceCount++;
+    }
+
     
 }
