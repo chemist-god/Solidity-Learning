@@ -53,5 +53,25 @@ contract WashBayManager {
         return serviceCount++;
     }
 
+    function assignWorker(uint256 _serviceId, address _worker) external onlyOwner {
+        Service storage s = services[_serviceId];
+        require(s.status == Status.Requested, "Service already assigned");
+        s.worker = _worker;
+        s.status = Status.InProgress;
+
+        emit WorkerAssigned(_serviceId, _worker);
+    }
+
+    function markCompleted(uint256 _serviceId) external {
+        Service storage s = services[_serviceId];
+        require(msg.sender == s.worker, "Only assigned worker can complete");
+        require(s.status == Status.InProgress, "Invalid status");
+
+        s.status = Status.Completed;
+        payable(s.worker).transfer(s.fee);
+
+        emit ServiceCompleted(_serviceId);
+    }
+
     
 }
