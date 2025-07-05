@@ -87,6 +87,50 @@
 				"type": "event"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_worker",
+						"type": "address"
+					}
+				],
+				"name": "assignWorker",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelService",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "markCompleted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -97,6 +141,25 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum WashBayManager.ServiceType",
+						"name": "_serviceType",
+						"type": "uint8"
+					}
+				],
+				"name": "requestService",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -155,6 +218,13 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawBalance",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -185,11 +255,11 @@
 	},
 	"sources": {
 		"contracts/concepts/WashBayManager.sol": {
-			"keccak256": "0xbcdbba5e90a020b1ff7b1398083a2591befada12bb21b6cd2862fe591fce6d87",
+			"keccak256": "0x1d06041bd452b360350b817aad024f62130c3df05aba67a3036c6fc64f74cdc0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d307135505f216428cf6767f3d0f107951df43c620a5e1048ddca2bd35f83110",
-				"dweb:/ipfs/QmU5qbqfaz1d7W3j6mTE4W6ucRVcEt9JHUbSUVJaoB5PgQ"
+				"bzz-raw://0255b36725c0ea8ae5b3761e5b02669b1861029120d17337c34922a876a75bdc",
+				"dweb:/ipfs/QmPjMHQ4utiV6G4iVbEAPzSKNQdVzxFmeqjcA4GfQ2hfWP"
 			]
 		}
 	},

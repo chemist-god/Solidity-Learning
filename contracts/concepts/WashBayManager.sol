@@ -73,5 +73,19 @@ contract WashBayManager {
         emit ServiceCompleted(_serviceId);
     }
 
-    
+    function cancelService(uint256 _serviceId) external onlyCustomer(_serviceId) {
+        Service storage s = services[_serviceId];
+        require(s.status == Status.Requested, "Cannot cancel now");
+
+        s.status = Status.Cancelled;
+        payable(s.customer).transfer(s.fee);
+
+        emit ServiceCancelled(_serviceId);
+    }
+
+    // Optional: allow the owner to withdraw any leftover balance
+    // i will expand this implementation
+    function withdrawBalance() external onlyOwner {
+        payable(owner).transfer(address(this).balance);
+    }
 }
