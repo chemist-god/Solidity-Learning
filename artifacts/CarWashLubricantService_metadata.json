@@ -1,0 +1,851 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "serviceId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CarWashLubricantService.ServiceType",
+						"name": "serviceType",
+						"type": "uint8"
+					}
+				],
+				"name": "ServiceAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					}
+				],
+				"name": "ServiceOrderCancelled",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "serviceIds",
+						"type": "uint256[]"
+					}
+				],
+				"name": "ServiceOrderCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CarWashLubricantService.OrderStatus",
+						"name": "oldStatus",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "enum CarWashLubricantService.OrderStatus",
+						"name": "newStatus",
+						"type": "uint8"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "changedBy",
+						"type": "address"
+					}
+				],
+				"name": "ServiceOrderStatusChanged",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "serviceId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "oldPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "ServicePriceUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "serviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "ServiceRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "StaffAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "orderId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "StaffAssignedToOrder",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "StaffRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_estimatedDuration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CarWashLubricantService.ServiceType",
+						"name": "_serviceType",
+						"type": "uint8"
+					}
+				],
+				"name": "addService",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "addStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "assignStaffToOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "cancelServiceOrder",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_serviceIds",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "string",
+						"name": "_customerNotes",
+						"type": "string"
+					}
+				],
+				"name": "createServiceOrder",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllServiceIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_customerAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCustomerOrderIds",
+				"outputs": [
+					{
+						"internalType": "uint224[]",
+						"name": "",
+						"type": "uint224[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "getOrderDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "customer",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "serviceIds",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalPrice",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum CarWashLubricantService.OrderStatus",
+								"name": "status",
+								"type": "uint8"
+							},
+							{
+								"internalType": "address",
+								"name": "staffAssigned",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "createdAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "completedAt",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "customerNotes",
+								"type": "string"
+							}
+						],
+						"internalType": "struct CarWashLubricantService.ServiceOrder",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "getServiceDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "price",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "estimatedDuration",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum CarWashLubricantService.ServiceType",
+								"name": "serviceType",
+								"type": "uint8"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CarWashLubricantService.Service",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "isStaff",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "markOrderCompleted",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_orderId",
+						"type": "uint256"
+					}
+				],
+				"name": "markOrderInProgress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextOrderId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextServiceId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					}
+				],
+				"name": "removeService",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_staffAddress",
+						"type": "address"
+					}
+				],
+				"name": "removeStaff",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "serviceOrders",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "customer",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CarWashLubricantService.OrderStatus",
+						"name": "status",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "staffAssigned",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "createdAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "completedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "customerNotes",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "services",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "estimatedDuration",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum CarWashLubricantService.ServiceType",
+						"name": "serviceType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_serviceId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_newPrice",
+						"type": "uint256"
+					}
+				],
+				"name": "updateServicePrice",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "A smart contract for managing car wash and lubricant services, bookings, and payments. This contract allows an owner to define services, customers to create orders and pay, and staff to mark orders as complete.",
+			"kind": "dev",
+			"methods": {
+				"addService(string,string,uint256,uint256,uint8)": {
+					"details": "Adds a new service to the catalog.",
+					"params": {
+						"_description": "A brief description of the service.",
+						"_estimatedDuration": "The estimated time to complete the service in minutes.",
+						"_name": "The name of the service.",
+						"_price": "The price of the service in Wei.",
+						"_serviceType": "The type of service (Wash, Lubricant, Other)."
+					}
+				},
+				"addStaff(address)": {
+					"details": "Adds an address to the list of authorized staff members.",
+					"params": {
+						"_staffAddress": "The address to grant staff permissions to."
+					}
+				},
+				"assignStaffToOrder(uint256,address)": {
+					"details": "Allows staff to assign themselves or another staff member to an order.",
+					"params": {
+						"_orderId": "The ID of the order to assign staff to.",
+						"_staffAddress": "The address of the staff member to assign."
+					}
+				},
+				"cancelServiceOrder(uint256)": {
+					"details": "Allows a customer to cancel their own order if it's still Pending or Confirmed. Refunds the payment to the customer.",
+					"params": {
+						"_orderId": "The ID of the order to cancel."
+					}
+				},
+				"constructor": {
+					"details": "Initializes the contract, setting the deployer as the owner."
+				},
+				"createServiceOrder(uint256[],string)": {
+					"details": "Allows a customer to create a new service order and pay for it. The total value sent with the transaction must match the calculated total price.",
+					"params": {
+						"_customerNotes": "Any additional notes from the customer for the order.",
+						"_serviceIds": "An array of IDs of the services requested."
+					}
+				},
+				"getAllServiceIds()": {
+					"details": "Retrieves all service IDs currently defined.",
+					"returns": {
+						"_0": "An array of all valid service IDs."
+					}
+				},
+				"getContractBalance()": {
+					"details": "Returns the current balance of the contract (funds collected from orders).",
+					"returns": {
+						"_0": "The contract's balance in Wei."
+					}
+				},
+				"getCustomerOrderIds(address)": {
+					"details": "Retrieves all order IDs created by a specific customer.",
+					"params": {
+						"_customerAddress": "The address of the customer."
+					},
+					"returns": {
+						"_0": "An array of order IDs."
+					}
+				},
+				"getOrderDetails(uint256)": {
+					"details": "Retrieves the details of a specific service order.",
+					"params": {
+						"_orderId": "The ID of the order."
+					},
+					"returns": {
+						"_0": "ServiceOrder struct containing all order details."
+					}
+				},
+				"getServiceDetails(uint256)": {
+					"details": "Retrieves the details of a specific service.",
+					"params": {
+						"_serviceId": "The ID of the service."
+					},
+					"returns": {
+						"_0": "Service struct containing all service details."
+					}
+				},
+				"markOrderCompleted(uint256)": {
+					"details": "Allows staff to mark an order as Completed.",
+					"params": {
+						"_orderId": "The ID of the order to update."
+					}
+				},
+				"markOrderInProgress(uint256)": {
+					"details": "Allows staff to mark an order as InProgress.",
+					"params": {
+						"_orderId": "The ID of the order to update."
+					}
+				},
+				"removeService(uint256)": {
+					"details": "Marks a service as non-existent (soft delete). Existing orders with this service will still reference it, but new orders cannot be made.",
+					"params": {
+						"_serviceId": "The ID of the service to remove."
+					}
+				},
+				"removeStaff(address)": {
+					"details": "Removes an address from the list of authorized staff members.",
+					"params": {
+						"_staffAddress": "The address to revoke staff permissions from."
+					}
+				},
+				"updateServicePrice(uint256,uint256)": {
+					"details": "Updates the price of an existing service.",
+					"params": {
+						"_newPrice": "The new price for the service in Wei.",
+						"_serviceId": "The ID of the service to update."
+					}
+				}
+			},
+			"title": "CarWashLubricantService",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/concepts/artifacts/Lubricant.sol": "CarWashLubricantService"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/concepts/artifacts/Lubricant.sol": {
+			"keccak256": "0xeef3254484ec272972f0d403ae6a3d021e475ac87ab1e58cfce8a6a21d7ec037",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7a911961e8e754bf1217cebef4490c400635fe4792f739779b452e3f4d83ae6",
+				"dweb:/ipfs/QmQP8Ej2rhiQ5JiuFqqxpLDziFTxdnAkHSGVzgzeSmn4cu"
+			]
+		}
+	},
+	"version": 1
+}
