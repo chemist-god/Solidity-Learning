@@ -11,6 +11,21 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [],
+				"name": "ElectionAlreadyExists",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "InvalidTimeline",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -79,11 +94,30 @@
 				"outputs": [
 					{
 						"internalType": "bytes32",
-						"name": "",
+						"name": "electionId",
 						"type": "bytes32"
 					}
 				],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "electionIds",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -120,11 +154,19 @@
 						"internalType": "string",
 						"name": "bannerUrl",
 						"type": "string"
-					},
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllElectionIds",
+				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "exists",
-						"type": "bool"
+						"internalType": "bytes32[]",
+						"name": "",
+						"type": "bytes32[]"
 					}
 				],
 				"stateMutability": "view",
@@ -166,11 +208,6 @@
 								"internalType": "string",
 								"name": "bannerUrl",
 								"type": "string"
-							},
-							{
-								"internalType": "bool",
-								"name": "exists",
-								"type": "bool"
 							}
 						],
 						"internalType": "struct ElectionManager.Election",
@@ -223,11 +260,11 @@
 	},
 	"sources": {
 		"contracts/tVote/ElectionManager.sol": {
-			"keccak256": "0xefdf1974111fb344946f1414d8dc9cb42c44b511a2ad9fffcafe3fa68b3d8e40",
+			"keccak256": "0xa25ca171f6be912246905022cd8d1dff9bc0c6488418939aacfda61fe652bd87",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ecfb1ca22d280d1afaf14919c02d5204a2f92684b8c99d67ae49dd5b7bd144f0",
-				"dweb:/ipfs/QmZu6X7f23yAfnFaP6jQHhnbgtbE97gkP2uK8qVcXijgTH"
+				"bzz-raw://616d23a0a32473e2bdf95e23cba615428b2582fd24408a9d8e0f291c4a4d6e61",
+				"dweb:/ipfs/QmUe8cW28fkx8Sm7ynWae6yz2JdHk2UCFnkQfbQ6htEPHE"
 			]
 		}
 	},
