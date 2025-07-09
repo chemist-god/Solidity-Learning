@@ -131,6 +131,57 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "_electionId",
+						"type": "bytes32"
+					}
+				],
+				"name": "getElection",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "startDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "endDate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "bannerUrl",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ElectionManager.Election",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -172,11 +223,11 @@
 	},
 	"sources": {
 		"contracts/tVote/ElectionManager.sol": {
-			"keccak256": "0xa7326f4da5de2a222313a5b7546883c8ff5548db125a63ec71af1371ce885299",
+			"keccak256": "0xefdf1974111fb344946f1414d8dc9cb42c44b511a2ad9fffcafe3fa68b3d8e40",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4cc5ab0fbe7ffe391f19613b9e71023144808a18ef0cfbfbfa5e2593f18fdb40",
-				"dweb:/ipfs/QmPL34DUE94FoxFpDW369F8uHg4EHjQPoH8AkgQdbGBpLj"
+				"bzz-raw://ecfb1ca22d280d1afaf14919c02d5204a2f92684b8c99d67ae49dd5b7bd144f0",
+				"dweb:/ipfs/QmZu6X7f23yAfnFaP6jQHhnbgtbE97gkP2uK8qVcXijgTH"
 			]
 		}
 	},

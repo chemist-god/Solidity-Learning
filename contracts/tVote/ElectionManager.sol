@@ -54,5 +54,8 @@ contract ElectionManager {
         return electionId;
     }
 
-   
+    function getElection(bytes32 _electionId) external view returns (Election memory) {
+        require(elections[_electionId].exists, "Election does not exist");
+        return elections[_electionId];
+    }
 }
