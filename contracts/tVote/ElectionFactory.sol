@@ -103,5 +103,17 @@ contract ElectionFactory is Ownable(msg.sender) {
         );
     }
 
-    
+    // Helper: Get list of all election IDs
+    function getAllElectionIds() public view returns (uint[] memory) {
+        uint[] memory ids = new uint[](electionCount);
+        for (uint i = 0; i < electionCount; i++) {
+            ids[i] = i + 1;
+        }
+        return ids;
+    }
+
+    // Get contract version
+    function getVersion() public view returns (bytes32) {
+        return contractVersion;
+    }
 }

@@ -272,6 +272,32 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getAllElectionIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVersion",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -390,11 +416,11 @@
 			]
 		},
 		"contracts/tVote/ElectionFactory.sol": {
-			"keccak256": "0x7174df85c5e43989cfadd7c8ff787c1ec304f0be989ea9efde4299ea2fa29962",
+			"keccak256": "0xc36c042b5dd44fe734e94410c35acddf08e0fb88bc3c1d77c65660e8fe6baed8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1d00e04933648d7df7d0af2707823a1451a446ad18bbd2a978a0ebf9fd40d6ba",
-				"dweb:/ipfs/QmTTkusBXYG8a1E5VdL3ftA1YViGA1XyTGug9N8X9bvyiv"
+				"bzz-raw://35a9c535d64b48fcbd0a7e0c86b9db16f0a44aebff436641a6f32ec2ccbb1afa",
+				"dweb:/ipfs/QmcufpDAWAxwwvJwVtXj8J6Y71mVfP2wmjJYeRsefPgmHG"
 			]
 		}
 	},
