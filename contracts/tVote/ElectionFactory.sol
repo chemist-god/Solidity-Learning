@@ -93,5 +93,15 @@ contract ElectionFactory is Ownable(msg.sender) {
         emit ElectionEnded(_electionId);
     }
 
+    // Helper: Check if election is active
+    function isElectionActive(uint _electionId) public view returns (bool) {
+        Election storage election = elections[_electionId];
+        return (
+            election.isActive &&
+            block.timestamp >= election.startDate &&
+            block.timestamp <= election.endDate
+        );
+    }
+
     
 }
