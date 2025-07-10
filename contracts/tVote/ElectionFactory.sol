@@ -24,5 +24,24 @@ contract ElectionFactory is Ownable(msg.sender) {
     // Mapping from election ID to Election struct
     mapping(uint => Election) public elections;
 
+    // Events
+    event ElectionCreated(
+        uint indexed id,
+        string name,
+        string description,
+        uint startDate,
+        uint endDate,
+        string bannerUrl,
+        address indexed createdBy
+    );
+
+    event ElectionEnded(uint indexed id);
+    event ContractDeployed(bytes32 indexed version, address indexed deployer);
+
+    // Constructor
+    constructor() {
+        deployer = msg.sender;
+        emit ContractDeployed(contractVersion, deployer);
+    }
     
 }

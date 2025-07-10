@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -26,6 +31,87 @@
 				],
 				"name": "OwnableUnauthorizedAccount",
 				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "bytes32",
+						"name": "version",
+						"type": "bytes32"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "deployer",
+						"type": "address"
+					}
+				],
+				"name": "ContractDeployed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "startDate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "endDate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "bannerUrl",
+						"type": "string"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "createdBy",
+						"type": "address"
+					}
+				],
+				"name": "ElectionCreated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "ElectionEnded",
+				"type": "event"
 			},
 			{
 				"anonymous": false,
@@ -239,11 +325,11 @@
 			]
 		},
 		"contracts/tVote/ElectionFactory.sol": {
-			"keccak256": "0x8a9ed21e0d940bee4941f911ebc417c05e3d2b51307b4121da5811b4974d2150",
+			"keccak256": "0x8a52380ca0e50f6feee0b83adccd74b29576f6b16a776d2f1e117b0d131faea3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://03bafa0277c797909a49316eba00ed49c257547bad85432ec402abafe045195b",
-				"dweb:/ipfs/QmQPx7TtyZLNrMVrjKmn9Y4fWt7YbZSYMhLWBx7n28C4Kq"
+				"bzz-raw://6ac084eb8a2d1249e93ba363494360cc70d20ca9ca6a7ff469cdc06ed8956d98",
+				"dweb:/ipfs/QmPTS3GG3iEjECobQe97Dnmytzmtq6e6Fo2TyHYC2Ds2Zu"
 			]
 		}
 	},
