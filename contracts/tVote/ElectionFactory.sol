@@ -43,7 +43,7 @@ contract ElectionFactory is Ownable(msg.sender) {
         deployer = msg.sender;
         emit ContractDeployed(contractVersion, deployer);
     }
-
+    
     // Create a new election
     function createElection(
         string memory _name,
@@ -80,6 +80,17 @@ contract ElectionFactory is Ownable(msg.sender) {
             _bannerUrl,
             msg.sender
         );
+    }
+
+    // End an election (archive or cancel)
+    function endElection(uint _electionId) public {
+        Election storage election = elections[_electionId];
+        require(election.id != 0, "Election does not exist");
+        require(election.createdBy == msg.sender || owner() == msg.sender, "Not authorized");
+        require(election.isActive, "Election already ended");
+
+        election.isActive = false;
+        emit ElectionEnded(_electionId);
     }
 
     

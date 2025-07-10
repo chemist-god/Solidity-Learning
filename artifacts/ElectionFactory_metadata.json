@@ -259,6 +259,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_electionId",
+						"type": "uint256"
+					}
+				],
+				"name": "endElection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -358,11 +371,11 @@
 			]
 		},
 		"contracts/tVote/ElectionFactory.sol": {
-			"keccak256": "0x1f97d585a34d0aaa1dcb6c5a6cf85c4f99dd27bc43cdf1f457317b476a4d38d5",
+			"keccak256": "0xb2d71a060b1f665bc972b2b2f17967514c7e4eddaf93bd0867c21772dddce29c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a31bc550f2a28ffa6c7c228680d9f16e20e9da48efc4f52e8ff0750ed860a747",
-				"dweb:/ipfs/QmVsMmEwhmehz9faawswFdEiBJXwB77HxVjtLLAdFRSAUJ"
+				"bzz-raw://60d27e66a06efb1e831de65b16f63e857ad7c4abd7de69be4ebcf28257756387",
+				"dweb:/ipfs/QmX13Y5E5jTVFTyS6ZHpdAR9FyL8hjCCSaTjh8GCex4qVR"
 			]
 		}
 	},
