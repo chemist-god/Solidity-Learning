@@ -43,5 +43,44 @@ contract ElectionFactory is Ownable(msg.sender) {
         deployer = msg.sender;
         emit ContractDeployed(contractVersion, deployer);
     }
+
+    // Create a new election
+    function createElection(
+        string memory _name,
+        string memory _description,
+        uint _startDate,
+        uint _endDate,
+        string memory _bannerUrl
+    ) public onlyOwner {
+        require(bytes(_name).length > 0, "Name cannot be empty");
+        require(bytes(_description).length > 0, "Description cannot be empty");
+        require(_startDate < _endDate, "Start date must be before end date");
+        require(_startDate > block.timestamp, "Start date must be in the future");
+
+        electionCount++;
+        uint newElectionId = electionCount;
+
+        elections[newElectionId] = Election({
+            id: newElectionId,
+            name: _name,
+            description: _description,
+            startDate: _startDate,
+            endDate: _endDate,
+            bannerUrl: _bannerUrl,
+            createdBy: msg.sender,
+            isActive: true
+        });
+
+        emit ElectionCreated(
+            newElectionId,
+            _name,
+            _description,
+            _startDate,
+            _endDate,
+            _bannerUrl,
+            msg.sender
+        );
+    }
+
     
 }
