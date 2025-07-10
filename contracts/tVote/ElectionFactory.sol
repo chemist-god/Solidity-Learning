@@ -16,5 +16,13 @@ contract ElectionFactory is Ownable(msg.sender) {
         bool isActive;
     }
 
+    // State variables
+    uint public electionCount;
+    bytes32 public immutable contractVersion = keccak256("TRUSTVOTE_V1");
+    address public immutable deployer;
+
+    // Mapping from election ID to Election struct
+    mapping(uint => Election) public elections;
+
     
 }
