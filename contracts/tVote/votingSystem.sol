@@ -37,5 +37,33 @@ contract VotingSystem {
     error InvalidCandidateIndex();
     error CallerNotOwner();
 
-   
+    // Modifier to check if sender is owner of ElectionFactory
+    modifier onlyFactoryOwner() {
+        require(
+            msg.sender == Ownable(electionFactory).owner(),
+            "Caller is not the factory owner"
+        );
+        _;
+    }
+
+    // Constructor takes ElectionFactory address
+    constructor(address _electionFactory) {
+        electionFactory = _electionFactory;
+    }
+
+    
+    function registerCandidates(uint electionId, string[] memory _candidates) external onlyFactoryOwner {
+        require(_candidates.length > 0, "At least one candidate required");
+
+        // Clear previous candidates (if any)
+        delete candidatesByElection[electionId];
+
+        // Set new candidates
+        candidatesByElection[electionId] = _candidates;
+
+        electionVotes[electionId].candidateCount = _candidates.length;
+
+        emit CandidatesRegistered(electionId, _candidates);
+    }
+
 }
