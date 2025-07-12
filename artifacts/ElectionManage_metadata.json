@@ -139,6 +139,39 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_startDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endDate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_bannerUrl",
+						"type": "string"
+					}
+				],
+				"name": "createElection",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "deployer",
 				"outputs": [
@@ -264,11 +297,11 @@
 			]
 		},
 		"contracts/concepts/manageElection.sol": {
-			"keccak256": "0xcd426e27f5742c120a3b3ea296a354299122def7db8d899a7d4fac7804e94c8c",
+			"keccak256": "0xad587a0476f7634a0909634137b4a58815f84b115421a225227e1825dd88290e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e855085f23f77ebf57c79541421d04b920f6b55cea8dfc43b1dd0722e544f9e5",
-				"dweb:/ipfs/QmYC6JH2yZzA7gRBAAZhyABHLV4FitdmaLm3Rdffe2nDUd"
+				"bzz-raw://090138236f017c96a90d417211d7b59824f4f5e15efa029d53753fdae503a35a",
+				"dweb:/ipfs/QmTWbF7Eo9iq22DJNuqDroF7D7Yc4a8eTma5q2WTDPQGw6"
 			]
 		}
 	},

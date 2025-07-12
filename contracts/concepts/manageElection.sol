@@ -26,4 +26,30 @@ contract ElectionManage is Ownable {
         emit ContractDeployed(contractVersion, deployer);
     }
 
+    function createElection(
+        string memory _name,
+        string memory _description,
+        uint _startDate,
+        uint _endDate,
+        string memory _bannerUrl
+    ) public onlyOwner {
+        require(bytes(_name).length > 0, "Name required");
+        require(_startDate > block.timestamp, "Start date must be future");
+        require(_startDate < _endDate, "Start must be before end");
+
+        electionCount++;
+        emit ElectionCreated(
+            electionCount,
+            _name,
+            _description,
+            _startDate,
+            _endDate,
+            _bannerUrl,
+            msg.sender,
+            block.chainid  // Critical for multi-chain support
+        );
+    }
+
+    // V2+: Removed storage-heavy functions (getAllElectionIds etc)
+    // Frontend should query events instead
 }
