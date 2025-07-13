@@ -16,4 +16,14 @@ contract ElectionRegistration {
     mapping(address => Candidate) public candidates;
     address[] public candidateAddresses;
 
+    event CandidateRegistered(address indexed candidateAddress, string name);
+    event CandidateApproved(address indexed candidateAddress, string message);
+    event CandidateRejected(address indexed candidateAddress, string reason);
+
+    modifier onlyElectionManager() {
+        require(msg.sender == electionManager, "Only Election Manager can perform this action");
+        _;
+    }
+
+    
 }
