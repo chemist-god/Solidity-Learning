@@ -167,6 +167,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "getAllCandidates",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -241,11 +254,11 @@
 	},
 	"sources": {
 		"contracts/tVote/ElectionRegister.sol": {
-			"keccak256": "0x8e2cfe8d96fa8ce8487abcebd6f72167fb44418842df65a2a3cf05ca48da6e54",
+			"keccak256": "0xaf18489d5d5437f573b7ecf5dfba18780f126d5492d0a82f06bcd00591b89d53",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://4e9d17d77fe8c8b261cb30e80ce4f7a5e9c0ca59f259ca5c4dffc7b6e42a884a",
-				"dweb:/ipfs/QmevWjUzdfocGFpJF273m2JTtHaHfGya9cxrcFxLEHjdJ2"
+				"bzz-raw://ab0068f6b631d45746a9975fc5e532c59552d6e4d78358b39c14a03c45527489",
+				"dweb:/ipfs/QmPSdLKxfrdJkJ9djD2EGxL67tZFzFYaXfmd3QvMLCYeVi"
 			]
 		}
 	},

@@ -95,4 +95,10 @@ contract ElectionRegistration {
         emit CandidateRejected(_candidateAddress, _reason);
     }
 
+    // Get all registered candidate addresses
+    // will modify this later on...
+    
+    function getAllCandidates() public view returns (address[] memory) {
+        return candidateAddresses;
+    }
 }
