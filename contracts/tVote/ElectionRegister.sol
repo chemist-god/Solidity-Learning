@@ -25,5 +25,38 @@ contract ElectionRegistration {
         _;
     }
 
-    
+    constructor() {
+        electionManager = msg.sender;
+    }
+
+                //here the user will 
+    // Register as a candidate.
+     // _name Name of the candidate
+     // _age Age of the candidate
+     // _idDocumentHash Hash of the uploaded ID document (e.g., from IPFS)
+     // _additionalInfo Any extra info
+     
+    function registerCandidate(
+        string memory _name,
+        uint256 _age,
+        string memory _idDocumentHash,
+        string memory _additionalInfo
+    ) public {
+        require(!candidates[msg.sender].exists, "Already registered");
+
+        candidates[msg.sender] = Candidate({
+            name: _name,
+            age: _age,
+            idDocumentHash: _idDocumentHash,
+            additionalInfo: _additionalInfo,
+            isRegistered: false,
+            approved: false,
+            exists: true
+        });
+
+        candidateAddresses.push(msg.sender);
+
+        emit CandidateRegistered(msg.sender, _name);
+    }
+
 }
