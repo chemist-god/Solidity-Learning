@@ -59,4 +59,22 @@ contract ElectionRegistration {
         emit CandidateRegistered(msg.sender, _name);
     }
 
+                 // here we approve
+    //  a candidate
+     //  _candidateAddress Address of the candidate
+     //  _message Optional message to send with approval
+    
+    function approveCandidate(address _candidateAddress, string memory _message)
+        public
+        onlyElectionManager
+    {
+        require(candidates[_candidateAddress].exists, "Candidate does not exist");
+        require(!candidates[_candidateAddress].approved, "Already approved");
+
+        candidates[_candidateAddress].approved = true;
+        candidates[_candidateAddress].isRegistered = true;
+
+        emit CandidateApproved(_candidateAddress, _message);
+    }
+
 }

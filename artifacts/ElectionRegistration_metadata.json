@@ -70,6 +70,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_candidateAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
+					}
+				],
+				"name": "approveCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -205,11 +223,11 @@
 	},
 	"sources": {
 		"contracts/tVote/ElectionRegister.sol": {
-			"keccak256": "0x2dc82a7ae423f9df43fbc7c12cd4e41d32d95d429eb56b1425e21f766451da48",
+			"keccak256": "0x9e8714295ed5353783405352ff04a89d9df6870db1096d992076facb3a9764bc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://5c2527251115f0d755887de8e3156a3a441c1da7a334c6cb9f71aaa81aa8ea5d",
-				"dweb:/ipfs/Qmf42PHyn1xiSzZ4UfCbAdgmRuBYXKKSX3BBPveBPEDgTE"
+				"bzz-raw://c5afae5d280705d6cb1beff25a86f4a6ad442a09d3c289c81f16083e6fe81bca",
+				"dweb:/ipfs/QmSS13VocgFfGSiYpdeHQX2ybJ21TXfxdAXriqnM15E7cv"
 			]
 		}
 	},
