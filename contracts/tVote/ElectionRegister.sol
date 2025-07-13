@@ -77,4 +77,22 @@ contract ElectionRegistration {
         emit CandidateApproved(_candidateAddress, _message);
     }
 
+                          //this function here a candiate is rejected 
+    // Reject a candidate
+     //  _candidateAddress Address of the candidate
+     //  _reason Reason for rejection
+     
+    function rejectCandidate(address _candidateAddress, string memory _reason)
+        public
+        onlyElectionManager
+    {
+        require(candidates[_candidateAddress].exists, "Candidate does not exist");
+        require(!candidates[_candidateAddress].approved, "Already approved");
+
+        candidates[_candidateAddress].approved = false;
+        candidates[_candidateAddress].isRegistered = false;
+
+        emit CandidateRejected(_candidateAddress, _reason);
+    }
+
 }
