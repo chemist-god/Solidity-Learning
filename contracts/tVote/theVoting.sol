@@ -22,5 +22,14 @@ contract TheVoter {
     event VoteCasted(address indexed voter, address indexed candidate);
     event VoterNotEligible(address indexed voter);
 
-    
+    modifier onlyElectionManager() {
+        require(msg.sender == electionManager, "Only election manager can call this");
+        _;
+    }
+
+    constructor(address _soulboundTokenAddress) {
+        electionManager = msg.sender;
+        soulboundTokenContract = _soulboundTokenAddress;
+    }
+
 }
