@@ -40,4 +40,33 @@ contract TheVoter {
         voteCounts[_candidateAddress] = 0;
     }
 
+    //Cast a vote for a candidate 
+    function vote(address _candidateAddress) public {
+        ISoulboundToken sbt = ISoulboundToken(soulboundTokenContract);
+
+        // Check if the voter has the soulbound token
+        require(sbt.balanceOf(msg.sender) == 1, "Voter not eligible: no soulbound token");
+
+        // Check if the voter has already voted
+        require(!voters[msg.sender].hasVoted, "Already voted");
+
+        // Check if the candidate is valid
+        bool isValidCandidate = false;
+        for (uint256 i = 0; i < candidates.length; i++) {
+            if (candidates[i] == _candidateAddress) {
+                isValidCandidate = true;
+                break;
+            }
+        }
+        require(isValidCandidate, "Invalid candidate");
+
+        // Record the vote
+        voters[msg.sender].hasVoted = true;
+        voters[msg.sender].candidateAddress = _candidateAddress;
+        voteCounts[_candidateAddress] += 1;
+
+        emit VoteCasted(msg.sender, _candidateAddress);
+    }
+
+
 }
