@@ -94,6 +94,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "getCandidate",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCandidateCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "soulboundTokenContract",
 				"outputs": [
@@ -191,11 +223,11 @@
 	},
 	"sources": {
 		"contracts/tVote/theVoting.sol": {
-			"keccak256": "0x0d496e96063e6b058461541df9fe95b7ffdabc5fe9b920f3dbeb676cb4def846",
+			"keccak256": "0xecaeb303af56955fa00f3b3284309ddf2860579126ba5ccec183ebf10386d5c3",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bc7075561d1e6e1ee7b0b319e4027e03abfb3894b2f024843933479d67224b5c",
-				"dweb:/ipfs/QmV5VZtDHjXt7xuU2qAE7VHkREdQCEo5giKNEx9xWEAJCr"
+				"bzz-raw://6b4448ace6e945191ae653e15b334033b9629b93b260cc8daae3e4434c30cff1",
+				"dweb:/ipfs/QmcTZjfSwAEvrvmJLzQ81GqifuUs3aWs47cV3tMvHskRpJ"
 			]
 		}
 	},

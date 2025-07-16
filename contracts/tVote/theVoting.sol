@@ -69,4 +69,14 @@ contract TheVoter {
     }
 
 
+    //Get total number of candidates
+    function getCandidateCount() public view returns (uint256) {
+        return candidates.length;
+    }
+
+    //candidate at index
+    function getCandidate(uint256 index) public view returns (address) {
+        return candidates[index];
+    }
+
 }
