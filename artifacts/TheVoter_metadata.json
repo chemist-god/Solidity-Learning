@@ -126,6 +126,63 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "getVote",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "candidate",
+						"type": "address"
+					}
+				],
+				"name": "getVoteCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "hasVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "soulboundTokenContract",
 				"outputs": [
@@ -223,11 +280,11 @@
 	},
 	"sources": {
 		"contracts/tVote/theVoting.sol": {
-			"keccak256": "0xecaeb303af56955fa00f3b3284309ddf2860579126ba5ccec183ebf10386d5c3",
+			"keccak256": "0x69d07a5cad6d68a2ccc30152c231ab073471b4ab32e5deb592db56ee5fc84cc5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6b4448ace6e945191ae653e15b334033b9629b93b260cc8daae3e4434c30cff1",
-				"dweb:/ipfs/QmcTZjfSwAEvrvmJLzQ81GqifuUs3aWs47cV3tMvHskRpJ"
+				"bzz-raw://e9b8869946621876f1327ae51336d6f31e314875f79c55d8428d618fcedb11c6",
+				"dweb:/ipfs/QmYBtsvnxLcEo1yqWiATSJ3je5ruXsRCVkUHj5bpZehV9Z"
 			]
 		}
 	},

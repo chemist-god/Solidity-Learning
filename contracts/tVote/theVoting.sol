@@ -79,4 +79,18 @@ contract TheVoter {
         return candidates[index];
     }
 
+    //Get total votes for a candidate
+    function getVoteCount(address candidate) public view returns (uint256) {
+        return voteCounts[candidate];
+    }
+
+    //Check if a voter has already voted
+    function hasVoted(address voter) public view returns (bool) {
+        return voters[voter].hasVoted;
+    }
+
+    // Get who the voter voted for
+    function getVote(address voter) public view returns (address) {
+        return voters[voter].candidateAddress;
+    }
 }
