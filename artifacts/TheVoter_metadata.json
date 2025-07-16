@@ -6,6 +6,57 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "candidate",
+						"type": "address"
+					}
+				],
+				"name": "VoteCasted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					}
+				],
+				"name": "VoterNotEligible",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "candidates",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "electionManager",
 				"outputs": [
@@ -25,6 +76,49 @@
 					{
 						"internalType": "address",
 						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voteCounts",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voters",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "hasVoted",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "candidateAddress",
 						"type": "address"
 					}
 				],
@@ -60,11 +154,11 @@
 	},
 	"sources": {
 		"contracts/tVote/theVoting.sol": {
-			"keccak256": "0x6acc240c4c689e2bc30d2b5fa5141c77464f0177f1d08e31a9830ce5f4199bf9",
+			"keccak256": "0x19c34c6fa059b60affef20629011e1fa2f3db03196211ce30f4fd3da44312b72",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cc4d9f774d38567897a20e464f64c48cf7ca0b9118f705f45083593f030cca3a",
-				"dweb:/ipfs/QmP6oB2TkxRkVhwF3Vp2cVG2bH5KFGXUsgB7QmYtKeyj1n"
+				"bzz-raw://a3ed2b361a3e01b734e54dde87d4591102be2571be1fedc139fa9a45e5b4522e",
+				"dweb:/ipfs/QmXET5dbZxJ3gGNtRLqYYUWSaiU3M5gc1VZoQBVDDwCndU"
 			]
 		}
 	},

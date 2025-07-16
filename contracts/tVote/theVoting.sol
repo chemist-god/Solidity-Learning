@@ -14,4 +14,13 @@ contract TheVoter {
         address candidateAddress;
     }
 
+    mapping(address => VoteRecord) public voters;
+
+    address[] public candidates;
+    mapping(address => uint256) public voteCounts;
+
+    event VoteCasted(address indexed voter, address indexed candidate);
+    event VoterNotEligible(address indexed voter);
+
+    
 }
