@@ -32,4 +32,12 @@ contract TheVoter {
         soulboundTokenContract = _soulboundTokenAddress;
     }
 
+    // here add a registered candidate to the list of votable candidates
+
+    function addCandidate(address _candidateAddress) public onlyElectionManager {
+        require(_candidateAddress != address(0), "Invalid address");
+        candidates.push(_candidateAddress);
+        voteCounts[_candidateAddress] = 0;
+    }
+
 }

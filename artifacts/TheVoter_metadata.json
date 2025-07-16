@@ -51,6 +51,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "address",
+						"name": "_candidateAddress",
+						"type": "address"
+					}
+				],
+				"name": "addCandidate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -165,11 +178,11 @@
 	},
 	"sources": {
 		"contracts/tVote/theVoting.sol": {
-			"keccak256": "0xb3dc50e0c30147f3070c1df8c782f5443d80022092e90264308af27ef0cbe17a",
+			"keccak256": "0xda44f0b4999ce9b283036a735417fa47f4c543aafd8236e221f0f1670ecee8f9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1ee1405f77fe8f7a7ee1b3520c26910d8f0d69fa267ec6ffebf4a2b00fa4e08c",
-				"dweb:/ipfs/QmeThhUrStmJVXgEeuvcy9wFzz5D6oqksrxD3gMwk1Vn7q"
+				"bzz-raw://1d7c63815ebb360060679aebd7323994e637dc270a23c403008157c2c3fdfab1",
+				"dweb:/ipfs/QmPkgUw8FSBbTwtVVZwk9DXGtkVUdgkptDsxJVnNTqRkQc"
 			]
 		}
 	},
