@@ -11,6 +11,79 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "courses",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "tutor",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalCompletions",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "lessonProgress",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "nextCourseId",
 				"outputs": [
@@ -31,6 +104,40 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "users",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isTutor",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rewardPoints",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -65,11 +172,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0x6328da2c4acabcc9921ed8983d0055edab3cd6907d6b623959117744a7d0eee2",
+			"keccak256": "0xe8250af690380b656b595100bd48aca585ab9dd45b5208c0b0f19a4c9c1896b1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://adc53c52cd4555450aeed727af3812fe1d9751b89aec54e1dd3c1fd715d3fbf5",
-				"dweb:/ipfs/QmPHQQGVNmrLz6QYdh2Tw4DNh86kM4hs1WH4nTvVmMPL2b"
+				"bzz-raw://35173e7360420f68e44ab1a60338aa25919e443d2883ec0477e797de1459deb5",
+				"dweb:/ipfs/QmRuSGPwf56DUMmBf67QGYPxrrMqsXHREzCEkJaRL6oJj9"
 			]
 		}
 	},

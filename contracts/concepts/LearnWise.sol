@@ -39,4 +39,10 @@ contract LearnWise {
         mapping(uint => string) correctAnswers;
         mapping(address => QuizAttempt) attempts;
     }
-}
+
+    mapping(address => User) public users;
+    mapping(uint => Course) public courses;
+    mapping(address => mapping(uint => bool[])) public lessonProgress;
+    mapping(uint => Quiz) private quizzes;
+
+    }
