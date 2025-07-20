@@ -51,4 +51,12 @@ contract LearnWise {
         require(users[msg.sender].wallet == address(0), "User already registered");
         users[msg.sender] = User(msg.sender, _name, _isTutor, new uint[](0), new uint[](0), 0);
     }
+
+    // ------------------- Course Creation -------------------
+
+    function createCourse(string memory _title, string memory _description) external {
+        require(users[msg.sender].isTutor, "Only tutors can create courses");
+        courses[nextCourseId] = Course(nextCourseId, msg.sender, _title, _description, 0, true);
+        nextCourseId++;
+    }
 }

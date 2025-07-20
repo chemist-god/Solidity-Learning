@@ -57,6 +57,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					}
+				],
+				"name": "createCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -190,11 +208,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0x4de699168176a37d33ac223a86bf917f6df3abbb5f30e43c057a3d7a5dde0fe4",
+			"keccak256": "0x46272b36f4b8892db1d16804918c8d3ac4928ad8f14f0b281c29ca9ef97a29df",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ac373d1977eeccb0679927e60298cc2620ea45d35f55aba81419f711db33f54e",
-				"dweb:/ipfs/QmPjq8V3hueN5bUmSGCoKKq89APNvNGpFKpB7TEjj2Yr6M"
+				"bzz-raw://259fbdfa6f22dc0b4463da85c6365f48fedfb8e90bf49425d7e2feaaa3beb083",
+				"dweb:/ipfs/QmYvPWGVWYPnqCoWAciZK6CfdZVZyxcLtjfK1Zju8HArcT"
 			]
 		}
 	},
