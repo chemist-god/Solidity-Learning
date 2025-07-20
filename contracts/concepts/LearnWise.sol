@@ -45,4 +45,10 @@ contract LearnWise {
     mapping(address => mapping(uint => bool[])) public lessonProgress;
     mapping(uint => Quiz) private quizzes;
 
+    // ------------------- User Management -------------------
+
+    function registerUser(string memory _name, bool _isTutor) external {
+        require(users[msg.sender].wallet == address(0), "User already registered");
+        users[msg.sender] = User(msg.sender, _name, _isTutor, new uint[](0), new uint[](0), 0);
     }
+}

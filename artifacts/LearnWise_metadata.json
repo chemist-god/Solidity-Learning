@@ -112,6 +112,24 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "_isTutor",
+						"type": "bool"
+					}
+				],
+				"name": "registerUser",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -172,11 +190,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0xe8250af690380b656b595100bd48aca585ab9dd45b5208c0b0f19a4c9c1896b1",
+			"keccak256": "0x4de699168176a37d33ac223a86bf917f6df3abbb5f30e43c057a3d7a5dde0fe4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://35173e7360420f68e44ab1a60338aa25919e443d2883ec0477e797de1459deb5",
-				"dweb:/ipfs/QmRuSGPwf56DUMmBf67QGYPxrrMqsXHREzCEkJaRL6oJj9"
+				"bzz-raw://ac373d1977eeccb0679927e60298cc2620ea45d35f55aba81419f711db33f54e",
+				"dweb:/ipfs/QmPjq8V3hueN5bUmSGCoKKq89APNvNGpFKpB7TEjj2Yr6M"
 			]
 		}
 	},
