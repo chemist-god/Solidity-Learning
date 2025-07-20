@@ -65,11 +65,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0xb11162f92a93d507307971825adbfb78bf2b13faf0a1f3487bc04d49fcc87853",
+			"keccak256": "0x6328da2c4acabcc9921ed8983d0055edab3cd6907d6b623959117744a7d0eee2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3966d1258a652de4730f8d02712f7a011ceacabbf04cc0a8379966ae88318ba4",
-				"dweb:/ipfs/Qma3q5zHKkL3Ear6c3bqUtwL4f5mBRaabqPfLPrptBJGcx"
+				"bzz-raw://adc53c52cd4555450aeed727af3812fe1d9751b89aec54e1dd3c1fd715d3fbf5",
+				"dweb:/ipfs/QmPHQQGVNmrLz6QYdh2Tw4DNh86kM4hs1WH4nTvVmMPL2b"
 			]
 		}
 	},
