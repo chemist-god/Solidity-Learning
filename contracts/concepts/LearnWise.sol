@@ -59,4 +59,23 @@ contract LearnWise {
         courses[nextCourseId] = Course(nextCourseId, msg.sender, _title, _description, 0, true);
         nextCourseId++;
     }
+
+    // ------------------- Enrollment & Progress -------------------
+
+    function enrollInCourse(uint _courseId) external {
+        require(courses[_courseId].isActive, "Inactive course");
+        users[msg.sender].enrolledCourses.push(_courseId);
+    }
+
+    function markLessonComplete(uint _courseId, uint _lessonIndex) external {
+        lessonProgress[msg.sender][_courseId][_lessonIndex] = true;
+    }
+
+    function completeCourse(uint _courseId) external {
+        users[msg.sender].completedCourses.push(_courseId);
+        users[msg.sender].rewardPoints += 100;
+        courses[_courseId].totalCompletions++;
+        users[courses[_courseId].tutor].rewardPoints += 50;
+    }
+
 }
