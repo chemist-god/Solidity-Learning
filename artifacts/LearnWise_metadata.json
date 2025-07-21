@@ -101,6 +101,132 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getCourse",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "tutor",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalCompletions",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isActive",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct LearnWise.Course",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "getUser",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "wallet",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isTutor",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "enrolledCourses",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256[]",
+								"name": "completedCourses",
+								"type": "uint256[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "rewardPoints",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct LearnWise.User",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_courseId",
+						"type": "uint256"
+					}
+				],
+				"name": "getUserProgress",
+				"outputs": [
+					{
+						"internalType": "bool[]",
+						"name": "",
+						"type": "bool[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -275,11 +401,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0x332c0a501a55896ef27a6408f13c7affad2670040b138a79781f88054efb1820",
+			"keccak256": "0x6fd887b57e1c95573e46b81e9ba9b608a4e888f8b2e6aed1df2918b4904f89a1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0218e4e94f1ed903a0f5a2e9dfda3aca10743f15f6080b3ab9aec744b9c2bbf7",
-				"dweb:/ipfs/QmPWkzfCVCL4RNbXCFnWGEqgCtZdZvRP4sbk2MNH5SyHA1"
+				"bzz-raw://3624d4c1c83bc9455d3d2719d77dbe3d5896815b95a8165c5da329f8553373c2",
+				"dweb:/ipfs/QmP51vZaU1UseQu7NrhxcTwzxQsyyMTeXgcK4S4SSMdn2V"
 			]
 		}
 	},

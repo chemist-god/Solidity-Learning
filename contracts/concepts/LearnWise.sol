@@ -95,4 +95,17 @@ contract LearnWise {
         }
     }
 
+    // ------------------- Utility -------------------
+
+    function getUser(address _user) external view returns (User memory) {
+        return users[_user];
     }
+
+    function getCourse(uint _id) external view returns (Course memory) {
+        return courses[_id];
+    }
+
+    function getUserProgress(address _user, uint _courseId) external view returns (bool[] memory) {
+        return lessonProgress[_user][_courseId];
+    }
+}
