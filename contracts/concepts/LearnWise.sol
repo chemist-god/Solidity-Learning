@@ -78,4 +78,21 @@ contract LearnWise {
         users[courses[_courseId].tutor].rewardPoints += 50;
     }
 
-}
+    // ------------------- Quiz Logic -------------------
+
+    function submitQuiz(
+        uint _courseId,
+        uint _score,
+        bool _passed
+    ) external {
+        QuizAttempt storage attempt = quizzes[_courseId].attempts[msg.sender];
+        attempt.score = _score;
+        attempt.passed = _passed;
+        attempt.retaken = !attempt.retaken;
+        
+        if (_passed) {
+            users[msg.sender].rewardPoints += 50;
+        }
+    }
+
+    }

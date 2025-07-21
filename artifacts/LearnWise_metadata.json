@@ -192,6 +192,29 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "_courseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_score",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "_passed",
+						"type": "bool"
+					}
+				],
+				"name": "submitQuiz",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
@@ -252,11 +275,11 @@
 	},
 	"sources": {
 		"contracts/concepts/LearnWise.sol": {
-			"keccak256": "0x31d32e4e2d694e5f06a7d65ba54140b673f28ba9db98178365c78adbf583f7ac",
+			"keccak256": "0x332c0a501a55896ef27a6408f13c7affad2670040b138a79781f88054efb1820",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d519d65d9f5e26d4bbe53553177074a3c5de8fa7df4fb55684136277c1865986",
-				"dweb:/ipfs/QmUaNLeuVXVPzeih75JFqvtWYeP3QMfGtngAqumbLDzLGQ"
+				"bzz-raw://0218e4e94f1ed903a0f5a2e9dfda3aca10743f15f6080b3ab9aec744b9c2bbf7",
+				"dweb:/ipfs/QmPWkzfCVCL4RNbXCFnWGEqgCtZdZvRP4sbk2MNH5SyHA1"
 			]
 		}
 	},
