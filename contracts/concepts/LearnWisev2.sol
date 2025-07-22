@@ -4,150 +4,192 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract LearnWiseExtended is ERC721URIStorage, Ownable {
-    uint public nextCourseId;
-    uint public nextBadgeId;
-    address public platformWallet;
-
-    constructor() ERC721("LearnBadge", "LBDG") {
-        platformWallet = msg.sender;
-    }
+/**
+ * @title LearnWiseBasic
+ * @dev A simple decentralized learning platform with NFT course completion badges.
+ */
+contract LearnWiseBasic is ERC721URIStorage, Ownable {
+    uint256 public nextCourseId;
+    uint256 public nextBadgeId;
 
     struct User {
-        address wallet;
         string name;
         bool isTutor;
-        uint[] enrolledCourses;
-        uint[] completedCourses;
-        uint rewardPoints;
-        address inviter;
+        uint256[] enrolledCourses;
+        uint256[] completedCourses;
     }
 
     struct Course {
-        uint id;
-        address tutor;
         string title;
         string description;
-        uint totalCompletions;
+        address tutor;
         bool isActive;
-        uint stakingAmount;
     }
 
     struct QuizAttempt {
-        uint score;
+        uint256 score;
         bool passed;
-        bool retaken;
     }
 
+    // Mappings
     mapping(address => User) public users;
-    mapping(uint => Course) public courses;
-    mapping(address => mapping(uint => bool[])) public lessonProgress;
-    mapping(uint => mapping(address => QuizAttempt)) public quizAttempts;
+    mapping(uint256 => Course) public courses;
+    mapping(address => mapping(uint256 => bool[])) public lessonProgress; // user -> course -> lesson[]
+    mapping(uint256 => mapping(address => QuizAttempt)) public quizAttempts;
+    mapping(address => uint256[]) public badgesMinted;
 
-    // Tutor staking
-    mapping(address => uint) public tutorStakes;
+    // Events
+    event UserRegistered(address indexed user, string name, bool isTutor);
+    event CourseCreated(uint256 indexed courseId, string title, address indexed tutor);
+    event CourseEnrolled(address indexed user, uint256 indexed courseId);
+    event CourseCompleted(address indexed user, uint256 indexed courseId);
+    event QuizSubmitted(address indexed user, uint256 indexed courseId, uint256 score, bool passed);
+    event BadgeMinted(address indexed user, uint256 indexed tokenId, uint256 indexed courseId);
 
-    // Referral tracking
-    mapping(address => uint) public referralRewards;
+    constructor() ERC721("LearnBadge", "LBDG") {}
 
-    // NFT Badge tracking
-    mapping(address => uint[]) public badgesMinted;
-
-    // ------------------- User Management -------------------
-
-    function registerUser(string memory _name, bool _isTutor, address _inviter) external {
-        require(users[msg.sender].wallet == address(0), "User already exists");
-        users[msg.sender] = User(msg.sender, _name, _isTutor, new uint[](0), new uint[](0), 0, _inviter);
-        if (_inviter != address(0)) {
-            referralRewards[_inviter] += 25; // reward points for referrals
-        }
+    // --- User Registration ---
+    function registerUser(string memory _name, bool _isTutor) external {
+        require(bytes(users[msg.sender].name).length == 0, "User already registered");
+        users[msg.sender] = User({
+            name: _name,
+            isTutor: _isTutor,
+            enrolledCourses: new uint256[](0),
+            completedCourses: new uint256[](0)
+        });
+        emit UserRegistered(msg.sender, _name, _isTutor);
     }
 
-    // ------------------- Tutor Staking & Course Creation -------------------
-
-    function stakeToCreateCourse(uint _amount) external payable {
-        require(users[msg.sender].isTutor, "Not a tutor");
-        require(msg.value == _amount, "Incorrect stake");
-        tutorStakes[msg.sender] += _amount;
-    }
-
+    // --- Course Creation (Only Tutors) ---
     function createCourse(string memory _title, string memory _description) external {
-        require(users[msg.sender].isTutor, "Not a tutor");
-        require(tutorStakes[msg.sender] >= 0.05 ether, "Minimum stake required");
-        courses[nextCourseId] = Course(nextCourseId, msg.sender, _title, _description, 0, true, tutorStakes[msg.sender]);
+        require(users[msg.sender].isTutor, "Only tutors can create courses");
+        courses[nextCourseId] = Course({
+            title: _title,
+            description: _description,
+            tutor: msg.sender,
+            isActive: true
+        });
+        emit CourseCreated(nextCourseId, _title, msg.sender);
         nextCourseId++;
     }
 
-    // ------------------- Enrollment & Progress -------------------
+    // --- Enroll in Course ---
+    function enrollCourse(uint256 _courseId) external {
+        require(_courseId < nextCourseId, "Course does not exist");
+        require(courses[_courseId].isActive, "Course is inactive");
+        require(!isEnrolled(msg.sender, _courseId), "Already enrolled");
 
-    function enrollCourse(uint _courseId) external {
-        require(courses[_courseId].isActive, "Inactive");
         users[msg.sender].enrolledCourses.push(_courseId);
+        emit CourseEnrolled(msg.sender, _courseId);
     }
 
-    function completeLesson(uint _courseId, uint _lessonIndex) external {
+    // --- Mark Lesson as Complete ---
+    function completeLesson(uint256 _courseId, uint256 _lessonIndex) external {
+        require(isEnrolled(msg.sender, _courseId), "Not enrolled in course");
+        // Dynamically expand lesson progress array
+        if (_lessonIndex >= lessonProgress[msg.sender][_courseId].length) {
+            uint256 newLen = _lessonIndex + 1;
+            bool[] storage progress = lessonProgress[msg.sender][_courseId];
+            /* solhint-disable-next-line no-inline-assembly */
+            assembly {
+                mstore(progress, newLen)
+            }
+            // Initialize new lessons to false
+            for (uint256 i = 0; i < newLen; ) {
+                if (i >= progress.length) {
+                    progress.push(false);
+                }
+                unchecked { i++; }
+            }
+        }
         lessonProgress[msg.sender][_courseId][_lessonIndex] = true;
     }
 
-    function completeCourse(uint _courseId) external {
-        users[msg.sender].completedCourses.push(_courseId);
-        users[msg.sender].rewardPoints += 100;
+    // --- Submit Quiz ---
+    function submitQuiz(uint256 _courseId, uint256 _score, bool _passed) external {
+        require(isEnrolled(msg.sender, _courseId), "Not enrolled");
+        // Prevent retakes for now
+        require(quizAttempts[_courseId][msg.sender].passed == false && 
+                quizAttempts[_courseId][msg.sender].score == 0, "Quiz already taken");
 
-        address tutor = courses[_courseId].tutor;
-        courses[_courseId].totalCompletions++;
-        users[tutor].rewardPoints += 50;
+        quizAttempts[_courseId][msg.sender] = QuizAttempt(_score, _passed);
+
+        if (_passed) {
+            emit QuizSubmitted(msg.sender, _courseId, _score, _passed);
+        }
+    }
+
+    // --- Complete Course & Mint Badge ---
+    function completeCourse(uint256 _courseId) external {
+        require(isEnrolled(msg.sender, _courseId), "Not enrolled");
+        require(!isCompleted(msg.sender, _courseId), "Course already completed");
+        require(quizAttempts[_courseId][msg.sender].passed, "Quiz not passed");
+
+        users[msg.sender].completedCourses.push(_courseId);
 
         _mintBadge(msg.sender, _courseId);
+
+        emit CourseCompleted(msg.sender, _courseId);
     }
 
-    // ------------------- Quiz Logic -------------------
+    // --- Internal: Mint NFT Badge ---
+    function _mintBadge(address _to, uint256 _courseId) internal {
+        uint256 tokenId = nextBadgeId++;
+        string memory tokenURI = string(
+            abi.encodePacked("ipfs://example/course-", _uintToString(_courseId), "-badge.json")
+        );
+        _safeMint(_to, tokenId);
+        _setTokenURI(tokenId, tokenURI);
+        badgesMinted[_to].push(tokenId);
+        emit BadgeMinted(_to, tokenId, _courseId);
+    }
 
-    function submitQuiz(uint _courseId, uint _score, bool _passed) external {
-        quizAttempts[_courseId][msg.sender] = QuizAttempt(_score, _passed, !quizAttempts[_courseId][msg.sender].retaken);
-        if (_passed) {
-            users[msg.sender].rewardPoints += 50;
+    // --- View Functions ---
+    function isEnrolled(address _user, uint256 _courseId) public view returns (bool) {
+        uint256[] memory list = users[_user].enrolledCourses;
+        for (uint256 i = 0; i < list.length; ) {
+            if (list[i] == _courseId) return true;
+            unchecked { i++; }
         }
+        return false;
     }
 
-    // ------------------- NFT Badge Minting -------------------
-
-    function _mintBadge(address _user, uint _courseId) internal {
-        uint tokenId = nextBadgeId++;
-        string memory metadata = string(abi.encodePacked("Course #", _toString(_courseId), " Badge"));
-        _safeMint(_user, tokenId);
-        _setTokenURI(tokenId, metadata);
-        badgesMinted[_user].push(tokenId);
-    }
-
-    function _toString(uint v) internal pure returns (string memory) {
-        if (v == 0) return "0";
-        uint j = v;
-        uint len;
-        while (j != 0) {
-            len++;
-            j /= 10;
+    function isCompleted(address _user, uint256 _courseId) public view returns (bool) {
+        uint256[] memory list = users[_user].completedCourses;
+        for (uint256 i = 0; i < list.length; ) {
+            if (list[i] == _courseId) return true;
+            unchecked { i++; }
         }
-        bytes memory bstr = new bytes(len);
-        uint k = len;
-        while (v != 0) {
-            k = k - 1;
-            bstr[k] = bytes1(uint8(48 + v % 10));
-            v /= 10;
-        }
-        return string(bstr);
+        return false;
     }
 
-    // ------------------- Getters -------------------
+    function getEnrolledCourses(address _user) external view returns (uint256[] memory) {
+        return users[_user].enrolledCourses;
+    }
 
-    function getBadges(address _user) external view returns (uint[] memory) {
+    function getCompletedCourses(address _user) external view returns (uint256[] memory) {
+        return users[_user].completedCourses;
+    }
+
+    function getBadges(address _user) external view returns (uint256[] memory) {
         return badgesMinted[_user];
     }
 
-    function getReferralReward(address _user) external view returns (uint) {
-        return referralRewards[_user];
-    }
-
-    function getTutorStake(address _tutor) external view returns (uint) {
-        return tutorStakes[_tutor];
+    // --- Utilities ---
+    function _uintToString(uint256 value) internal pure returns (string memory) {
+        if (value == 0) return "0";
+        uint256 temp = value;
+        uint256 digits;
+        while (temp != 0) {
+            digits++;
+            temp /= 10;
+        }
+        bytes memory buffer = new bytes(digits);
+        while (value != 0) {
+            digits -= 1;
+            buffer[digits] = bytes1(uint8(48 + value % 10));
+            value /= 10;
+        }
+        return string(buffer);
     }
 }
