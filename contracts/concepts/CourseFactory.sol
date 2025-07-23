@@ -37,3 +37,54 @@ contract RewardToken is ERC20, Ownable {
     }
 }
 
+// ==================== Course Contract ====================
+contract Course is Ownable {
+    address public tutor;
+    string public title;
+    uint256 public passThreshold;
+    CertificateNFT public certificateNFT;
+    RewardToken public rewardToken;
+
+    mapping(address => bool) public enrolled;
+    mapping(address => uint256) public quizScores;
+    mapping(address => bool) public certified;
+
+    event Enrolled(address learner);
+    event QuizSubmitted(address learner, uint256 score);
+    event Certified(address learner, uint256 tokenId);
+
+    constructor(
+        address _tutor,
+        string memory _title,
+        uint256 _passThreshold,
+        address _certificateNFT,
+        address _rewardToken
+    ) {
+        tutor = _tutor;
+        title = _title;
+        passThreshold = _passThreshold;
+        certificateNFT = CertificateNFT(_certificateNFT);
+        rewardToken = RewardToken(_rewardToken);
+        transferOwnership(_tutor); // Tutor manages this course
+    }
+
+    function enroll() external {
+        require(!enrolled[msg.sender], "Already enrolled");
+        enrolled[msg.sender] = true;
+        emit Enrolled(msg.sender);
+    }
+
+    function submitQuiz(uint256 score, string memory certificateURI) external {
+        require(enrolled[msg.sender], "Not enrolled");
+        quizScores[msg.sender] = score;
+        emit QuizSubmitted(msg.sender, score);
+
+        if (score >= passThreshold && !certified[msg.sender]) {
+            certified[msg.sender] = true;
+            uint256 tokenId = certificateNFT.mintCertificate(msg.sender, certificateURI);
+            rewardToken.rewardUser(tutor, 100 * 10**18); // Reward tutor (100 tokens)
+            emit Certified(msg.sender, tokenId);
+        }
+    }
+}
+
