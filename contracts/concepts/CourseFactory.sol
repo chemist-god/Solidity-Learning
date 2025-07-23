@@ -26,3 +26,14 @@ contract CertificateNFT is ERC721, Ownable {
     }
 }
 
+// ==================== Reward Token (ERC-20) ====================
+contract RewardToken is ERC20, Ownable {
+    constructor() ERC20("CourseRewardToken", "CRT") {
+        _mint(msg.sender, 1_000_000 * 10**18); // Mint initial supply to deployer
+    }
+
+    function rewardUser(address user, uint256 amount) external onlyOwner {
+        _transfer(owner(), user, amount);
+    }
+}
+
