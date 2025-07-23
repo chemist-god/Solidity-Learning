@@ -115,6 +115,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "tutor",
+						"type": "address"
+					}
+				],
+				"name": "approveTutor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "",
 						"type": "address"
 					}
@@ -180,6 +193,83 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "passThreshold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rewardAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "createCourse",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "courseId",
+						"type": "uint256"
+					}
+				],
+				"name": "enroll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "courseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getProgress",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "bool",
+								"name": "enrolled",
+								"type": "bool"
+							},
+							{
+								"internalType": "uint256",
+								"name": "quizScore",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "certified",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct CoursePlatform.UserProgress",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
@@ -229,6 +319,24 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "courseId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "score",
+						"type": "uint256"
+					}
+				],
+				"name": "submitQuiz",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -259,11 +367,11 @@
 	},
 	"sources": {
 		"contracts/CoursePlatform.sol": {
-			"keccak256": "0x061b011da4111888c1aaf563aae160bbd170c10207eb43a3c9b788e67cb242bd",
+			"keccak256": "0xe57badd3581a9821826254137934cafd8c5e78c96643af5e69ea63dd5ac25a32",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e1826a7205fc11fb3df0cbc1f21137540e0673ccb5e25b9815152c8de66cef52",
-				"dweb:/ipfs/Qmc3tQPPmda7tiiaPDATJGjkfR3Ur9hUKPU8iHrbyUQPjB"
+				"bzz-raw://fb85b2b1b6651c4ade943a7a2c381de6ad2e16217c58d60c3674c25a41462f1b",
+				"dweb:/ipfs/QmW8F89Aiaf9ZUmNaVwbmuXm5W5MzRVchbJWAnpgRyNDx4"
 			]
 		}
 	},
