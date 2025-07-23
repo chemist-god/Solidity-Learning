@@ -88,3 +88,37 @@ contract Course is Ownable {
     }
 }
 
+// ==================== Course Factory ====================
+contract CourseFactory is Ownable {
+    uint256 public courseCount;
+    RewardToken public rewardToken;
+    CertificateNFT public certificateNFT;
+
+    mapping(uint256 => address) public courses;
+    mapping(address => bool) public approvedTutors;
+
+    event CourseCreated(uint256 courseId, address courseAddress);
+
+    constructor() {
+        rewardToken = new RewardToken();
+        certificateNFT = new CertificateNFT();
+    }
+
+    function approveTutor(address tutor) external onlyOwner {
+        approvedTutors[tutor] = true;
+    }
+
+    function createCourse(string memory title, uint256 passThreshold) external {
+        require(approvedTutors[msg.sender], "Not an approved tutor");
+        Course newCourse = new Course(
+            msg.sender,
+            title,
+            passThreshold,
+            address(certificateNFT),
+            address(rewardToken)
+        );
+        courses[courseCount] = address(newCourse);
+        emit CourseCreated(courseCount, address(newCourse));
+        courseCount++;
+    }
+}
